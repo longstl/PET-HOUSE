@@ -16,7 +16,7 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('userId')->unsigned();
-            $table->foreign('categoryId')->references('id')->on('users');
+            $table->foreign('userId')->references('id')->on('users');
             $table->string('shipName');
             $table->string('shipPhone');
             $table->string('shipAddress');
