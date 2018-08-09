@@ -15,7 +15,7 @@
                 <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
                             class="nav-link text-uppercase pb_letter-spacing-2" href="/">Home</a></li>
                 <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
-                            class="nav-link text-uppercase pb_letter-spacing-2" href="#">About</a></li>
+                            class="nav-link text-uppercase pb_letter-spacing-2" href="/about">About</a></li>
                 <li class="nav-item dropdown text-uppercase pb_letter-spacing-2"
                     style="margin-top: 30px; margin-bottom: 30px;">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
