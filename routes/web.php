@@ -22,6 +22,10 @@ Route::get('/404',function (){
     return view('error.404');
 });
 
+Route::get('/contact', function () {
+    return view('shop.contact');
+});
+
 Route::get('/user/register',function (){
    return view('partials.login-register');
 });

@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse justify-content-md-center" id="probootstrap-navbar">
             <ul class="navbar-nav">
                 <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
-                            class="nav-link text-uppercase pb_letter-spacing-2" href="#">Home</a></li>
+                            class="nav-link text-uppercase pb_letter-spacing-2" href="/">Home</a></li>
                 <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
                             class="nav-link text-uppercase pb_letter-spacing-2" href="#">About</a></li>
                 <li class="nav-item dropdown text-uppercase pb_letter-spacing-2"
@@ -57,7 +57,7 @@
                 <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
                             class="nav-link text-uppercase pb_letter-spacing-2" href="#">Pet Spa</a></li>
                 <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
-                            class="nav-link text-uppercase pb_letter-spacing-2" href="#">Contact</a></li>
+                            class="nav-link text-uppercase pb_letter-spacing-2" href="/contact">Contact</a></li>
             </ul>
         </div>
     </div>
