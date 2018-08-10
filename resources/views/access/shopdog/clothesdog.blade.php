@@ -21,22 +21,22 @@
                 <div class="card bg-light mb-2">
                     <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i>Dog Accessories</div>
                     <ul class="list-group category_block">
-                        <li class="list-group-item"><a href="necklace">Necklace for dogs</a></li>
-                            <li class="list-group-item"><a href="">Clothes for dogs</a></li>
-                        <li class="list-group-item"><a href="category.html">Chain</a></li>
-                        <li class="list-group-item"><a href="category.html">bow for dog</a></li>
-                        <li class="list-group-item"><a href="category.html">Brush for dogs</a></li>
+                        <li class="list-group-item"><a href="necklacedog">Necklace for dogs</a></li>
+                        <li class="list-group-item"><a href="clothesdog">Clothes for dogs</a></li>
+                        <li class="list-group-item"><a href="chaindog">Chain</a></li>
+                        <li class="list-group-item"><a href="bowdog">Bow for dog</a></li>
+                        <li class="list-group-item"><a href="brushdog">Brush for dogs</a></li>
                     </ul>
                 </div>
 
                 <div class="card bg-light mb-2">
                     <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Cat shop</div>
                     <ul class="list-group category_block">
-                        <li class="list-group-item"><a href="accessories">Necklace for dogs</a>
+                        <li class="list-group-item"><a href="necklacecat">Necklace for cat</a>
                         </li>
-                        <li class="list-group-item"><a href="category.html">Clothes for cat</a></li>
-                        <li class="list-group-item"><a href="category.html">Bow and hat</a></li>
-                        <li class="list-group-item"><a href="category.html">Shake the neck for cats</a></li>
+                        <li class="list-group-item"><a href="clothescat">Clothes for cat</a></li>
+                        <li class="list-group-item"><a href="bowandhatcat">Bow and hat</a></li>
+                        <li class="list-group-item"><a href="shaketheneck">Shake the neck for cats</a></li>
                     </ul>
                 </div>
 
