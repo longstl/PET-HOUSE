@@ -16,9 +16,9 @@ class CreateOrderDetailsTable extends Migration
         Schema::create('order_details', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('orderId')->unsigned();
-            $table->foreign('categoryId')->references('id')->on('orders');
+            $table->foreign('orderId')->references('id')->on('orders');
             $table->integer('productId')->unsigned();
-            $table->foreign('categoryId')->references('id')->on('products');
+            $table->foreign('productId')->references('id')->on('products');
             $table->integer('quantity');
             $table->integer('price');
             $table->timestamps();

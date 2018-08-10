@@ -63,6 +63,10 @@ Route::get('/contact', function () {
     return view('shop.contact');
 });
 
+Route::get('/about', function () {
+    return view('shop.about');
+});
+
 Route::get('/user/register',function (){
    return view('partials.login-register');
 });
