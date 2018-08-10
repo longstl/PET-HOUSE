@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/header.css" type="text/css">
 <link rel="stylesheet" href="/css/cursor.css" type="text/css">
-<nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light bg-dark" id="pb-navbar"
+<nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light bg-dark navbar-default navbar-fixed-top" id="pb-navbar"
      style="height: 50px">
     <div class="container">
         <a class="navbar-brand d-xl-none d-lg-none d-md-block d-sm-block" href="/">
@@ -46,7 +46,7 @@
                             </ul>
                         </li>
                     </ul>
-                <li class="nav-item logo-center d-xl-block d-lg-block d-md-none d-sm-none d-none">
+                <li class="nav-item logo-center d-xl-block d-lg-block d-md-none d-sm-none d-none navbar-default navbar-fixed-top">
                     <a class="nav-link text-uppercase pb_letter-spacing-2" href="/">
                         <img src="images/logo/logo.png" alt="Instant Logo" class="light"
                              style="width: 80px; height: 80px;">
@@ -61,7 +61,7 @@
             </ul>
         </div>
     </div>
-    <nav class="nav navbar-nav navbar-right">
+    <nav class="nav navbar-nav navbar-right navbar-expand-lg navbar-default navbar-fixed-top">
         <button type="button" class="btn btn-info btn-dark" data-toggle="modal" data-target="#cart_Modal"
                 style="color: #CCCECF"><i
                     class="fas fa-shopping-cart"></i>
