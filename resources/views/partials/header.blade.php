@@ -62,7 +62,7 @@
         </div>
     </div>
     <nav class="nav navbar-nav navbar-right navbar-expand-lg navbar-default navbar-fixed-top">
-        <button type="button" class="btn btn-info btn-dark" data-toggle="modal" data-target="#cart_Modal"
+        <button type="button" onclick="window.location.href='/cart'" class="btn btn-info btn-dark" id="cart" data-toggle="modal" data-target="#cart_Modal"
                 style="color: #CCCECF"><i
                     class="fas fa-shopping-cart"></i>
         </button>
@@ -73,7 +73,7 @@
         <div id="login" class="modal" style="width: 100%;">
             <div class="login-form">
                 <form action="#" method="post">
-                    <h2 class="text-center">SIGN IN  </h2>
+                    <h2 class="text-center">SIGN IN</h2>
                     <div class="form-group">
                         <div class="input-group">
 

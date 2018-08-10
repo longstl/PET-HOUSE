@@ -70,3 +70,7 @@ Route::get('/about', function () {
 Route::get('/user/register',function (){
    return view('partials.login-register');
 });
+
+Route::get('/cart',function (){
+    return view('shop.cart');
+});
