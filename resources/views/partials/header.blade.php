@@ -53,7 +53,7 @@
                     </a>
                 </li>
                 <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
-                            class="nav-link text-uppercase pb_letter-spacing-2" href="#">Shop Accessories</a></li>
+                            class="nav-link text-uppercase pb_letter-spacing-2" href="accessories">Shop Accessories</a></li>
                 <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
                             class="nav-link text-uppercase pb_letter-spacing-2" href="#">Pet Spa</a></li>
                 <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
