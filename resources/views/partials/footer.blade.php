@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/cursor.css" type="text/css">
 <!-- Footer -->
-<footer class="page-footer font-small mdb-color pt-4" style="background-color: #343A40; margin-top: 10px;">
+<footer class="page-footer font-small mdb-color pt-4 bg-info" style="background-color: #343A40; margin-top: 10px;">
 
     <!-- Footer Links -->
     <div class="container text-center text-md-left" style="color: white">

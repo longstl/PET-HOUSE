@@ -1,23 +1,20 @@
 <link rel="stylesheet" href="/css/header.css" type="text/css">
 <link rel="stylesheet" href="/css/cursor.css" type="text/css">
-<nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light bg-dark navbar-default navbar-fixed-top" id="pb-navbar"
-     style="height: 50px">
-    <div class="container">
-        <a class="navbar-brand d-xl-none d-lg-none d-md-block d-sm-block" href="/">
-            <img src="images/logo/logo.png" alt="Instant Logo" class="light" style="width: 80px; height: 80px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-navbar"
-                aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span><i class="ion-navicon"></i></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-md-center" id="probootstrap-navbar">
-            <ul class="navbar-nav">
-                <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
-                            class="nav-link text-uppercase pb_letter-spacing-2" href="/">Home</a></li>
-                <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
-                            class="nav-link text-uppercase pb_letter-spacing-2" href="/about">About</a></li>
-                <li class="nav-item dropdown text-uppercase pb_letter-spacing-2"
-                    style="margin-top: 30px; margin-bottom: 30px;">
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-info" id="mainNav" style="height: 80px;">
+    <div class="container"><a class="navbar-brand" href="#page-top"><a
+                    class="nav-link text-uppercase pb_letter-spacing-2" href="/">
+                <img src="https://scontent.fhan1-1.fna.fbcdn.net/v/t1.15752-9/39012519_417782352077740_795181493700788224_n.png?_nc_cat=0&oh=a61235e87aadfd99642bd97bb2b12408&oe=5BCC969E"
+                     alt="Instant Logo" class="light"
+                     style="width: 100px; height: 100px;">
+            </a></a>
+        <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarResponsive"
+                type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav ml-auto text-uppercase">
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="/">HOME</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">ABOUT</a></li>
+                <li class="nav-item dropdown text-uppercase pb_letter-spacing-2">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
                         Adopt a Pet
@@ -46,27 +43,20 @@
                             </ul>
                         </li>
                     </ul>
-                <li class="nav-item logo-center d-xl-block d-lg-block d-md-none d-sm-none d-none navbar-default navbar-fixed-top">
-                    <a class="nav-link text-uppercase pb_letter-spacing-2" href="/">
-                        <img src="images/logo/logo.png" alt="Instant Logo" class="light"
-                             style="width: 80px; height: 80px;">
-                    </a>
                 </li>
-                <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
-                            class="nav-link text-uppercase pb_letter-spacing-2" href="accessories">Shop Accessories</a></li>
-                <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
-                            class="nav-link text-uppercase pb_letter-spacing-2" href="#">Pet Spa</a></li>
-                <li class="nav-item" style="margin-top: 30px; margin-bottom: 30px;"><a
-                            class="nav-link text-uppercase pb_letter-spacing-2" href="/contact">Contact</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">SHOP
+                        ACCESSORIES</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">PET SPA</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">CONTACT</a></li>
             </ul>
         </div>
     </div>
     <nav class="nav navbar-nav navbar-right navbar-expand-lg navbar-default navbar-fixed-top">
-        <button type="button" onclick="window.location.href='/cart'" class="btn btn-info btn-dark" id="cart" data-toggle="modal" data-target="#cart_Modal"
+        <button type="button" onclick="window.location.href='/cart'" class="btn btn-info bg-info" id="cart" data-toggle="modal" data-target="#cart_Modal"
                 style="color: #CCCECF"><i
                     class="fas fa-shopping-cart"></i>
         </button>
-        <button type="button" onclick="showLogin()" class="btn btn-info btn-dark" data-toggle="modal" data-target="#user_Modal"
+        <button type="button" onclick="showLogin()" class="btn btn-info bg-info" data-toggle="modal" data-target="#user_Modal"
                 style="color: #CCCECF"><i
                     class="fas fa-users"></i>
         </button>

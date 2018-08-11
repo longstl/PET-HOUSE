@@ -74,3 +74,7 @@ Route::get('/user/register',function (){
 Route::get('/cart',function (){
     return view('shop.cart');
 });
+
+Route::get('/dashboard',function (){
+    return view('dashboard.dashboard');
+});
