@@ -19,40 +19,25 @@ Route::get('/', function () {
     return view('shop.index');
 });
 /* shop dog*/
-Route::get('/necklacedog',function () {
-    return view('access.shopdog.necklacedog');
-});
-Route::get('/clothesdog',function () {
-    return view('access.shopdog.clothesdog');
-});
-Route::get('/bowdog',function () {
-    return view('access.shopdog.bowdog');
-});
-Route::get('/chaindog',function () {
-    return view('access.shopdog.chaindog');
-});
-Route::get('/brushdog',function () {
-    return view('access.shopdog.brushdog');
-});
-/* shopcat */
-Route::get('/necklacecat',function () {
-    return view('access.shopcat.necklacecat');
-});
-Route::get('/clothescat',function () {
-    return view('access.shopcat.clothescat');
-});
-Route::get('/bowandhatcat',function () {
-    return view('access.shopcat.bowandhatcat');
-});
-Route::get('/shaketheneck',function () {
-    return view('access.shopcat.shaketheneck');
-});
 
-Route::get('/productdetails',function (){
-    return view('access.productdetails') ;
-});
 Route::get('/accessories',function (){
     return view('access.accessori');
+});
+Route::get('/accessoriesdog',function (){
+    return view('access.shopaccessories.accessoriesdog');
+});
+Route::get('/accessoriescat',function (){
+    return view('access.shopaccessories.accessoriescat');
+});
+Route::get('/petspa',function (){
+    return view('petspa.spa');
+});
+Route::get('/pethousedog',function (){
+    return view('pethouse.dog');
+});
+
+Route::get('/pethousecat',function (){
+    return view('pethouse.cat');
 });
 
 Route::get('/404',function (){
@@ -68,7 +53,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/user/register',function (){
-   return view('partials.login-register');
+    return view('partials.login-register');
 });
 
 Route::get('/cart',function (){

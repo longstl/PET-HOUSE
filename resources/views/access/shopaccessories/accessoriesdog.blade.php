@@ -265,22 +265,6 @@
             padding-right: 14px;
             background: #fff;
         }
-        .nm-divider .nm-divider-line {
-            position: absolute;
-            top: 102%;
-            left: 0;
-            z-index: 10;
-            display: block;
-            content: " ";
-            width: 100%;
-            height: 1px;
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-            transform: translateY(-50%);
-            background: #eee;
-        }
         element.style {
         }
         .woocommerce-ordering{
