@@ -25,6 +25,7 @@
 <div class="slide-show">
     @yield('slide-show')
 </div>
+@include('partials.social-sidebar')
 <div class="container">
     @yield('content')
 </div>
