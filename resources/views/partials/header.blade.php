@@ -1,10 +1,11 @@
 <link rel="stylesheet" href="/css/header.css" type="text/css">
 <link rel="stylesheet" href="/css/cursor.css" type="text/css">
-<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-info" id="mainNav" style="height: 80px;">
+<link rel="stylesheet" href="/css/login-register.css" type="text/css">
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-info font-weight-bold" id="mainNav" style="height: 80px;">
     <div class="container"><a class="navbar-brand" href="#page-top"><a
                     class="nav-link text-uppercase pb_letter-spacing-2" href="/">
                 <img src="https://scontent.fhan1-1.fna.fbcdn.net/v/t1.15752-9/39012519_417782352077740_795181493700788224_n.png?_nc_cat=0&oh=a61235e87aadfd99642bd97bb2b12408&oe=5BCC969E"
-                     alt="Instant Logo" class="light"
+                     alt="PET HOUSE Logo" class="light"
                      style="width: 100px; height: 100px;">
             </a></a>
         <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarResponsive"
@@ -125,133 +126,4 @@
         </div>
     </nav>
 </nav>
-<style>
-    .navbar-nav li:hover > ul.dropdown-menu {
-        display: block;
-    }
-
-    .dropdown-submenu {
-        position: relative;
-    }
-
-    .dropdown-submenu > .dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -6px;
-    }
-
-    /* rotate caret on hover */
-    .dropdown-menu > li > a:hover:after {
-        text-decoration: underline;
-        transform: rotate(-90deg);
-    }
-
-    /* Mask for background, by default is not display */
-    #mask {
-        display: none;
-        background: #000;
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        opacity: 0.8;
-        z-index: 999;
-    }
-
-    .login-form {
-        width: 385px;
-        margin: 30px auto;
-    }
-    .login-form form {
-        margin-bottom: 15px;
-        background: #f7f7f7;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-        padding: 30px;
-    }
-    .login-form h2 {
-        color: #007bff;
-        margin: 0 0 15px;
-    }
-
-    .form-control, .login-btn {
-        min-height: 38px;
-        border-radius: 2px;
-    }
-
-    .login-btn {
-        font-size: 15px;
-        font-weight: bold;
-    }
-    .social-btn .btn {
-        border: none;
-        margin: 10px 3px 0;
-        opacity: 1;
-    }
-    .social-btn .btn:hover {
-        opacity: 0.9;
-    }
-    .social-btn .btn-primary {
-        background: #507cc0;
-    }
-    .social-btn .btn-info {
-        background: #64ccf1;
-    }
-    .social-btn .btn-danger {
-        background: #df4930;
-    }
-    .or-seperator {
-        margin-top: 20px;
-        text-align: center;
-        border-top: 1px solid #ccc;
-    }
-    .or-seperator i {
-        padding: 0 10px;
-        background: #f7f7f7;
-        position: relative;
-        top: -11px;
-        z-index: 1;
-    }
-
-</style>
-<script>
-    // Get the modal
-    var login = document.getElementById('login');
-    var register = document.getElementById('register');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == login) {
-            login.style.display = "none";
-        } else if(event.target == register){
-            register.style.display = "none";
-        }
-    }
-
-    function showRegister() {
-        document.getElementById("login").style.display = 'none';
-        document.getElementById("register").style.display = 'block';
-
-    }
-
-    function showLogin() {
-        document.getElementById("login").style.display = 'block';
-        document.getElementById("register").style.display = 'none';
-
-    }
-
-    var password = document.getElementById("password")
-        , confirm_password = document.getElementById("confirm_password");
-
-    function validatePassword(){
-        if(password.value != confirm_password.value) {
-            confirm_password.setCustomValidity("Password không trùng khớp.");
-        } else {
-            confirm_password.setCustomValidity('');
-        }
-    }
-
-    password.onchange = validatePassword;
-    confirm_password.onkeyup = validatePassword;
-</script>
+<script src="js/login-register.js"></script>
