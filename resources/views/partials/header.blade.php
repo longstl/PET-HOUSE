@@ -13,7 +13,6 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="nav navbar-nav ml-auto text-uppercase">
                 <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="/">HOME</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">ABOUT</a></li>
                 <li class="nav-item dropdown text-uppercase pb_letter-spacing-2">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
@@ -36,9 +35,9 @@
 
                     </ul>
                 </li>
-
                 <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">PET SPA</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">CONTACT</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="contact">CONTACT</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="about">ABOUT</a></li>
             </ul>
         </div>
     </div>
