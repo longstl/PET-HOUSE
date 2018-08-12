@@ -11,17 +11,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!------ Include the above in your HEAD tag ---------->
     <br>
-    <form class="woocommerce-ordering" method="get">
-        <select name="orderby" class="orderby">
-            <option value="menu_order" selected="selected">Necklace</option>
-            <option value="popularity">Sort by popularity</option>
-            <option value="rating">Sort by average rating</option>
-            <option value="date">Sort by newness</option>
-            <option value="price">Sort by price: low to high</option>
-            <option value="price-desc">Sort by price: high to low</option>
-        </select>
-        <input type="hidden" name="paged" value="1">
-    </form>
     <div class="bread-bar bg-grey">
         <div class="container">
             <div class="row">
@@ -29,7 +18,7 @@
                     <ol class="breadcrumb">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html">Dog Accessories</a></li>
-                        <li class="active">Necklace</li>
+                        <li class="active">Chó Béc Dê</li>
                     </ol>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-4">
@@ -37,11 +26,21 @@
             </div>
         </div>
     </div>
-    <div class="nm-divider separator_align_center">
-    <h2 class="nm-divider-title medium">Dog Accessories</h2>
-        <br>
-        <div class="nm-divider-line" style></div>
-    </div>
+    <form class="woocommerce-ordering" method="get">
+        <select name="orderby" class="orderby">
+            <option value="menu_order" selected="selected">Chó Béc Dê</option>
+            <option value="popularity">Sort by popularity</option>
+            <option value="rating">Sort by average rating</option>
+            <option value="date">Sort by newness</option>
+            <option value="price">Sort by price: low to high</option>
+            <option value="price-desc">Sort by price: high to low</option>
+        </select>
+        <input type="hidden" name="paged" value="1">
+    </form><br>
+    <header class="woocommerce-products-header">
+        <h1 class="woocommerce-products-header__title page-title">Shop Accessories</h1>
+
+    </header>
     <br>
     <div class="container">
         <div class="row">
@@ -49,9 +48,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://media2.vatgia.vn/pictures/fullsize/2016/07/15/htciw1468569739.png" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-17-1492164409898.jpg" alt=""></a>
                             <h2>$12</h2>
-                            <p>Blue necklace</p>
+                            <p>Is a dog</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -61,9 +60,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://vn-live-02.slatic.net/original/7a39abd1248d2c2f19f8d8bde6226278.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-72-1492164409934.jpg" alt=""></a>
                             <h2>$20</h2>
-                            <p>Necklace knit</p>
+                            <p>Is a dog</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -73,9 +72,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://www.pet-house.com.vn/res/product/album/F5A8B04D.jpg " alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2018/4/9/photo-1-15232339956202010719818.jpg " alt=""></a>
                             <h2>$17</h2>
-                            <p>Red necklace</p>
+                            <p>Is a dog</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -85,9 +84,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://pettysoc.com/wp-content/uploads/2016/02/968_1_968_vong_co_chuong.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="http://nanapet.com/upload/4-Herman-After-Square-5792a4493f0cf__700.jpg" alt=""></a>
                             <h2>$9</h2>
-                            <p>Round Neck</p>
+                            <p>Is a dog</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -105,9 +104,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://static.nongsanbanbuon.com/media/images/1/products/13/durable-pet-vong-co-cho-cho-co-the-dieu-chinh-3-m-phan-quang-nylon-dogjpg640x640-1511193091.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2016/dog14-1456186399564.jpg" alt=""></a>
                             <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
+                            <p>Is a dog</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -117,9 +116,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://petcare.vn/wp-content/uploads/2016/06/x18.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://baomoi-photo-1-td.zadn.vn/w700_r1/16/11/06/144/20761107/1_129770.jpg" alt=""></a>
                             <h2>$7</h2>
-                            <p>necklace with lead</p>
+                            <p>Is a dog</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -129,9 +128,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://www.petmart.vn/wp-content/uploads/2016/09/vong-co-xich-ky-luat-cho-cho.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="http://nanapet.com/upload/HAIRY-before-and-after-transformations-of-dog-haircuts-5794202062053__700.jpg" alt=""></a>
                             <h2>$22</h2>
-                            <p>Necklace of iron wire</p>
+                            <p>Is a dog</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -141,9 +140,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://lolipet.net/wp-content/uploads/d%C3%A2y-d%E1%BA%AFt-+-v%C3%B2ng-c%E1%BB%95-da-t%E1%BA%BFt-th%E1%BB%ABng-3.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="http://static2.yan.vn/YanNews/2167221/201804/nhung-hinh-anh-cho-thay-husky-la-giong-cho-ngo-ngan-so-mot-221cf383.jpg" alt=""></a>
                             <h2>$10</h2>
-                            <p>Necklace with lead</p>
+                            <p>Is a dog</p>
                             <a href="" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -158,9 +157,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://static.nongsanbanbuon.com/media/images/1/products/13/durable-pet-vong-co-cho-cho-co-the-dieu-chinh-3-m-phan-quang-nylon-dogjpg640x640-1511193091.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2016/c1-1470817918028.jpg" alt=""></a>
                             <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
+                            <p>Is a dog</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -170,9 +169,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://petcare.vn/wp-content/uploads/2016/06/x18.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="http://nanapet.com/upload/5-Raider_After-Square-5792a3d1f0e81__700.jpg" alt=""></a>
                             <h2>$7</h2>
-                            <p>necklace with lead</p>
+                            <p>Is a dog</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -182,9 +181,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://www.petmart.vn/wp-content/uploads/2016/09/vong-co-xich-ky-luat-cho-cho.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://cdn.pose.com.vn/legacy/images/baiviet/201607/scrape_14679018215976_s4-1467787655531.jpg" alt=""></a>
                             <h2>$22</h2>
-                            <p>Necklace of iron wire</p>
+                            <p>Is dog</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -194,9 +193,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://lolipet.net/wp-content/uploads/d%C3%A2y-d%E1%BA%AFt-+-v%C3%B2ng-c%E1%BB%95-da-t%E1%BA%BFt-th%E1%BB%ABng-3.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvKTU0yxe8QHzGQIrxRc7AbEJNF20-8X5GpalsaJkEp_tEBrrnyQ" alt=""></a>
                             <h2>$10</h2>
-                            <p>Necklace with lead</p>
+                            <p>Dog</p>
                             <a href="" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -210,7 +209,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6 product_img">
-                            <img src="https://media2.vatgia.vn/pictures/fullsize/2016/07/15/htciw1468569739.png" class="img-fluid">
+                            <img src="http://nanapet.com/upload/4-Herman-After-Square-5792a4493f0cf__700.jpg" class="img-fluid">
                         </div>
                         <div class="col-md-6 product_content">
                             <h3>Name <span>Necklace with lead</span></h3><hr>
@@ -252,7 +251,20 @@
     <style>
         element.style {
         }
-
+        h1 {
+            font-size: 5px;
+            color: #0d5bdd;
+            font-weight: normal;
+            margin: 10px 0;
+            font-family: 'Open Sans', sans-serif;
+            display: block;
+            font-size: 2em;
+            -webkit-margin-before: 0.67em;
+            -webkit-margin-after: 0.67em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            font-weight: bold;
+        }
         .nm-divider.separator_align_center .nm-divider-title, .nm-divider.separator_align_right .nm-divider-title {
             padding-left: 14px;
         }
@@ -286,14 +298,15 @@
         .woocommerce-ordering{
 
             padding-top: 4px;
-            float: right;
+            padding-left: 12px;
+            float: left;
         }
         .woocommerce .woocommerce-ordering {
             margin: 0 0 1em;
             float: left;
         }
         .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering {
-            float: right;
+            float: left;
         }
 
         .bg-grey {background:white}

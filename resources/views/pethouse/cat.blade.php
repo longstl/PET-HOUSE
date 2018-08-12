@@ -18,7 +18,7 @@
                     <ol class="breadcrumb">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html">Dog Accessories</a></li>
-                        <li class="active">Chó Béc Dê</li>
+                        <li class="active">Cat</li>
                     </ol>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-4">
@@ -28,7 +28,7 @@
     </div>
     <form class="woocommerce-ordering" method="get">
         <select name="orderby" class="orderby">
-            <option value="menu_order" selected="selected">Chó Béc Dê</option>
+            <option value="menu_order" selected="selected">Cat</option>
             <option value="popularity">Sort by popularity</option>
             <option value="rating">Sort by average rating</option>
             <option value="date">Sort by newness</option>
@@ -48,9 +48,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-17-1492164409898.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://cdn.pose.com.vn/legacy/images/baiviet/201609/scrape_14734787708583_m10-1473395779257.jpg" alt=""></a>
                             <h2>$12</h2>
-                            <p>Blue necklace</p>
+                            <p>Is a cat</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -60,9 +60,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-72-1492164409934.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://dantricdn.com/k:c05a76d21c/2016/02/26/7-1456481352010/ngam-nang-meo-co-doi-mat-dep-nhat-the-gioi-noi-nhu-con-tren-mang.jpg" alt=""></a>
                             <h2>$20</h2>
-                            <p>Necklace knit</p>
+                            <p>Is a cat</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -72,9 +72,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2018/4/9/photo-1-15232339956202010719818.jpg " alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://baomoi-photo-1-td.zadn.vn/w700_r1/18/04/14/139/25661852/8_106289.jpg " alt=""></a>
                             <h2>$17</h2>
-                            <p>Red necklace</p>
+                            <p>Is a cat</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                         <div class="iteminfo text-xs-center">
                             <a data-toggle="modal" data-target="#product_view"><img src="http://nanapet.com/upload/4-Herman-After-Square-5792a4493f0cf__700.jpg" alt=""></a>
                             <h2>$9</h2>
-                            <p>Round Neck</p>
+                            <p>Is a cat</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -104,9 +104,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2016/dog14-1456186399564.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2016/1-1462079008911.jpg" alt=""></a>
                             <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
+                            <p>Is a cat</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -116,9 +116,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://baomoi-photo-1-td.zadn.vn/w700_r1/16/11/06/144/20761107/1_129770.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2016/c1-1478170863250.jpg" alt=""></a>
                             <h2>$7</h2>
-                            <p>necklace with lead</p>
+                            <p>Is a cat</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -128,9 +128,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://nanapet.com/upload/HAIRY-before-and-after-transformations-of-dog-haircuts-5794202062053__700.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="http://img.lostbird.vn/2017/12/15/38099/14.jpg" alt=""></a>
                             <h2>$22</h2>
-                            <p>Necklace of iron wire</p>
+                            <p>Is a cat</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -140,9 +140,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://static2.yan.vn/YanNews/2167221/201804/nhung-hinh-anh-cho-thay-husky-la-giong-cho-ngo-ngan-so-mot-221cf383.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="http://mypetsvn.com/wp-content/uploads/2018/04/giadinhmoi1-4-1012.jpg" alt=""></a>
                             <h2>$10</h2>
-                            <p>Necklace with lead</p>
+                            <p>Is a cat</p>
                             <a href="" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -157,9 +157,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2016/c1-1470817918028.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://tapchinongnghiep.net/wp-content/uploads/2018/04/meo-anh-long-ngan-cat-9.jpg" alt=""></a>
                             <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
+                            <p>Is a cat</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -169,9 +169,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="http://nanapet.com/upload/5-Raider_After-Square-5792a3d1f0e81__700.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="https://kenh14cdn.com/2016/m4-1482995505079.jpg" alt=""></a>
                             <h2>$7</h2>
-                            <p>necklace with lead</p>
+                            <p>Is a cat</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -181,9 +181,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://cdn.pose.com.vn/legacy/images/baiviet/201607/scrape_14679018215976_s4-1467787655531.jpg" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="http://cms.kienthuc.net.vn/zoomh/500/uploaded/hongngan/2017_04_04/d/chet-me-co-meo-mat-to-xinh-dep-nhat-nhat-ban-hinh-2.jpg" alt=""></a>
                             <h2>$22</h2>
-                            <p>Necklace of iron wire</p>
+                            <p>NIs a cat</p>
                             <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -193,9 +193,9 @@
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvKTU0yxe8QHzGQIrxRc7AbEJNF20-8X5GpalsaJkEp_tEBrrnyQ" alt=""></a>
+                            <a data-toggle="modal" data-target="#product_view"><img src="http://img.lostbird.vn/2017/12/15/38099/9.jpg" alt=""></a>
                             <h2>$10</h2>
-                            <p>Necklace with lead</p>
+                            <p>Is a cat</p>
                             <a href="" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6 product_img">
-                            <img src="http://nanapet.com/upload/4-Herman-After-Square-5792a4493f0cf__700.jpg" class="img-fluid">
+                            <img src="http://mypetsvn.com/wp-content/uploads/2018/04/giadinhmoi1-4-1012.jpg" class="img-fluid">
                         </div>
                         <div class="col-md-6 product_content">
                             <h3>Name <span>Necklace with lead</span></h3><hr>

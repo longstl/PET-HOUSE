@@ -20,32 +20,23 @@
                         Adopt a Pet
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action1</a></li>
-                        <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="http://google.com">Google</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Submenu</a></li>
-                                <li><a class="dropdown-item" href="#">Submenu0</a></li>
-                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu
-                                        1</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
-                                        <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu
-                                        2</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Subsubmenu2</a></li>
-                                        <li><a class="dropdown-item" href="#">Subsubmenu2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+                        <li><a class="dropdown-item" href="pethousedog">Dog</a></li>
+                        <li><a class="dropdown-item" href="pethousecat">Cat</a></li>
+
                     </ul>
                 </li>
-                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">SHOP
-                        ACCESSORIES</a></li>
+                <li class="nav-item dropdown text-uppercase pb_letter-spacing-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Shop Accessories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="accessoriesdog">Dog</a></li>
+                        <li><a class="dropdown-item" href="accessoriescat">Cat</a></li>
+
+                    </ul>
+                </li>
+
                 <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">PET SPA</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">CONTACT</a></li>
             </ul>
