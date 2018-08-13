@@ -4,7 +4,7 @@
 <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark font-weight-bold" id="mainNav" style="height: 80px;">
     <div class="container"><a class="navbar-brand" href="#page-top"><a
                     class="nav-link text-uppercase pb_letter-spacing-2" href="/">
-                <img src="https://scontent.fhan1-1.fna.fbcdn.net/v/t1.15752-9/39012519_417782352077740_795181493700788224_n.png?_nc_cat=0&oh=a61235e87aadfd99642bd97bb2b12408&oe=5BCC969E"
+                <img src="images/logo/logo.png"
                      alt="PET HOUSE Logo" class="light"
                      style="width: 100px; height: 100px;">
             </a></a>
@@ -44,11 +44,11 @@
     </div>
     <nav class="nav navbar-nav navbar-right navbar-expand-lg navbar-default navbar-fixed-top">
         <button type="button" onclick="window.location.href='/cart'" class="btn btn-info bg-dark" id="cart" data-toggle="modal" data-target="#cart_Modal"
-                style="color: #CCCECF"><i
+                style="color: #CCCECF; border: none"><i
                     class="fas fa-shopping-cart"></i>
         </button>
         <button type="button" onclick="showLogin()" class="btn btn-info bg-dark" data-toggle="modal" data-target="#user_Modal"
-                style="color: #CCCECF"><i
+                style="color: #CCCECF; border: none"><i
                     class="fas fa-users"></i>
         </button>
         <div id="login" class="modal" style="width: 100%;">

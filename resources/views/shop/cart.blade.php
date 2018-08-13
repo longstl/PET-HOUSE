@@ -37,15 +37,10 @@
                 </header>
 
                 <div class="content">
-
                     <h1>Lorem ipsum</h1>
 
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, numquam quis perspiciatis ea ad
                     omnis provident laborum dolore in atque.
-
-                    <div title="You have selected this product to be shipped in the color yellow." style="top: 0"
-                         class="color yellow"></div>
-                    <div style="top: 43px" class="type small">XXL</div>
                 </div>
 
                 <footer class="content">
@@ -78,12 +73,6 @@
 
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, numquam quis perspiciatis ea ad
                     omnis provident laborum dolore in atque.
-
-                    <div title="You have selected this product to be shipped in the color red." style="top: 0"
-                         class="color red"></div>
-                    <div title="You have selected this product to be shipped sized Small." style="top: 43px"
-                         class="type small">Small
-                    </div>
                 </div>
 
                 <footer class="content">
@@ -118,9 +107,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, numquam quis perspiciatis ea ad
                     omnis provident laborum dolore in atque.
 
-                    <div title="You have selected this product to be shipped in the color blue." style="top: 0"
-                         class="color blue"></div>
-                    <div style="top: 43px" class="type small">Large</div>
+
                 </div>
 
                 <footer class="content">
