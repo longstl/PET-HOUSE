@@ -8,8 +8,17 @@
 }
 
 .sale .clearfix a {
-    border: solid 1px #007bff;
-    background: #007bff;
+
+    background: #fff;
+    border: 0 none;
+    border-radius: 0;
+    color: #e01125;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.sale .clearfix a:hover{
+    color: #ffffff;
+    background: red;
 }
 
 .sale {
@@ -18,6 +27,7 @@
     width: 300px;
     height: auto;
     border: solid 2px #d1d1d1;
+    box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 .sale:before {
@@ -58,6 +68,7 @@
     width: 300px;
     height: auto;
     border: solid 2px #d1d1d1;
+    box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 .hot:before {
@@ -86,4 +97,17 @@
 .hot .clearfix a {
     border: solid 1px #007bff;
     background: #007bff;
+}
+.hot .clearfix a {
+
+    background: #fff;
+    border: 0 none;
+    border-radius: 0;
+    color: #e01125;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.hot .clearfix a:hover{
+    color: #ffffff;
+    background: red;
 }

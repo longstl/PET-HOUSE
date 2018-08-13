@@ -6,6 +6,7 @@
     @include('partials.slideshow')
 @endsection
 @section('content')
+    <link rel="stylesheet" href="/css/contact.css" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -79,61 +80,4 @@
             <a href="#"><i class="fab fa-facebook fa-3x pr-4"></i></a>
         </div>
     </div>
-<style>
-    #contatti{
-        background-color: #64ccf1;
-        letter-spacing: 2px;
-    }
-    #contatti a{
-        color: #fff;
-        text-decoration: none;
-    }
-
-
-    @media (max-width: 575.98px) {
-
-        #contatti{padding-bottom: 800px;}
-        #contatti .maps iframe{
-            width: 100%;
-            height: 450px;
-        }
-    }
-
-
-    @media (min-width: 576px) {
-
-        #contatti{padding-bottom: 800px;}
-
-        #contatti .maps iframe{
-            width: 100%;
-            height: 450px;
-        }
-    }
-
-    @media (min-width: 768px) {
-
-        #contatti{padding-bottom: 350px;}
-
-        #contatti .maps iframe{
-            width: 100%;
-            height: 850px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        #contatti{padding-bottom: 200px;}
-
-        #contatti .maps iframe{
-            width: 100%;
-            height: 700px;
-        }
-    }
-
-
-    #author a{
-        color: #fff;
-        text-decoration: none;
-
-    }
-</style>
 @endsection
