@@ -111,3 +111,15 @@
     color: #ffffff;
     background: red;
 }
+.pp{
+    margin-top: 10px;
+}
+#product_view .btn-ground a{
+    background: #ffffff;
+    color: red;
+    border: none;
+}
+#product_view .btn-ground a:hover{
+    color: #ffffff;
+    background-color: red;
+}

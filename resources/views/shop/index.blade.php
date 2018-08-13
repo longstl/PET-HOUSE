@@ -2,7 +2,21 @@
 @section('title')
     Laravel Shopping Cart
 @endsection
+@section('scripts')
+    <script src="/js/modal-product.js" type="text/javascript"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+@endsection
 @section('styles')
+
+    <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">
     <link rel="stylesheet" href="/css/index.css" type="text/css">
     <link rel="stylesheet" href="/css/cursor.css" type="text/css">
     <link rel="stylesheet" href="/css/cart-sale.css" type="text/css">
@@ -48,7 +62,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card sale">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -61,7 +75,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card sale">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -76,7 +90,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card sale">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -94,7 +108,7 @@
         <div class="row ">
             <div class="col-md-4">
                 <div class="card sale">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -109,7 +123,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card sale">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -124,7 +138,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card sale">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -146,7 +160,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card hot">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -161,7 +175,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card hot">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -176,7 +190,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card hot">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -194,7 +208,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card hot">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -209,7 +223,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card hot">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -224,7 +238,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card hot">
-                    <a href="#">
+                    <a data-toggle="modal" data-target="#product_view">
                         <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
                     </a>
                     <div class="clearfix">
@@ -239,5 +253,36 @@
             </div>
         </div>
         <br><br>
+    </div>
+    <div class="modal fade product_view" id="product_view">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 product_img">
+                            <img src="http://mypetsvn.com/wp-content/uploads/2018/04/giadinhmoi1-4-1012.jpg" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 product_content">
+                            <h3>Name <span>Necklace with lead</span></h3><hr>
+                            <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <center><h3 class="cost"><span class="glyphicon glyphicon-usd"></span> $10 <small class="pre-cost"></small></h3></center>
+                            <div class="row">
+                                <p class="pp">Quantity : </p>
+                                <footer class="content">
+                                    <span class="qt-minus">-</span>
+                                    <span class="qt">1</span>
+                                    <span class="qt-plus">+</span>
+                                </footer>
+                            </div>
+
+                            <div class="space-ten"></div>
+                            <div class="btn-ground">
+                                <center><a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
