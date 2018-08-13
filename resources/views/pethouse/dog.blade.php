@@ -11,6 +11,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!------ Include the above in your HEAD tag ---------->
     <br>
+    <form class="woocommerce-ordering" method="get">
+        <select name="orderby" class="orderby">
+            <option value="menu_order" selected="selected">Cat</option>
+            <option value="popularity">Sort by popularity</option>
+            <option value="rating">Sort by average rating</option>
+            <option value="date">Sort by newness</option>
+            <option value="price">Sort by price: low to high</option>
+            <option value="price-desc">Sort by price: high to low</option>
+        </select>
+        <input type="hidden" name="paged" value="1">
+    </form>
     <div class="bread-bar bg-grey">
         <div class="container">
             <div class="row">
@@ -26,17 +37,7 @@
             </div>
         </div>
     </div>
-    <form class="woocommerce-ordering" method="get">
-        <select name="orderby" class="orderby">
-            <option value="menu_order" selected="selected">Chó Béc Dê</option>
-            <option value="popularity">Sort by popularity</option>
-            <option value="rating">Sort by average rating</option>
-            <option value="date">Sort by newness</option>
-            <option value="price">Sort by price: low to high</option>
-            <option value="price-desc">Sort by price: high to low</option>
-        </select>
-        <input type="hidden" name="paged" value="1">
-    </form><br>
+    <br>
     <header class="woocommerce-products-header">
         <h1 class="woocommerce-products-header__title page-title">Shop Accessories</h1>
 
@@ -295,20 +296,27 @@
         }
         element.style {
         }
+
+
+
         .woocommerce-ordering{
 
             padding-top: 4px;
             padding-left: 12px;
             float: left;
         }
+        .woocommerce-ordering{
+
+            padding-top: 4px;
+            float: right;
+        }
         .woocommerce .woocommerce-ordering {
             margin: 0 0 1em;
             float: left;
         }
         .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering {
-            float: left;
+            float: right;
         }
-
         .bg-grey {background:white}
         .breadcrumb {background: none; margin: 0;font-weight: 300;padding-left: 0; font-size: 13px;}
         .breadcrumb a {color: #999;}
