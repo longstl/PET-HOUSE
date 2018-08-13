@@ -43,11 +43,11 @@
         </div>
     </div>
     <nav class="nav navbar-nav navbar-right navbar-expand-lg navbar-default navbar-fixed-top">
-        <button type="button" onclick="window.location.href='/cart'" class="btn btn-info bg-info" id="cart" data-toggle="modal" data-target="#cart_Modal"
+        <button type="button" onclick="window.location.href='/cart'" class="btn btn-info bg-dark" id="cart" data-toggle="modal" data-target="#cart_Modal"
                 style="color: #CCCECF"><i
                     class="fas fa-shopping-cart"></i>
         </button>
-        <button type="button" onclick="showLogin()" class="btn btn-info bg-info" data-toggle="modal" data-target="#user_Modal"
+        <button type="button" onclick="showLogin()" class="btn btn-info bg-dark" data-toggle="modal" data-target="#user_Modal"
                 style="color: #CCCECF"><i
                     class="fas fa-users"></i>
         </button>

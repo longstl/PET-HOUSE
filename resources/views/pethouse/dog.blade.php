@@ -1,9 +1,6 @@
 @extends('layouts.master')
 @section('title')
 @endsection
-@extends('layouts.master')
-@section('title')
-@endsection
 @section('scripts')
     <script src="/js/modal-product.js" type="text/javascript"/>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
