@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/header.css" type="text/css">
 <link rel="stylesheet" href="/css/cursor.css" type="text/css">
 <link rel="stylesheet" href="/css/login-register.css" type="text/css">
-<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-info font-weight-bold" id="mainNav" style="height: 80px;">
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark font-weight-bold" id="mainNav" style="height: 80px;">
     <div class="container"><a class="navbar-brand" href="#page-top"><a
                     class="nav-link text-uppercase pb_letter-spacing-2" href="/">
                 <img src="https://scontent.fhan1-1.fna.fbcdn.net/v/t1.15752-9/39012519_417782352077740_795181493700788224_n.png?_nc_cat=0&oh=a61235e87aadfd99642bd97bb2b12408&oe=5BCC969E"
