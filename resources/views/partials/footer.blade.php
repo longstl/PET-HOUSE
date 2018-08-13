@@ -84,7 +84,7 @@
             <div class="col-md-7 col-lg-8">
 
                 <!--Copyright-->
-                <p class="text-center text-md-left">© 2018 FptAptech:
+                <p class="text-center text-md-left">© 2018 FptAptech
                     <a href="https://mdbootstrap.com/bootstrap-tutorial/">
                         <strong style="color: white"> PET HOUSE </strong>
                     </a>
