@@ -64,7 +64,7 @@
                 <p>
                     <i class="fa fa-home mr-3"></i>Số 8 - Tôn Thất Thuyết - Mỹ Đình 2 - Nam Từ Liêm - Hà Nội.</p>
                 <p>
-                    <i class="fa fa-envelope mr-3"></i> pethouse11082018@gmail.com</p>
+                    <i class="fa fa-envelope mr-2"></i> pethouse11082018@gmail.com</p>
                 <p>
                     <i class="fa fa-phone mr-3"></i> + 0949156973</p>
                 <p>
