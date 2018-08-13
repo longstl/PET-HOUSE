@@ -62,13 +62,13 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
                 <p>
-                    <i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
+                    <i class="fa fa-home mr-3"></i>Số 8 - Tôn Thất Thuyết - Mỹ Đình 2 - Nam Từ Liêm - Hà Nội.</p>
                 <p>
-                    <i class="fa fa-envelope mr-3"></i> info@gmail.com</p>
+                    <i class="fa fa-envelope mr-3"></i> pethouse11082018@gmail.com</p>
                 <p>
-                    <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <i class="fa fa-phone mr-3"></i> + 0949156973</p>
                 <p>
-                    <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+                    <i class="fa fa-print mr-3"></i> + 01694668959</p>
             </div>
             <!-- Grid column -->
 
@@ -84,7 +84,7 @@
             <div class="col-md-7 col-lg-8">
 
                 <!--Copyright-->
-                <p class="text-center text-md-left">© 2018 Copyright:
+                <p class="text-center text-md-left">© 2018 FptAptech:
                     <a href="https://mdbootstrap.com/bootstrap-tutorial/">
                         <strong style="color: white"> PET HOUSE </strong>
                     </a>

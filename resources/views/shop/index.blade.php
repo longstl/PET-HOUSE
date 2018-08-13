@@ -14,8 +14,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-uppercase section-heading">Services</h2>
-                    <h3 class="text-muted section-subheading">Lorem ipsum dolor sit amet consectetur</h3>
+                    <h2 class="text-uppercase section-heading">Pet House</h2>
+                    <h3 class="text-muted section-subheading">Welcome to the Pet House</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -193,4 +193,95 @@
         </div>
         <br><br>
     </div>
+    <style>
+        .sale img {
+            width: 296px;
+            height: 260px;
+        }
+
+        .sale .clearfix div {
+            padding: 5px;
+        }
+
+        .sale .clearfix a {
+            border: solid 1px #007bff;
+            background: #007bff;
+        }
+
+        .sale {
+            margin-left: 30px;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: solid 2px #d1d1d1;
+        }
+
+        .sale:before {
+            position: absolute;
+            content: '';
+            top: 0px;
+            right: 0px;
+            width: 0;
+            height: 0;
+            border-top: 80px solid #ff0000;
+            border-left: 80px solid transparent;
+        }
+
+        .sale:after {
+            position: absolute;
+            top: 16px;
+            right: 5px;
+            transform: rotate(45deg);
+            font-family: Tahoma;
+            content: "-15%";
+            font-size: 15px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .hot img {
+            width: 296px;
+            height: 260px;
+        }
+
+        .hot .clearfix div {
+            padding: 5px;
+        }
+
+        .hot {
+            margin-left: 30px;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: solid 2px #d1d1d1;
+        }
+
+        .hot:before {
+            position: absolute;
+            content: '';
+            top: 0px;
+            right: 0px;
+            width: 0;
+            height: 0;
+            border-top: 80px solid #ff0000;
+            border-left: 80px solid transparent;
+        }
+
+        .hot:after {
+            position: absolute;
+            top: 16px;
+            right: 5px;
+            transform: rotate(40deg);
+            font-family: Tahoma;
+            content: "New";
+            font-size: 15px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .hot .clearfix a {
+            border: solid 1px #007bff;
+            background: #007bff;
+        }
+    </style>
 @endsection
