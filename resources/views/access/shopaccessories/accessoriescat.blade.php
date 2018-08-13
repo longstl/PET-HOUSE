@@ -1,10 +1,23 @@
 @extends('layouts.master')
 @section('title')
 @endsection
+@section('scripts')
+    <script src="/js/modal-product.js" type="text/javascript"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+@endsection
 @section('slide-show')
     @include('partials.slideshow')
 @endsection
 @section('content')
+
     <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">
     <br>
     <!------ Include the above in your HEAD tag ---------->
@@ -215,12 +228,12 @@
                             <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             <center><h3 class="cost"><span class="glyphicon glyphicon-usd"></span> $10 <small class="pre-cost"></small></h3></center>
                             <div class="row">
-                                Enter the quantity :
-                                <div class="col-md-6 col-sm-4 col-xs-12">
-                                    <div class="qty-changer">
-                                        <input class="qty-input form-group" type="number" value="1"/>
-                                    </div>
-                                </div>
+                                <p class="pp">Quantity : </p>
+                                <footer class="content">
+                                    <span class="qt-minus">-</span>
+                                    <span class="qt">1</span>
+                                    <span class="qt-plus">+</span>
+                                </footer>
                                 <!-- end col -->
                             </div>
 
