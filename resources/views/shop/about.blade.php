@@ -15,7 +15,12 @@
             <h2 class="name">PET HOUSE</h2>
         </div>
         <div class="about">
-            <p class="bio">Cat ipsum dolor sit amet, stare at ceiling. Rub face on everything rub face on everything for whos the baby. Lick butt. Shake treat bag run in circles and whos the baby behind the couch throwup on your pillow. Swat at dog chase mice or claw drapes. Mark territory need to chase tail chew foot, yet hunt anything that moves.</p>
+            <p class="bio">
+                Pet House guarantees that the service we provide you is reputable,
+                if any mistakes or dissatisfaction during the transaction, Pet House
+                is ready to receive all your suggestions.
+                Please contact Pet House for the product and please!
+            </p>
         </div>
     </div><br><br>
     <section class="container">
@@ -31,7 +36,7 @@
                     </h2>
                     <div class="mc-content">
                         <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                            <img class="img-responsive" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.15752-9/39074191_408600426335864_8482292906151903232_n.jpg?_nc_cat=0&oh=78957c4dfb651e65716b6a711b1446af&oe=5BF91666">
                         </div>
                         <div class="mc-description">
                            <p>-Họ tên: Trịnh Thị Thảo.</p>
@@ -66,7 +71,7 @@
                     </h2>
                     <div class="mc-content">
                         <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                            <img class="img-responsive"  src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.15752-9/39059185_314143292480547_2506499882668261376_n.jpg?_nc_cat=0&oh=784d7c2d2db22a455f8a1181d25d0e35&oe=5C081EF1">
                         </div>
                         <div class="mc-description">
                             <p>Họ tên: Hà Văn Thường.</p>
@@ -101,7 +106,7 @@
                     </h2>
                     <div class="mc-content">
                         <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                            <img class="img-responsive" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.15752-9/39017331_743228579350083_7690663925930524672_n.jpg?_nc_cat=0&oh=b35978054f59e530e4f7dc77a29ec84e&oe=5C0A3E35">
                         </div>
                         <div class="mc-description">
                             <p>Họ tên: Trần Ngọc Khánh.</p>
