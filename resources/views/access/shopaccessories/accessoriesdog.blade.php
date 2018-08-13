@@ -190,7 +190,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="row">
                 <div class="item-image-wrapper">
                     <div class="single-items">
                         <div class="iteminfo text-xs-center">
