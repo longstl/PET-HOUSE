@@ -20,6 +20,9 @@ Route::get('/', function () {
 });
 /* shop dog*/
 
+Route::get('/spa',function () {
+    return view('petspa.spa');
+});
 Route::get('/accessories',function (){
     return view('access.accessori');
 });

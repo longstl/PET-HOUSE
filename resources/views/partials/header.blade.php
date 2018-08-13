@@ -36,7 +36,7 @@
 
                     </ul>
                 </li>
-                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#">PET SPA</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="spa">PET SPA</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="contact">CONTACT</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="about">ABOUT</a></li>
             </ul>
