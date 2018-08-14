@@ -1,8 +1,6 @@
 @extends('dashboard.layout.masteradminlayout')
 @yield('title','Dashboard')
-
 @section('content')
-    <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -20,7 +18,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="flag">
-                                                        <img src="/asset_dashboard/img/flags/US.png">
+                                                        <img src="{{asset('asset_dashboard/img/flags/US.png')}}">
                                                     </div>
                                                 </td>
                                                 <td>USA</td>
@@ -34,7 +32,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="flag">
-                                                        <img src="/asset_dashboard/img/flags/DE.png">
+                                                        <img src="{{asset('asset_dashboard/img/flags/DE.png')}}">
                                                     </div>
                                                 </td>
                                                 <td>Germany</td>
@@ -48,7 +46,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="flag">
-                                                        <img src="/asset_dashboard/img/flags/AU.png">
+                                                        <img src="{{asset('asset_dashboard/img/flags/AU.png')}}">
                                                     </div>
                                                 </td>
                                                 <td>Australia</td>
@@ -62,7 +60,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="flag">
-                                                        <img src="/asset_dashboard/img/flags/GB.png">
+                                                        <img src="{{asset('asset_dashboard/img/flags/GB.png')}}">
                                                     </div>
                                                 </td>
                                                 <td>United Kingdom</td>
@@ -76,7 +74,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="flag">
-                                                        <img src="/asset_dashboard/img/flags/RO.png">
+                                                        <img src="{{asset('asset_dashboard/img/flags/RO.png')}}">
                                                     </div>
                                                 </td>
                                                 <td>Romania</td>
@@ -90,7 +88,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="flag">
-                                                        <img src="/asset_dashboard/img/flags/BR.png">
+                                                        <img src="{{asset('asset_dashboard/img/flags/BR.png')}}">
                                                     </div>
                                                 </td>
                                                 <td>Brasil</td>
@@ -124,10 +122,12 @@
                                 <button type="button" class="btn btn-danger btn-simple fix-broken-card">
                                     <i class="material-icons">build</i> Fix Header!
                                 </button>
-                                <button type="button" class="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
+                                <button type="button" class="btn btn-info btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Refresh">
                                     <i class="material-icons">refresh</i>
                                 </button>
-                                <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
+                                <button type="button" class="btn btn-default btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Change Date">
                                     <i class="material-icons">edit</i>
                                 </button>
                             </div>
@@ -151,16 +151,19 @@
                                 <button type="button" class="btn btn-danger btn-simple fix-broken-card">
                                     <i class="material-icons">build</i> Fix Header!
                                 </button>
-                                <button type="button" class="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
+                                <button type="button" class="btn btn-info btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Refresh">
                                     <i class="material-icons">refresh</i>
                                 </button>
-                                <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
+                                <button type="button" class="btn btn-default btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Change Date">
                                     <i class="material-icons">edit</i>
                                 </button>
                             </div>
                             <h4 class="card-title">Daily Sales</h4>
                             <p class="category">
-                                <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+                                <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in
+                                today sales.</p>
                         </div>
                         <div class="card-footer">
                             <div class="stats">
@@ -179,10 +182,12 @@
                                 <button type="button" class="btn btn-danger btn-simple fix-broken-card">
                                     <i class="material-icons">build</i> Fix Header!
                                 </button>
-                                <button type="button" class="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
+                                <button type="button" class="btn btn-info btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Refresh">
                                     <i class="material-icons">refresh</i>
                                 </button>
-                                <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
+                                <button type="button" class="btn btn-default btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Change Date">
                                     <i class="material-icons">edit</i>
                                 </button>
                             </div>
@@ -271,7 +276,7 @@
                     <div class="card card-product">
                         <div class="card-image" data-header-animation="true">
                             <a href="#pablo">
-                                <img class="img" src="/asset_dashboard/img/card-2.jpg">
+                                <img class="img" src="{{asset('asset_dashboard/img/card-2.jpg')}}">
                             </a>
                         </div>
                         <div class="card-content">
@@ -279,13 +284,16 @@
                                 <button type="button" class="btn btn-danger btn-simple fix-broken-card">
                                     <i class="material-icons">build</i> Fix Header!
                                 </button>
-                                <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
+                                <button type="button" class="btn btn-default btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="View">
                                     <i class="material-icons">art_track</i>
                                 </button>
-                                <button type="button" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
+                                <button type="button" class="btn btn-success btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Edit">
                                     <i class="material-icons">edit</i>
                                 </button>
-                                <button type="button" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
+                                <button type="button" class="btn btn-danger btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Remove">
                                     <i class="material-icons">close</i>
                                 </button>
                             </div>
@@ -293,7 +301,8 @@
                                 <a href="#pablo">Cozy 5 Stars Apartment</a>
                             </h4>
                             <div class="card-description">
-                                The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+                                The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to
+                                "Naviglio" where you can enjoy the main night life in Barcelona.
                             </div>
                         </div>
                         <div class="card-footer">
@@ -310,7 +319,7 @@
                     <div class="card card-product">
                         <div class="card-image" data-header-animation="true">
                             <a href="#pablo">
-                                <img class="img" src="/asset_dashboard/img/card-3.jpg">
+                                <img class="img" src="{{asset('asset_dashboard/img/card-3.jpg')}}">
                             </a>
                         </div>
                         <div class="card-content">
@@ -318,13 +327,16 @@
                                 <button type="button" class="btn btn-danger btn-simple fix-broken-card">
                                     <i class="material-icons">build</i> Fix Header!
                                 </button>
-                                <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
+                                <button type="button" class="btn btn-default btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="View">
                                     <i class="material-icons">art_track</i>
                                 </button>
-                                <button type="button" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
+                                <button type="button" class="btn btn-success btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Edit">
                                     <i class="material-icons">edit</i>
                                 </button>
-                                <button type="button" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
+                                <button type="button" class="btn btn-danger btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Remove">
                                     <i class="material-icons">close</i>
                                 </button>
                             </div>
@@ -332,7 +344,8 @@
                                 <a href="#pablo">Office Studio</a>
                             </h4>
                             <div class="card-description">
-                                The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the night life in London, UK.
+                                The place is close to Metro Station and bus stop just 2 min by walk and near to
+                                "Naviglio" where you can enjoy the night life in London, UK.
                             </div>
                         </div>
                         <div class="card-footer">
@@ -349,7 +362,7 @@
                     <div class="card card-product">
                         <div class="card-image" data-header-animation="true">
                             <a href="#pablo">
-                                <img class="img" src="/asset_dashboard/img/card-1.jpg">
+                                <img class="img" src="{{asset('asset_dashboard/img/card-1.jpg')}}">
                             </a>
                         </div>
                         <div class="card-content">
@@ -357,13 +370,16 @@
                                 <button type="button" class="btn btn-danger btn-simple fix-broken-card">
                                     <i class="material-icons">build</i> Fix Header!
                                 </button>
-                                <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
+                                <button type="button" class="btn btn-default btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="View">
                                     <i class="material-icons">art_track</i>
                                 </button>
-                                <button type="button" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
+                                <button type="button" class="btn btn-success btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Edit">
                                     <i class="material-icons">edit</i>
                                 </button>
-                                <button type="button" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
+                                <button type="button" class="btn btn-danger btn-simple" rel="tooltip"
+                                        data-placement="bottom" title="Remove">
                                     <i class="material-icons">close</i>
                                 </button>
                             </div>
@@ -371,7 +387,8 @@
                                 <a href="#pablo">Beautiful Castle</a>
                             </h4>
                             <div class="card-description">
-                                The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Milan.
+                                The place is close to Metro Station and bus stop just 2 min by walk and near to
+                                "Naviglio" where you can enjoy the main night life in Milan.
                             </div>
                         </div>
                         <div class="card-footer">
@@ -386,5 +403,4 @@
                 </div>
             </div>
         </div>
-    </div>
-    @endsection
+@endsection
