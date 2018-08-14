@@ -25,37 +25,34 @@
     @include('partials.slideshow')
 @endsection
 @section('content')
+    <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
     <section id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-uppercase section-heading">Pet House</h2>
-                    <h3 class="text-muted section-subheading">Welcome to the Pet House</h3>
+                    <h2 class="text-muted section-subheading">Welcome to the Pet House</h2  >
                 </div>
             </div><br><br>
             <div class="row text-center">
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i
                                 class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i></span>
                     <h4 class="section-heading">Order easily</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                        architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">When see the product, the customer could be cick given the output to the store and the order to take a quick way and convenient.</p>
                 </div>
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i
                                 class="fas fa-truck fa-stack-1x fa-inverse"></i></span>
                     <h4 class="section-heading">Delivery fast</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                        architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">After successful ordering, we will process and check orders. Staff will review orders, contact with customers and ship quickly.</p>
                 </div>
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i
                                 class="far fa-handshake fa-stack-1x fa-inverse"></i></span>
                     <h4 class="section-heading">Friendly employee</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                        architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Online consultants are very enthusiastic and detailed, in addition our stores have beautiful and friendly staff.</p>
                 </div>
             </div>
         </div>
     </section><br><br>
-    <center><h2>SALE PRODUCT</h2></center>
+    <center><h2 class="text-muted section-subheading">Discounted</h2  ></center>
     <hr>
 
     <div class="container text-xl-center">
@@ -63,7 +60,7 @@
             <div class="col-md-4">
                 <div class="card sale">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-17-1492164409898.jpg">
                     </a>
                     <div class="clearfix">
                         <h2>$21</h2>
@@ -76,7 +73,7 @@
             <div class="col-md-4">
                 <div class="card sale">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="https://baomoi-photo-1-td.zadn.vn/w700_r1/18/04/14/139/25661852/8_106289.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -91,7 +88,7 @@
             <div class="col-md-4">
                 <div class="card sale">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="https://kenh14cdn.com/2018/4/9/photo-1-15232339956202010719818.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -109,7 +106,7 @@
             <div class="col-md-4">
                 <div class="card sale">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="http://nanapet.com/upload/4-Herman-After-Square-5792a4493f0cf__700.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -124,7 +121,7 @@
             <div class="col-md-4">
                 <div class="card sale">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="https://kenh14cdn.com/2016/1-1462079008911.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -139,7 +136,7 @@
             <div class="col-md-4">
                 <div class="card sale">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="https://kenh14cdn.com/2016/dog14-1456186399564.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -154,14 +151,14 @@
         </div>
         <br><br>
     </div>
-    <center><h2>NEW PRODUCT</h2></center>
+    <center><h2 class="text-muted section-subheading">New Pets</h2  ></center>
     <hr>
     <div class="container text-xl-center">
         <div class="row">
             <div class="col-md-4">
                 <div class="card hot">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="https://kenh14cdn.com/2016/c1-1478170863250.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -176,7 +173,7 @@
             <div class="col-md-4">
                 <div class="card hot">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="https://baomoi-photo-1-td.zadn.vn/w700_r1/16/11/06/144/20761107/1_129770.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -191,7 +188,7 @@
             <div class="col-md-4">
                 <div class="card hot">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="http://img.lostbird.vn/2017/12/15/38099/14.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -209,7 +206,7 @@
             <div class="col-md-4">
                 <div class="card hot">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="http://nanapet.com/upload/HAIRY-before-and-after-transformations-of-dog-haircuts-5794202062053__700.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -224,7 +221,7 @@
             <div class="col-md-4">
                 <div class="card hot">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="http://mypetsvn.com/wp-content/uploads/2018/04/giadinhmoi1-4-1012.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -239,7 +236,7 @@
             <div class="col-md-4">
                 <div class="card hot">
                     <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://diendanlequydon.com/downloads/image_prv/29/28054.jpg">
+                        <img src="https://cdn.pose.com.vn/legacy/images/baiviet/201609/scrape_14734787708583_m10-1473395779257.jpg">
                     </a>
                     <div class="clearfix">
                         <div class="clearfix">
@@ -260,7 +257,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6 product_img">
-                            <img src="http://mypetsvn.com/wp-content/uploads/2018/04/giadinhmoi1-4-1012.jpg" class="img-fluid">
+                            <img src="https://cdn.pose.com.vn/legacy/images/baiviet/201609/scrape_14734787708583_m10-1473395779257.jpg" class="img-fluid">
                         </div>
                         <div class="col-md-6 product_content">
                             <h3>Name <span>Necklace with lead</span></h3><hr>
