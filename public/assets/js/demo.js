@@ -12,7 +12,7 @@ $().ready(function(){
 
     if( window_width > 767 && fixed_plugin_open == 'Dashboard' ){
         if($('.fixed-plugin .dropdown').hasClass('show-dropdown')){
-            $('.fixed-plugin .dropdown').addClass('open');
+            // $('.fixed-plugin .dropdown').addClass('open');
         }
 
     }
@@ -182,7 +182,7 @@ $().ready(function(){
         api.openPopup('twitter');
       },
       template: '<i class="fa fa-twitter"></i> &middot; 45',
-      url: '//demos.creative-tim.com/material-asset_dashboard-pro/examples/asset_dashboard.html'
+      url: '//demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html'
     });
 
     $('#facebook').sharrre({
@@ -196,7 +196,7 @@ $().ready(function(){
         api.openPopup('facebook');
       },
       template: '<i class="fa fa-facebook-square"></i> &middot; 50',
-      url: '//demos.creative-tim.com/material-asset_dashboard-pro/examples/asset_dashboard.html'
+      url: '//demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html'
     });
 
 
