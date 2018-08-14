@@ -1,12 +1,14 @@
 #contatti{
-    background-color: #64ccf1;
+    background-color: #ECEFF1;
     letter-spacing: 2px;
 }
 #contatti a{
-    color: #fff;
+    color: #3E2723;
     text-decoration: none;
 }
-
+.contatti h2{
+    color: #3E2723;
+}
 
 @media (max-width: 575.98px) {
 
@@ -49,7 +51,11 @@
 
 
 #author a{
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
 
+}
+#author{
+    background-color: #007bff;
+height: 100px;
 }
