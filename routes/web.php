@@ -63,6 +63,6 @@ Route::get('/cart',function (){
     return view('shop.cart');
 });
 
-Route::get('/dashboard',function (){
-    return view('dashboard.dashboard');
+Route::get('/dashboard ',function (){
+    return view('dashboard.index');
 });
