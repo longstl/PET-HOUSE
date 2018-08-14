@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-light" type="submit">Button</button>
+                                <button class="btn btn-light" type="submit">Send Mail</button>
                             </div>
                         </div>
                     </form>
