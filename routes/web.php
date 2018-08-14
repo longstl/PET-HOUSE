@@ -66,3 +66,6 @@ Route::get('/cart',function (){
 Route::get('/dashboard ',function (){
     return view('dashboard.index');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -74,3 +74,13 @@ figure.slider figure figcaption {
     font-size: 2rem;
     padding: .6rem;
 }
+.slider a{
+    font-size: 20px;
+    color: #007bff;
+    border: #007bff;
+    background: rgba(0, 0, 0, 0.4);
+}
+.slider a:hover{
+    background: #007bff;
+    color: #ffffff;
+}

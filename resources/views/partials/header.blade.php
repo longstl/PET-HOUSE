@@ -1,54 +1,54 @@
 <link rel="stylesheet" href="/css/header.css" type="text/css">
 <link rel="stylesheet" href="/css/cursor.css" type="text/css">
 <link rel="stylesheet" href="/css/login-register.css" type="text/css">
-<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark font-weight-bold" id="mainNav" style="height: 80px;">
+<nav class="navbar navbar-expand-lg fixed-top font-weight-bold" id="mainNav" style="height: 70px;">
     <div class="container"><a class="navbar-brand" href="#page-top"><a
                     class="nav-link text-uppercase pb_letter-spacing-2" href="/">
                 <img src="images/logo/logo.png"
                      alt="PET HOUSE Logo" class="light"
-                     style="width: 100px; height: 100px;">
+                     style="width: 85px; height: 85px;">
             </a></a>
         <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarResponsive"
                 type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="nav navbar-nav ml-auto text-uppercase">
-                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="/">HOME</a></li>
+                <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger" href="/">HOME</a></li>
                 <li class="nav-item dropdown text-uppercase pb_letter-spacing-2">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    <a style="color: black" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
                         Adopt a Pet
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="pethousedog">Dog</a></li>
-                        <li><a class="dropdown-item" href="pethousecat">Cat</a></li>
+                        <li><a style="color: black" class="dropdown-item" href="pethousedog">Dog</a></li>
+                        <li><a style="color: black" class="dropdown-item" href="pethousecat">Cat</a></li>
 
                     </ul>
                 </li>
                 <li class="nav-item dropdown text-uppercase pb_letter-spacing-2">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    <a style="color: black" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
                         Shop Accessories
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="accessoriesdog">Dog</a></li>
-                        <li><a class="dropdown-item" href="accessoriescat">Cat</a></li>
+                        <li><a style="color: black" class="dropdown-item" href="accessoriesdog">Dog</a></li>
+                        <li><a style="color: black" class="dropdown-item" href="accessoriescat">Cat</a></li>
 
                     </ul>
                 </li>
-                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="spa">PET SPA</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="contact">CONTACT</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="about">ABOUT</a></li>
+                <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger" href="spa">PET SPA</a></li>
+                <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger" href="contact">CONTACT</a></li>
+                <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger" href="about">ABOUT</a></li>
             </ul>
         </div>
     </div>
     <nav class="nav navbar-nav navbar-right navbar-expand-lg navbar-default navbar-fixed-top">
-        <button type="button" onclick="window.location.href='/cart'" class="btn btn-info bg-dark" id="cart" data-toggle="modal" data-target="#cart_Modal"
-                style="color: #CCCECF; border: none"><i
-                    class="fas fa-shopping-cart"></i>
+        <button type="button" onclick="window.location.href='/cart'" class="btn btn-info" id="cart" data-toggle="modal" data-target="#cart_Modal"
+                style="color: black; background: none; border: none"><i
+                    class="fas fa-cart-arrow-down"></i>
         </button>
-        <button type="button" onclick="showLogin()" class="btn btn-info bg-dark" data-toggle="modal" data-target="#user_Modal"
-                style="color: #CCCECF; border: none"><i
+        <button type="button" onclick="showLogin()" class="btn btn-info" data-toggle="modal" data-target="#user_Modal"
+                style="color: black; background: none; border: none;"><i
                     class="fas fa-users"></i>
         </button>
         <div id="login" class="modal" style="width: 100%;">

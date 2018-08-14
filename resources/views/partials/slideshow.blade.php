@@ -3,24 +3,24 @@
 <div id="captioned-gallery">
     <figure class="slider">
         <figure>
-            <img src="/images/slide_show/01.png" alt="">
-            <figcaption>PET HOUSE</figcaption>
+            <img src="/images/slide_show/01.png" alt="Pet House welcome you, click below to see pet.">
+            <figcaption><a href="#" class="btn btn-secondary">See Pet <i class="fas fa-hand-point-right"></i></a></figcaption>
         </figure>
         <figure>
-            <img src="/images/slide_show/02.png" alt>
-            <figcaption>PET HOUSE</figcaption>
+            <img src="/images/slide_show/02.png" alt="">
+            <figcaption><a href="#" class="btn btn-secondary">See Pet <i class="fas fa-hand-point-right"></i></a></figcaption>
         </figure>
         <figure>
             <img src="/images/slide_show/03.png" alt="">
-            <figcaption>PET HOUSE</figcaption>
+            <figcaption><a href="#" class="btn btn-secondary">See Pet <i class="fas fa-hand-point-right"></i></a></figcaption>
         </figure>
         <figure>
             <img src="/images/slide_show/04.png" alt="">
-            <figcaption>PET HOUSE</figcaption>
+            <figcaption><a href="#" class="btn btn-secondary">See Pet <i class="fas fa-hand-point-right"></i></a></figcaption>
         </figure>
         <figure>
             <img src="/images/slide_show/05.png" alt="">
-            <figcaption>PET HOUSE</figcaption>
+            <figcaption><a href="#" class="btn btn-secondary">See Pet <i class="fas fa-hand-point-right"></i></a></figcaption>
         </figure>
     </figure>
 </div>

@@ -17,3 +17,10 @@
     text-decoration: underline;
     transform: rotate(-90deg);
 }
+#mainNav{
+    background: #fff;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+#mainNav button:hover{
+    border: #dddddd;
+}
