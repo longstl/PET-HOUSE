@@ -20,7 +20,7 @@ class CreateArticlesTable extends Migration
             $table->string('title');
             $table->string('content');
             $table->string('images');
-            $table->integer('status');
+            $table->integer('status')->default(1); // 0: close - 1: new - 2: hot
             $table->timestamps();
         });
     }
