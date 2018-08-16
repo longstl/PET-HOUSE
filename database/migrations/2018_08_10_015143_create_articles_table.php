@@ -18,7 +18,7 @@ class CreateArticlesTable extends Migration
             $table->unsignedInteger('userId');
             $table->foreign('userId')->references('id')->on('users');
             $table->string('title');
-            $table->string('content');
+            $table->text('content');
             $table->string('images');
             $table->integer('status')->default(1); // 0: close - 1: new - 2: hot
             $table->timestamps();
