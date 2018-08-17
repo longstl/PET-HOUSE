@@ -84,10 +84,10 @@
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="pages/pricing.html">Add new Category</a>
+                                <a href="/dashboard/category/create">Add new Category</a>
                             </li>
                             <li>
-                                <a href="pages/timeline.html">List Category</a>
+                                <a href="/dashboard/category">List Category</a>
                             </li>
                         </ul>
                     </div>
