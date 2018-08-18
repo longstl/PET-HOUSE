@@ -65,11 +65,6 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $obj = Product::find($id);
-        if ($obj == null) {
-            return view('/404');
-        }
-        return view('dashboard.product.edit')->with('obj', $obj);
     }
 
     /**
