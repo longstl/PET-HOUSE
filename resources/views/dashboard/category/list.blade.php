@@ -10,7 +10,7 @@
                 <i class="material-icons">assignment</i>
             </div>
             <div class="card-content">
-                <h4 class="card-title">DANH SÁCH SẢN PHẨM</h4>
+                <h4 class="card-title">LIST CATEGORY</h4>
                 <div class="toolbar">
                     <!--        Here you can write extra buttons/actions for the toolbar              -->
                 </div>
@@ -31,19 +31,19 @@
                                             </th>
                                             <th class="sorting_asc" tabindex="0" aria-controls="datatables" rowspan="1"
                                                 colspan="1" style="width: 157px;" aria-sort="ascending"
-                                                aria-label="Name: activate to sort column descending">Tên
+                                                aria-label="Name: activate to sort column descending">Name
                                             </th>
                                             <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
                                                 colspan="1" style="width: 303px;"
-                                                aria-label="Image: activate to sort column ascending">Mô tả
+                                                aria-label="Image: activate to sort column ascending">Description
                                             </th>
                                             <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
                                                 colspan="1" style="width: 156px;"
-                                                aria-label="Price: activate to sort column ascending">Ảnh đại diện
+                                                aria-label="Price: activate to sort column ascending">Image
                                             </th>
                                             <th class="disabled-sorting text-right sorting" tabindex="0"
                                                 aria-controls="datatables" rowspan="1" colspan="1" style="width: 149px;"
-                                                aria-label="Actions: activate to sort column ascending">Thao tác
+                                                aria-label="Actions: activate to sort column ascending">Manipulation
                                             </th>
                                         </tr>
                                         </thead>
