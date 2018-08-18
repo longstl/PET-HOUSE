@@ -248,7 +248,7 @@ class ProductTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],[
-                'title' => 'Mad About Dog Fancy Collar',
+                'title' => 'Mad About Dog Fancy Collar 1',
                 'description' => 'Mad about dog presents pet collar charm. It is made from polyester material and is suitable for dog’s . It is pink in colour, has embellished design and has a rectangle shape.',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/01/81YcufC1jUL._SL1500_.jpg',
                 'categoryId' => '3',
@@ -256,7 +256,7 @@ class ProductTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],[
-                'title' => 'Mad About Dog Fancy Collar',
+                'title' => 'Mad About Dog Fancy Collar 2',
                 'description' => 'Mad about dog presents pet collar charm. It is made from stone material and is suitable for dog’s . It is transparent in colour, has embellished design and has a rectangle shape.',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/01/81qZaUg5jIL._SL1500_.jpg',
                 'categoryId' => '3',
@@ -264,7 +264,7 @@ class ProductTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],[
-                'title' => 'Mad About Dog Fancy Hats',
+                'title' => 'Mad About Dog Fancy Hats 1',
                 'description' => 'Mad about dog presents pet apparels and accessories. It is suitable for dog’s. It is made from velvet material and is red in colour. It has a plain. This item contains one piece hat',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/01/91ebS3m3dwL._SL1500_.jpg',
                 'categoryId' => '3',
@@ -272,7 +272,7 @@ class ProductTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],[
-                'title' => 'Mad About Dog Fancy Hats',
+                'title' => 'Mad About Dog Fancy Hats 2',
                 'description' => 'Mad about dog presents pet apparels and accessories. It is suitable for dog’s. It is made from net material and is navy blue in colour. It has a plain. This item contains one piece hat.',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/01/A13hrYeJanL._SL1500_.jpg',
                 'categoryId' => '3',
@@ -283,7 +283,7 @@ class ProductTableSeeder extends Seeder
 
             [
                 'title' => '',
-                'description' => 'Max Power cat food is the best brand',
+                'description' => 'Max Power cat food is the best brand 1',
                 'images' => 'https://www.petmart.vn/wp-content/uploads/2017/09/thuc-an-cho-meo-anf-skin-care-350x350.jpg',
                 'categoryId' => '3',
                 'price' => 12,
@@ -292,7 +292,7 @@ class ProductTableSeeder extends Seeder
             ],
             [
                 'title' => 'ANF SALMON & POTATO',
-                'description' => 'Max Power cat food is the best brand',
+                'description' => 'Max Power cat food is the best brand 2',
                 'images' => 'https://www.petmart.vn/wp-content/uploads/2017/09/thuc-an-cho-meo-vi-ca-hoi-khoai-tay-anf-salmon-potato-595x595.jpg',
                 'categoryId' => '3',
                 'price' => 13,
