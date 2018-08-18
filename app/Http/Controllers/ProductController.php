@@ -15,7 +15,7 @@ class ProductController extends Controller
     public function index()
     {
         $limit = 10;
-        $list_obj = Product::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
+        $list_obj = Product::paginate($limit);
         return view('dashboard.product.list')->with('list_obj', $list_obj);
     }
 
@@ -103,6 +103,12 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $obj = Product::find($id);
+        if ($obj == null) {
+            return response()->json(['message' => 'Category does not exist or has been deleted !'], 404);
+        }
+        $obj->status = 0;
+        $obj->save();
+        return response()->json(['message' => 'Deleted category information .'], 200);
     }
 }
