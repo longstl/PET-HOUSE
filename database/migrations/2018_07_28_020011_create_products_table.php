@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('title')->unique();
             $table->text('description');
             $table->integer('price');
+            $table->integer('discount')->nullable();
             $table->integer('categoryId')->unsigned();
             $table->foreign('categoryId')->references('id')->on('categories');
             $table->integer('status')->default(1); // 0: out of stock - 1: new - 2: discount - 3: hot
