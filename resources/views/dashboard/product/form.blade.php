@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Avatar</label>
+                                <label class="col-sm-2 label-on-left">Images</label>
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>

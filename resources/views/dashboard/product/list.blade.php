@@ -43,7 +43,7 @@
                                             </th>
                                             <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
                                                 colspan="1" style="width: 156px;"
-                                                aria-label="Price: activate to sort column ascending">Avatar
+                                                aria-label="Price: activate to sort column ascending">Images
                                             </th>
                                             <th class="disabled-sorting text-right sorting" tabindex="0"
                                                 aria-controls="datatables" rowspan="1" colspan="1" style="width: 149px;"
