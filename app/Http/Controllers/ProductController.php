@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -13,7 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $limit = 10;
+        $list_obj = Product::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
+        return view('dashboard.product.list')->with('list_obj', $list_obj);
     }
 
     /**
@@ -23,7 +26,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.product.form');
     }
 
     /**
@@ -34,7 +37,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $obj =new Product();
+        $obj->title = $request->get('title');
+        $obj->description = $request->get('description');
+        $obj->price = $request->get('price');
+        $obj->images = $request->get('images');
+        $obj->save();
+        return redirect('/dashboard/product');
     }
 
     /**
@@ -56,7 +65,11 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $obj = Product::find($id);
+        if ($obj == null) {
+            return view('/404');
+        }
+        return view('dashboard.product.edit')->with('obj', $obj);
     }
 
     /**
@@ -68,7 +81,16 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $obj = Product::find($id);
+        if ($obj == null) {
+            return view('404');
+        }
+        $obj->title = $request->get('title');
+        $obj->description = $request->get('description');
+        $obj->price = $request->get('price');
+        $obj->images = $request->get('images');
+        $obj->save();
+        return redirect('/dashboard/product');
     }
 
     /**
