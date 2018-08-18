@@ -102,10 +102,10 @@
                     <div class="collapse" id="componentsExamples">
                         <ul class="nav">
                             <li>
-                                <a href="components/buttons.html">Add new Product</a>
+                                <a href="/dashboard/product/create">Add new Product</a>
                             </li>
                             <li>
-                                <a href="components/grid.html">List Product</a>
+                                <a href="/dashboard/product">List Product</a>
                             </li>
                         </ul>
                     </div>

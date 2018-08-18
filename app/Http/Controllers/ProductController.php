@@ -38,6 +38,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $obj =new Product();
+        $obj->categoryId = $request->get('categoryId');
         $obj->title = $request->get('title');
         $obj->description = $request->get('description');
         $obj->price = $request->get('price');
@@ -85,6 +86,7 @@ class ProductController extends Controller
         if ($obj == null) {
             return view('404');
         }
+        $obj->categoryId = $request->get('categoryId');
         $obj->title = $request->get('title');
         $obj->description = $request->get('description');
         $obj->price = $request->get('price');

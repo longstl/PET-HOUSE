@@ -21,7 +21,16 @@
                                 <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="title" class="form-control">
+                                        <input type="text" name="title" class="form-control" value="{{$obj->title}}">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">CategoryId</label>
+                                <div class="col-sm-4">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" name="categoryId" class="form-control" value="{{$obj->categoryId}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
@@ -30,7 +39,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="description" class="form-control">
+                                        <input type="text" name="description" class="form-control" value="{{$obj->description}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
@@ -39,7 +48,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="images" class="form-control">
+                                        <input type="text" name="price" class="form-control" value="{{$obj->price}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
@@ -48,7 +57,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="images" class="form-control">
+                                        <input type="text" name="images" class="form-control" value="{{$obj->images}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
