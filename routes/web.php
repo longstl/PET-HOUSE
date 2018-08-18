@@ -68,3 +68,7 @@ Route::get('/dashboard ',function (){
 });
 
 Route::resource('dashboard/category', 'CategoryController');
+
+Route::resource('dashboard/article','ArticleController');
+
+Route::resource('dashboard/product', 'ProductController');
