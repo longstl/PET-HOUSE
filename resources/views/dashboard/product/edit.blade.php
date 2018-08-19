@@ -1,6 +1,6 @@
 @extends('dashboard.layout.masteradminlayout', [
-    'page_title' => 'Sửa thông tin danh mục sản phẩm | Seafashion dashboard Page',
-    'current_menu' => 'category_manager',
+    'page_title' => 'Sửa Thông Tin Sản Phẩm | Seafashion dashboard Page',
+    'current_menu' => 'product_manager',
     'current_sub_menu' => 'create_new',
 ])
 @section('content')
@@ -11,8 +11,8 @@
                     <i class="material-icons">edit</i>
                 </div>
                 <div class="card-content">
-                    <h4 class="card-title">CATEGORY EDIT</h4>
-                    <form method="post" action="/dashboard/category/{{$obj->id}}" class="form-horizontal">
+                    <h4 class="card-title">Product Edit</h4>
+                    <form method="post" action="/dashboard/product/{{$obj->id}}" class="form-horizontal">
                         @method('PUT')
                         {{csrf_field()}}
                         <div class="card-content">
@@ -35,7 +35,16 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Image</label>
+                                <label class="col-sm-2 label-on-left">Price</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" name="price" class="form-control" value="{{$obj->price}}">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Images</label>
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
@@ -44,12 +53,33 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Current Status</label>
-                                <div class="col-sm-2">
+                                <label class="col-sm-2 label-on-left">Current CategoryId</label>
+                                <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="status" class="form-control"
-                                               value="{{$obj->status?"Active":"Delete"}}" disabled>
+                                        <input type="text" name="categoryId" class="form-control" value="{{($obj->categoryId==1?"Dogs":($obj->categoryId==2?"Cats":"Accessories"))}}" disabled>
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">CategoryId</label>
+                                <div class="col-sm-1">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <select name="categoryId" class="form-control">
+                                            <option value="1">Dogs</option>
+                                            <option value="2">Cats</option>
+                                            <option value="3">Accessories</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Current Status</label>
+                                <div class="col-sm-4">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" name="status" class="form-control" value="{{$obj->status?"Active":"Delete"}}" disabled>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>

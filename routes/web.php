@@ -72,3 +72,5 @@ Route::resource('dashboard/category', 'CategoryController');
 Route::put('/dashboard/article/delete/','ArticleController@deleteById');
 
 Route::resource('dashboard/article','ArticleController');
+
+Route::resource('dashboard/product', 'ProductController');

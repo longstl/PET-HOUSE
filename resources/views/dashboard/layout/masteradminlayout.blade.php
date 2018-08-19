@@ -11,6 +11,7 @@
     <title>@yield('title')</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
     <!-- Bootstrap core CSS     -->
@@ -102,10 +103,10 @@
                     <div class="collapse" id="componentsExamples">
                         <ul class="nav">
                             <li>
-                                <a href="components/buttons.html">Add new Product</a>
+                                <a href="/dashboard/product/create">Add new Product</a>
                             </li>
                             <li>
-                                <a href="components/grid.html">List Product</a>
+                                <a href="/dashboard/product">List Product</a>
                             </li>
                         </ul>
                     </div>

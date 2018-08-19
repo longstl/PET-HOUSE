@@ -1,6 +1,6 @@
 @extends('dashboard.layout.masteradminlayout',[
     'page_title'=>'Danh sách danh mục sản phẩm | Seafashion dashboard Page',
-    'current_menu'=>'category_manager',
+    'current_menu'=>'product_manager',
     'current_sub_menu'=>'list_item'
 ])
 @section('content')
@@ -10,7 +10,7 @@
                 <i class="material-icons">assignment</i>
             </div>
             <div class="card-content">
-                <h4 class="card-title">LIST CATEGORY</h4>
+                <h4 class="card-title">List Product</h4>
                 <div class="toolbar">
                     <!--        Here you can write extra buttons/actions for the toolbar              -->
                 </div>
@@ -34,12 +34,16 @@
                                                 aria-label="Name: activate to sort column descending">Name
                                             </th>
                                             <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
-                                                colspan="1" style="width: 303px;"
+                                                colspan="1" style="width: 150px;"
                                                 aria-label="Image: activate to sort column ascending">Description
                                             </th>
                                             <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
+                                                colspan="1" style="width: 100px;"
+                                                aria-label="Price: activate to sort column ascending">Price
+                                            </th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
                                                 colspan="1" style="width: 156px;"
-                                                aria-label="Price: activate to sort column ascending">Image
+                                                aria-label="Price: activate to sort column ascending">Images
                                             </th>
                                             <th class="disabled-sorting text-right sorting" tabindex="0"
                                                 aria-controls="datatables" rowspan="1" colspan="1" style="width: 149px;"
@@ -53,13 +57,14 @@
                                                 <td>{{$item->id}}</td>
                                                 <td tabindex="0" class="sorting_1">{{$item->title}}</td>
                                                 <td>{{$item->description}}</td>
+                                                <td>{{$item->price}}</td>
                                                 <td>
                                                     <div class="card"
                                                          style="width: 100px;height: 80px;background-image: url('{{$item->images}}'); background-size: cover">
                                                     </div>
                                                 </td>
                                                 <td class="text-right">
-                                                    <a href="/dashboard/category/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
+                                                    <a href="/dashboard/product/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
                                                                 class="material-icons">edit</i></a>
                                                     <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i
                                                                 class="material-icons">close</i></a>
@@ -89,7 +94,7 @@
         $('.btn-delete').click(function () {
             var id = $(this).attr('href');
             $.ajax({
-                'url': '/dashboard/category/' + id,
+                'url': '/dashboard/product/' + id,
                 'method': 'DELETE',
                 'data':{
                     '_token':'{{csrf_token()}}'
