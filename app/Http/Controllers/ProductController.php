@@ -16,7 +16,7 @@ class ProductController extends Controller
     {
         $limit = 10;
         $list_obj = Product::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
-        return view('dashboard.category.list')->with('list_obj', $list_obj);
+        return view('dashboard.product.list')->with('list_obj', $list_obj);
     }
 
     /**
@@ -49,16 +49,16 @@ class ProductController extends Controller
             'title.min' => 'title too short, please enter at least 10 characters.',
             'title.max' => 'title too long, maximum 50 characters.',
             'title.unique' => 'title have been exist, try another name.',
-            'price.required' => 'Please enter title product.',
+            'price.required' => 'Please enter Price product.',
             'price.errorCharacter' => 'Please enter only numberic.',
             'description.required' => 'Please enter description product',
             'images.required' => 'Please enter image url',
         ]);
-        $obj->categoryId = $request->get('categoryId');
         $obj->title = $request->get('title');
         $obj->description = $request->get('description');
         $obj->price = $request->get('price');
         $obj->images = $request->get('images');
+        $obj->categoryId = $request->get('categoryId');
         $obj->save();
         return redirect('/dashboard/product');
     }
@@ -113,7 +113,7 @@ class ProductController extends Controller
             'title.min' => 'title too short, please enter at least 10 characters.',
             'title.max' => 'title too long, maximum 50 characters.',
             'title.unique' => 'title have been exist, try another name.',
-            'price.required' => 'Please enter title product.',
+            'price.required' => 'Please enter Price product.',
             'price.errorCharacter' => 'Please enter only numberic.',
             'description.required' => 'Please enter description product',
             'images.required' => 'Please enter image url',
