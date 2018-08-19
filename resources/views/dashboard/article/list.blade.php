@@ -90,7 +90,7 @@
             var answer = confirm('Are you sure you want to delete this?');
             if (answer) {
                 $.ajax({
-                    'url': '/dashboard/category/' + id,
+                    'url': '/dashboard/article/' + id,
                     'method': 'DELETE',
                     'data': {
                         '_token': '{{csrf_token()}}'
