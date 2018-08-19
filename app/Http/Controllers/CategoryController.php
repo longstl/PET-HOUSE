@@ -16,7 +16,7 @@ class CategoryController extends Controller
     {
         $limit = 10;
         $list_obj = Category::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
-        return view('dashboard.article.list')->with('list_obj', $list_obj);
+        return view('dashboard.category.list')->with('list_obj', $list_obj);
     }
 
     /**
