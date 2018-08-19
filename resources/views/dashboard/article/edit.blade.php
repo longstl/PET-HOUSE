@@ -29,7 +29,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="content" class="form-control" value="{{$obj->content}}">
+                                        <textarea type="text" name="content" class="form-control">{{$obj->content}}</textarea>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>

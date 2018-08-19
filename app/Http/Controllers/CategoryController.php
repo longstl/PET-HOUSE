@@ -15,8 +15,8 @@ class CategoryController extends Controller
     public function index()
     {
         $limit = 10;
-        $list_obj = Category::paginate($limit);
-        return view('dashboard.category.list')->with('list_obj', $list_obj);
+        $list_obj = Category::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
+        return view('dashboard.article.list')->with('list_obj', $list_obj);
     }
 
     /**
@@ -38,6 +38,18 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $obj = new Category();
+        $request->validate([
+            'title' => 'required|max:50|min:10',
+            'description' => 'required',
+            'images' => 'required'
+        ], [
+            'title.required' => 'Please enter title category.',
+            'title.min' => 'title too short, please enter at least 10 characters.',
+            'title.max' => 'title too long, maximum 50 characters.',
+            'title.unique' => 'title have been exist, try another name.',
+            'description.required' => 'Please enter description category',
+            'images.required' => 'Please enter image url',
+        ]);
         $obj->title = $request->get('title');
         $obj->description = $request->get('description');
         $obj->images = $request->get('images');
@@ -81,6 +93,22 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $obj = Category::find($id);
+        $validate_unique = '';
+        if($obj->title != $request->get('title')){
+            $validate_unique = '|unique:categories';
+        }
+        $request->validate([
+            'title' => 'required|max:50|min:10' . $validate_unique,
+            'description' => 'required',
+            'images' => 'required'
+        ], [
+            'title.required' => 'Please enter title category.',
+            'title.min' => 'title too short, please enter at least 10 characters.',
+            'title.max' => 'title too long, maximum 50 characters.',
+            'title.unique' => 'title have been exist, try another name.',
+            'description.required' => 'Please enter description category',
+            'images.required' => 'Please enter image url',
+        ]);
         if ($obj == null) {
             return view('404');
         }

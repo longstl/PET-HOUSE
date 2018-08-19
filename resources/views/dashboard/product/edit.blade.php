@@ -38,7 +38,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="price" class="form-control" value="{{$obj->price}}">
+                                        <input type="number" name="price" class="form-control" value="{{$obj->price}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>

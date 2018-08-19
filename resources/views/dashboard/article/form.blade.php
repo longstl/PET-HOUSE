@@ -10,7 +10,7 @@
                     <i class="material-icons">add</i>
                 </div>
                 <div class="card-content">
-                    <h4 class="card-title">TẠO MỚI DANH MỤC BÀI VIẾT</h4>
+                    <h4 class="card-title">ADD ARTICLE</h4>
                     <form method="post" action="/dashboard/article" class="form-horizontal">
                         {{csrf_field()}}
                         <div class="card-content">
@@ -28,7 +28,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="content" class="form-control">
+                                        <textarea type="text" name="content" class="form-control"></textarea>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
