@@ -121,10 +121,10 @@
                     <div class="collapse" id="formsExamples">
                         <ul class="nav">
                             <li>
-                                <a href="forms/regular.html">Add new Article</a>
+                                <a href="/dashboard/article/create">Add new Article</a>
                             </li>
                             <li>
-                                <a href="forms/extended.html">List Article</a>
+                                <a href="/dashboard/article">List Article</a>
                             </li>
                         </ul>
                     </div>

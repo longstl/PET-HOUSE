@@ -14,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $list_obj = Article::all();
+        $limit = 10;
+        $list_obj = Article::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
         return view('dashboard.article.list')->with('list_obj', $list_obj);
     }
 
@@ -38,7 +39,7 @@ class ArticleController extends Controller
     {
         $obj = new Article();
         $obj->title = $request->get('title');
-        $obj->description = $request->get('description');
+        $obj->content = $request->get('content');
         $obj->images = $request->get('images');
         $obj->save();
         return redirect('/dashboard/article');
@@ -83,9 +84,25 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Request $request, $id)
     {
         $obj = Article::find($id);
+        $validate_unique = '';
+        if($obj->name != $request->get('name')){
+            $validate_unique = '|unique:categories';
+        }
+        $request->validate([
+            'title' => 'required|max:50|min:10' . $validate_unique,
+            'content' => 'required',
+            'images' => 'required'
+        ], [
+            'title.required' => 'Please enter title article.',
+            'title.min' => 'title too short, please enter at least 10 characters.',
+            'title.max' => 'title too long, maximum 50 characters.',
+            'title.unique' => 'title have been exist, try another name.',
+            'content.required' => 'Please enter conent article',
+            'images.required' => 'Please enter image url',
+        ]);
         if ($obj == null) {
             return view('404');
         }
@@ -106,17 +123,10 @@ class ArticleController extends Controller
     {
         $obj = Article::find($id);
         if ($obj == null) {
-            return view('404');
+            return response()->json(['message' => 'Article does not exist or Deleted!'], 404);
         }
-        $obj->delete();
-        return redirect('/dashboard/article/list');
-    }
-
-    public function delete($id){
-        $obj = Article::find($id);
-        if ($obj == null) {
-            return view('404');
-        }
-        return view('dashboard.article.confirm_delete')->with('obj', $obj);
+        $obj->status = 0;
+        $obj->save();
+        return response()->json(['message' => 'Deleted'], 200);
     }
 }
