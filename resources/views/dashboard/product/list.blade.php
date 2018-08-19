@@ -100,11 +100,11 @@
                     '_token':'{{csrf_token()}}'
                 },
                 success: function (response) {
-                    alert('Delete Success !');
+                    alert('Delete Success!');
                     window.location.reload();
                 },
                 error: function () {
-                    alert('An error occurred, please try again later.');
+                    alert('Error, Please try again later.');
                 }
             });
             return false;
