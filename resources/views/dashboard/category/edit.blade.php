@@ -11,7 +11,7 @@
                     <i class="material-icons">edit</i>
                 </div>
                 <div class="card-content">
-                    <h4 class="card-title">SỬA DANH MỤC SẢN PHẨM</h4>
+                    <h4 class="card-title">CATEGORY EDIT</h4>
                     <form method="post" action="/dashboard/category/{{$obj->id}}" class="form-horizontal">
                         @method('PUT')
                         {{csrf_field()}}
@@ -30,7 +30,8 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="description" class="form-control" value="{{$obj->description}}">
+                                        <input type="text" name="description" class="form-control"
+                                               value="{{$obj->description}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
@@ -41,6 +42,28 @@
                                         <label class="control-label"></label>
                                         <input type="text" name="images" class="form-control" value="{{$obj->images}}">
                                         <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Current Status</label>
+                                <div class="col-sm-2">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" name="status" class="form-control"
+                                               value="{{$obj->status?"Active":"Delete"}}" disabled>
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Status</label>
+                                <div class="col-sm-1">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <select name="status" class="form-control">
+                                            <option value="0">Delete</option>
+                                            <option value="1">Active</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">

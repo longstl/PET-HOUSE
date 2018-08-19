@@ -87,6 +87,7 @@ class CategoryController extends Controller
         $obj->title = $request->get('title');
         $obj->description = $request->get('description');
         $obj->images = $request->get('images');
+        $obj->status = $request->get('status');
         $obj->save();
         return redirect('/dashboard/category');
     }
