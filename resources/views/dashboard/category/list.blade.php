@@ -1,8 +1,7 @@
-@extends('dashboard.layout.masteradminlayout',[
-    'page_title'=>'Danh sách danh mục sản phẩm | Seafashion dashboard Page',
-    'current_menu'=>'category_manager',
-    'current_sub_menu'=>'list_item'
-])
+@extends('dashboard.layout.masteradminlayout')
+@section('title')
+    Dashboard Admin Pet House | List Category
+@endsection
 @section('content')
     <div class="col-md-12">
         <div class="card">
@@ -59,9 +58,11 @@
                                                     </div>
                                                 </td>
                                                 <td class="text-right">
-                                                    <a href="/dashboard/category/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
+                                                    <a href="/dashboard/category/{{$item->id}}/edit"
+                                                       class="btn btn-simple btn-warning btn-icon edit"><i
                                                                 class="material-icons">edit</i></a>
-                                                    <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i
+                                                    <a href="{{$item->id}}"
+                                                       class="btn btn-simple btn-danger btn-icon remove btn-delete"><i
                                                                 class="material-icons">close</i></a>
                                                 </td>
                                             </tr>
@@ -91,8 +92,8 @@
             $.ajax({
                 'url': '/dashboard/category/' + id,
                 'method': 'DELETE',
-                'data':{
-                    '_token':'{{csrf_token()}}'
+                'data': {
+                    '_token': '{{csrf_token()}}'
                 },
                 success: function (response) {
                     alert('Delete Success!');

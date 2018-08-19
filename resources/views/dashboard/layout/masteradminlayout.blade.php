@@ -70,7 +70,7 @@
             </div>
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="/dashboard">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>

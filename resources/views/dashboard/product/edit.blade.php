@@ -1,8 +1,7 @@
-@extends('dashboard.layout.masteradminlayout', [
-    'page_title' => 'Sửa Thông Tin Sản Phẩm | Seafashion dashboard Page',
-    'current_menu' => 'product_manager',
-    'current_sub_menu' => 'create_new',
-])
+@extends('dashboard.layout.masteradminlayout')
+@section('title')
+    Dashboard Admin Pet House | Edit Product
+@endsection
 @section('content')
     <div class="row">
         <div class="col-md-12">
