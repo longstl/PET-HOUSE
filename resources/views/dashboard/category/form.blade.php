@@ -11,33 +11,42 @@
                 </div>
                 <div class="card-content">
                     <h4 class="card-title">ADD CATEGORY</h4>
+                    @if ($errors->any())
+                        <div class="alert alert-rose">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <form method="post" action="/dashboard/category" class="form-horizontal">
                         {{csrf_field()}}
                         <div class="card-content">
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Name</label>
+                                <label class="col-sm-2 label-on-left">Title</label>
                                 <div class="col-sm-4">
-                                    <div class="form-group label-floating is-empty">
+                                    <div class="form-group label-floating is-empty{{$errors->has('title')?' has-error':''}}">
                                         <label class="control-label"></label>
-                                        <input type="text" name="title" class="form-control">
+                                        <input type="text" name="title" class="form-control{{$errors->has('title')?' error':''}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
                                 <label class="col-sm-2 label-on-left">Description</label>
                                 <div class="col-sm-8">
-                                    <div class="form-group label-floating is-empty">
+                                    <div class="form-group label-floating is-empty{{$errors->has('description')?' has-error':''}}">
                                         <label class="control-label"></label>
-                                        <textarea type="text" name="description" class="form-control"></textarea>
+                                        <input type="text" name="description" class="form-control{{$errors->has('description')?' error':''}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Image</label>
+                                <label class="col-sm-2 label-on-left">Images</label>
                                 <div class="col-sm-8">
-                                    <div class="form-group label-floating is-empty">
+                                    <div class="form-group label-floating is-empty{{$errors->has('images')?' has-error':''}}">
                                         <label class="control-label"></label>
-                                        <input type="text" name="images" class="form-control">
+                                        <input type="text" name="images" class="form-control{{$errors->has('images')?' error':''}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
