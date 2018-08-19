@@ -95,11 +95,11 @@
                     '_token':'{{csrf_token()}}'
                 },
                 success: function (response) {
-                    alert('Xoá thành công!');
+                    alert('Delete Success!');
                     window.location.reload();
                 },
                 error: function () {
-                    alert('Có lỗi xảy ra, vui lòng thử lại sau.');
+                    alert('Error, Please try again later.');
                 }
             });
             return false;

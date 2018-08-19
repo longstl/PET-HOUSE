@@ -30,8 +30,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="description" class="form-control"
-                                               value="{{$obj->description}}">
+                                        <textarea type="text" name="description" class="form-control">{{$obj->description}}</textarea>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>

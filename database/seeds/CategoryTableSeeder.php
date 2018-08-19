@@ -37,13 +37,6 @@ class CategoryTableSeeder extends Seeder
                 'images' => 'https://ae01.alicdn.com/kf/HTB1AD2yIpXXXXcIXFXXq6xXFXXXa/223076411/HTB1AD2yIpXXXXcIXFXXq6xXFXXXa.jpg',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],
-            [
-                'title' => 'Spa',
-                'description' => 'pet spa',
-                'images' => 'https://cdn.images.express.co.uk/img/dynamic/130/590x/secondary/Dog-spa-590436.jpg',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
             ]
         ]);
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
