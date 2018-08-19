@@ -38,6 +38,18 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $obj = new Article();
+        $request->validate([
+            'title' => 'required|max:50|min:10',
+            'content' => 'required',
+            'images' => 'required'
+        ], [
+            'title.required' => 'Please enter title article.',
+            'title.min' => 'title too short, please enter at least 10 characters.',
+            'title.max' => 'title too long, maximum 50 characters.',
+            'title.unique' => 'title have been exist, try another name.',
+            'content.required' => 'Please enter content article',
+            'images.required' => 'Please enter image url',
+        ]);
         $obj->title = $request->get('title');
         $obj->content = $request->get('content');
         $obj->images = $request->get('images');
@@ -88,7 +100,7 @@ class ArticleController extends Controller
     {
         $obj = Article::find($id);
         $validate_unique = '';
-        if($obj->name != $request->get('name')){
+        if($obj->title != $request->get('title')){
             $validate_unique = '|unique:categories';
         }
         $request->validate([
@@ -100,7 +112,7 @@ class ArticleController extends Controller
             'title.min' => 'title too short, please enter at least 10 characters.',
             'title.max' => 'title too long, maximum 50 characters.',
             'title.unique' => 'title have been exist, try another name.',
-            'content.required' => 'Please enter conent article',
+            'content.required' => 'Please enter content article',
             'images.required' => 'Please enter image url',
         ]);
         if ($obj == null) {

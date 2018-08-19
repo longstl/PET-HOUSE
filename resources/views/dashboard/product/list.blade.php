@@ -46,7 +46,7 @@
                                             </th>
                                             <th class="disabled-sorting text-right sorting" tabindex="0"
                                                 aria-controls="datatables" rowspan="1" colspan="1" style="width: 149px;"
-                                                aria-label="Actions: activate to sort column ascending">Manipulation
+                                                aria-label="Actions: activate to sort column ascending">Action
                                             </th>
                                         </tr>
                                         </thead>
@@ -92,21 +92,28 @@
     <script>
         $('.btn-delete').click(function () {
             var id = $(this).attr('href');
-            $.ajax({
-                'url': '/dashboard/product/' + id,
-                'method': 'DELETE',
-                'data':{
-                    '_token':'{{csrf_token()}}'
-                },
-                success: function (response) {
-                    alert('Delete Success!');
-                    window.location.reload();
-                },
-                error: function () {
-                    alert('Error, Please try again later.');
-                }
-            });
-            return false;
+            var answer = confirm('Are you sure you want to delete this?');
+            if (answer) {
+                $.ajax({
+                    'url': '/dashboard/category/' + id,
+                    'method': 'DELETE',
+                    'data': {
+                        '_token': '{{csrf_token()}}'
+                    },
+                    success: function (response) {
+                        alert('Delete Success!');
+                        window.location.reload();
+                    },
+                    error: function () {
+                        alert('Error, Please try again later.');
+                    }
+                });
+                return false;
+            }
+            else {
+                e.preventDefault();
+                e.stopPropagation();
+            }
         })
     </script>
 @endsection
