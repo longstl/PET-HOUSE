@@ -1,8 +1,7 @@
-@extends('dashboard.layout.masteradminlayout',[
-    'page_title'=>'Danh sách danh mục bài viết | Seafashion dashboard Page',
-    'current_menu'=>'article_manager',
-    'current_sub_menu'=>'list_item'
-])
+@extends('dashboard.layout.masteradminlayout')
+@section('title')
+    Dashboard Admin Pet House | List article
+@endsection
 @section('content')
     <div class="col-md-12">
         <div class="card">
@@ -10,7 +9,7 @@
                 <i class="material-icons">assignment</i>
             </div>
             <div class="card-content">
-                <h4 class="card-title">DANH SÁCH BÀI VIẾT</h4>
+                <h4 class="card-title">LIST ARTICLE</h4>
                 <div class="toolbar">
                     <!--        Here you can write extra buttons/actions for the toolbar              -->
                 </div>
@@ -31,19 +30,19 @@
                                             </th>
                                             <th class="sorting_asc" tabindex="0" aria-controls="datatables" rowspan="1"
                                                 colspan="1" style="width: 157px;" aria-sort="ascending"
-                                                aria-label="Name: activate to sort column descending">Tên
+                                                aria-label="Name: activate to sort column descending">Title
                                             </th>
                                             <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
                                                 colspan="1" style="width: 303px;"
-                                                aria-label="Image: activate to sort column ascending">Mô tả
+                                                aria-label="Image: activate to sort column ascending">Content
                                             </th>
                                             <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
                                                 colspan="1" style="width: 156px;"
-                                                aria-label="Price: activate to sort column ascending">Ảnh đại diện
+                                                aria-label="Price: activate to sort column ascending">Image
                                             </th>
                                             <th class="disabled-sorting text-right sorting" tabindex="0"
                                                 aria-controls="datatables" rowspan="1" colspan="1" style="width: 149px;"
-                                                aria-label="Actions: activate to sort column ascending">Thao tác
+                                                aria-label="Actions: activate to sort column ascending">Action
                                             </th>
                                         </tr>
                                         </thead>
@@ -88,21 +87,28 @@
     <script>
         $('.btn-delete').click(function () {
             var id = $(this).attr('href');
-            $.ajax({
-                'url': '/dashboard/article/' + id,
-                'method': 'DELETE',
-                'data':{
-                    '_token':'{{csrf_token()}}'
-                },
-                success: function (response) {
-                    alert('Xoá thành công!');
-                    window.location.reload();
-                },
-                error: function () {
-                    alert('Có lỗi xảy ra, vui lòng thử lại sau.');
-                }
-            });
-            return false;
+            var answer = confirm('Are you sure you want to delete this?');
+            if (answer) {
+                $.ajax({
+                    'url': '/dashboard/category/' + id,
+                    'method': 'DELETE',
+                    'data': {
+                        '_token': '{{csrf_token()}}'
+                    },
+                    success: function (response) {
+                        alert('Delete Success!');
+                        window.location.reload();
+                    },
+                    error: function () {
+                        alert('Error, Please try again later.');
+                    }
+                });
+                return false;
+            }
+            else {
+                e.preventDefault();
+                e.stopPropagation();
+            }
         })
     </script>
 @endsection
