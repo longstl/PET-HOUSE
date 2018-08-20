@@ -65,7 +65,7 @@
                                                 <td class="text-right">
                                                     <a href="/dashboard/product/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
                                                                 class="material-icons">edit</i></a>
-                                                    <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i
+                                                    <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete-product"><i
                                                                 class="material-icons">close</i></a>
                                                 </td>
                                             </tr>
@@ -73,6 +73,10 @@
                                         </tbody>
                                     </table>
                             </div>
+                            @else
+                                <div class="alert alert-info">Hiện tại không có danh mục sản phẩm. Vui lòng click <a
+                                            href="/dashboard/product/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
+                                </div>
                             @endif
                         </div>
                         <div class="row">
@@ -89,31 +93,4 @@
         </div>
         <!--  end card  -->
     </div>
-    <script>
-        $('.btn-delete').click(function () {
-            var id = $(this).attr('href');
-            var answer = confirm('Are you sure you want to delete this?');
-            if (answer) {
-                $.ajax({
-                    'url': '/dashboard/product/' + id,
-                    'method': 'DELETE',
-                    'data': {
-                        '_token': '{{csrf_token()}}'
-                    },
-                    success: function (response) {
-                        alert('Delete Success!');
-                        window.location.reload();
-                    },
-                    error: function () {
-                        alert('Error, Please try again later.');
-                    }
-                });
-                return false;
-            }
-            else {
-                e.preventDefault();
-                e.stopPropagation();
-            }
-        })
-    </script>
 @endsection

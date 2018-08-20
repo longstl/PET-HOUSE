@@ -1,33 +1,33 @@
 <!doctype html>
 <html lang="en">
-
-
 <!-- Mirrored from demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2017 21:29:18 GMT -->
 <head>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/apple-icon.png')}}" />
-    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/apple-icon.png')}}"/>
+    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>@yield('title')</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
     <!-- Bootstrap core CSS     -->
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet"/>
     <!--  Material Dashboard CSS    -->
-    <link href="{{asset('assets/css/material-dashboard.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/material-dashboard.css')}}" rel="stylesheet"/>
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="{{asset('assets/css/demo.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/demo.css')}}" rel="stylesheet"/>
+    <meta name="_token" content="{{ csrf_token() }}">
     <!--     Fonts and icons     -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
 </head>
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="rose" data-background-color="black" data-image="{{asset('assets/img/sidebar-1.jpg')}}">
+    <div class="sidebar" data-active-color="rose" data-background-color="black"
+         data-image="{{asset('assets/img/sidebar-1.jpg')}}">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -46,7 +46,7 @@
         <div class="sidebar-wrapper">
             <div class="user">
                 <div class="photo">
-                    <img src="{{asset('assets/img/faces/avatar.jpg')}}" />
+                    <img src="{{asset('assets/img/faces/avatar.jpg')}}"/>
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
@@ -342,22 +342,22 @@
             <li class="header-title">Images</li>
             <li class="active">
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="{{asset('assets/img/sidebar-1.jpg')}}" alt="" />
+                    <img src="{{asset('assets/img/sidebar-1.jpg')}}" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="{{asset('assets/img/sidebar-2.jpg')}}" alt="" />
+                    <img src="{{asset('assets/img/sidebar-2.jpg')}}" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="{{asset('assets/img/sidebar-3.jpg')}}" alt="" />
+                    <img src="{{asset('assets/img/sidebar-3.jpg')}}" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="{{asset('assets/img/sidebar-4.jpg')}}" alt="" />
+                    <img src="{{asset('assets/img/sidebar-4.jpg')}}" alt=""/>
                 </a>
             </li>
         </ul>
@@ -405,17 +405,10 @@
 <!-- Material Dashboard javascript methods -->
 <script src="{{asset('assets/js/material-dashboard.js')}}"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
- <script src="/assets/js/demo.js"></script>
- <script type="text/javascript">
-    $(document).ready(function() {
 
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
-
-        demo.initVectorMap();
-    });
-</script>
-
+<script src="{{asset('js/quen.js')}}"></script>
+<script src="{{asset('js/product.js')}}"></script>
+<script src="{{asset('js/article.js')}}"></script>
 
 <!-- Mirrored from demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2017 21:32:16 GMT -->
 </html>
