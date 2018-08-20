@@ -475,6 +475,13 @@
 <!-- Material Dashboard javascript methods -->
 <script src="{{asset('assets/js/material-dashboard.js')}}"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<script src="{{asset('assets/js/demo.js')}}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+        demo.initVectorMap();
+    });</script>
 
 <script src="{{asset('js/quen.js')}}"></script>
 <script src="{{asset('js/product.js')}}"></script>
