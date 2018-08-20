@@ -1,4 +1,8 @@
-@extends('dashboard.layout.masteradminlayout')
+@extends('dashboard.layout.masteradminlayout', [
+    'page_title' => 'Tạo mới danh mục sản phẩm | Seafashion Admin Page',
+    'current_menu' => 'dashboard',
+    'current_sub_menu' => 'create_new',
+])
 @section('title')
     Dashboard
     @endsection

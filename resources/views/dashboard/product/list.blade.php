@@ -1,4 +1,8 @@
-@extends('dashboard.layout.masteradminlayout')
+@extends('dashboard.layout.masteradminlayout', [
+   'page_title'=>'Danh sách danh mục sản phẩm | Seafashion Admin Page',
+    'current_menu'=>'product_manager',
+    'current_sub_menu'=>'list_item'
+])
 @section('title')
     Dashboard Admin Pet House | List Product
 @endsection
