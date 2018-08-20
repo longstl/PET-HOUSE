@@ -15,8 +15,6 @@
             crossorigin="anonymous"></script>
 @endsection
 @section('styles')
-
-    <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">
     <link rel="stylesheet" href="/css/index.css" type="text/css">
     <link rel="stylesheet" href="/css/cursor.css" type="text/css">
     <link rel="stylesheet" href="/css/cart-sale.css" type="text/css">
@@ -52,204 +50,72 @@
             </div>
         </div>
     </section><br><br>
-    <center><h2 class="text-muted section-subheading">Discounted</h2  ></center>
+    <center><h1 class="text-muted section-subheading">New Product</h1  ></center>
     <hr>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="item-image-wrapper">
+                    <div class="single-items">
+                        <div class="iteminfo text-xs-center">
+                            <a data-toggle="modal" data-target="#product_view"><img
+                                        src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-17-1492164409898.jpg"
+                                        alt=""></a>
+                            <h2>$12</h2>
+                            <p>Is a dog</p>
+                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="item-image-wrapper">
+                    <div class="single-items">
+                        <div class="iteminfo text-xs-center">
+                            <a data-toggle="modal" data-target="#product_view"><img
+                                        src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-72-1492164409934.jpg"
+                                        alt=""></a>
+                            <h2>$20</h2>
+                            <p>Is a dog</p>
+                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="item-image-wrapper">
+                    <div class="single-items">
+                        <div class="iteminfo text-xs-center">
+                            <a data-toggle="modal" data-target="#product_view"><img
+                                        src="https://kenh14cdn.com/2018/4/9/photo-1-15232339956202010719818.jpg "
+                                        alt=""></a>
+                            <h2>$17</h2>
+                            <p>Is a dog</p>
+                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="item-image-wrapper">
+                    <div class="single-items">
+                        <div class="iteminfo text-xs-center">
+                            <a data-toggle="modal" data-target="#product_view"><img
+                                        src="http://nanapet.com/upload/4-Herman-After-Square-5792a4493f0cf__700.jpg"
+                                        alt=""></a>
+                            <h2>$9</h2>
+                            <p>Is a dog</p>
+                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="container text-xl-center">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card sale">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-17-1492164409898.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <h2>$21</h2>
-                        <p>Necklace with pendulum</p>
-                        <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                        class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card sale">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="https://baomoi-photo-1-td.zadn.vn/w700_r1/18/04/14/139/25661852/8_106289.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card sale">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="https://kenh14cdn.com/2018/4/9/photo-1-15232339956202010719818.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <br>
-        <div class="row ">
-            <div class="col-md-4">
-                <div class="card sale">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://nanapet.com/upload/4-Herman-After-Square-5792a4493f0cf__700.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card sale">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="https://kenh14cdn.com/2016/1-1462079008911.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card sale">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="https://kenh14cdn.com/2016/dog14-1456186399564.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br><br>
-    </div>
-    <center><h2 class="text-muted section-subheading">New Pets</h2  ></center>
-    <hr>
-    <div class="container text-xl-center">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card hot">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="https://kenh14cdn.com/2016/c1-1478170863250.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card hot">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="https://baomoi-photo-1-td.zadn.vn/w700_r1/16/11/06/144/20761107/1_129770.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card hot">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://img.lostbird.vn/2017/12/15/38099/14.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card hot">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://nanapet.com/upload/HAIRY-before-and-after-transformations-of-dog-haircuts-5794202062053__700.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card hot">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="http://mypetsvn.com/wp-content/uploads/2018/04/giadinhmoi1-4-1012.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card hot">
-                    <a data-toggle="modal" data-target="#product_view">
-                        <img src="https://cdn.pose.com.vn/legacy/images/baiviet/201609/scrape_14734787708583_m10-1473395779257.jpg">
-                    </a>
-                    <div class="clearfix">
-                        <div class="clearfix">
-                            <h2>$21</h2>
-                            <p>Necklace with pendulum</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br><br>
     </div>
     <div class="modal fade product_view" id="product_view">
         <div class="modal-dialog">
