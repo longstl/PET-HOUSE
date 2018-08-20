@@ -1,11 +1,8 @@
 @extends('dashboard.layout.masteradminlayout', [
-    'page_title' => 'Tạo mới danh mục sản phẩm | Seafashion Admin Page',
+    'page_title' => 'Create new article | PET HOUSE Admin Page',
     'current_menu' => 'article_manager',
     'current_sub_menu' => 'create_new',
 ])
-@section('title')
-    Dashboard Admin Pet House | Add article
-@endsection
 @section('content')
     <div class="row">
         <div class="col-md-12">

@@ -1,11 +1,8 @@
 @extends('dashboard.layout.masteradminlayout', [
-     'page_title' => 'Sửa thông tin danh mục sản phẩm | Seafashion Admin Page',
+     'page_title' => 'Edit Article | PET HOUSE Admin Page',
     'current_menu' => 'article_manager',
     'current_sub_menu' => 'edit',
 ])
-@section('title')
-    Dashboard Admin Pet House | Edit article
-@endsection
 @section('content')
     <div class="row">
         <div class="col-md-12">
