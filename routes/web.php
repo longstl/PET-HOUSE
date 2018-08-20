@@ -72,3 +72,20 @@ Route::resource('dashboard/category', 'CategoryController');
 Route::resource('dashboard/article','ArticleController');
 
 Route::resource('dashboard/product', 'ProductController');
+Auth::routes();
+
+Route::group(['milldeware' => ['web','auth']],function (){
+    Route::get('/',function (){
+        return view('welcome');
+    });
+
+    Route::get('/home',function (){
+        if (Auth::user()->admin == 0){
+            return view('home');
+        }else{
+            $users['users'] = \App\User::all();
+            return view('adminhome',$users);
+        }
+    });
+});
+
