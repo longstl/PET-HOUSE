@@ -215,7 +215,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 11,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'Mad About Dog Cotton Shoes ',
                 'description' => 'This shoes for dogs from the house of Mad About Dog is made of cotton material. It comes in pink color. This shoes gives utmost comfort for your pets and it can be hand washed',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/01/71T8TWLqjL._SL1500_.jpg',
@@ -223,7 +223,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 10,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'Mad About Dog Fancy Clip',
                 'description' => 'Mad about dog presents pet collar charm. It is made from net material and is suitable for dog’s . It is black in colour, has plain design and has a round shape.',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/02/913MOgI1hKL._SL1500_.jpg',
@@ -231,7 +231,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 18,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'Mad About Dog Fancy Butterfly Dress',
                 'description' => 'Mad about dog presents pet apparels and accessories. It is suitable for dog’s. It is made from chiffon material and is pink in colour. It has a plain. This item contains one dress.',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/01/A10C0UUc6VL._SL1500_.jpg',
@@ -239,7 +239,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 7,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'Mad About Dog Fancy Clip, 16 Cm X 16 Cm',
                 'description' => 'Mad about dog presents pet collar charm. It is made from net material and is suitable for dog’s . It is black in colour, has plain design and has a round shape.',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/02/91FsX47tZUL._SL1500_-1.jpg',
@@ -247,7 +247,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 10,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'Mad About Dog Fancy Collar 1',
                 'description' => 'Mad about dog presents pet collar charm. It is made from polyester material and is suitable for dog’s . It is pink in colour, has embellished design and has a rectangle shape.',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/01/81YcufC1jUL._SL1500_.jpg',
@@ -255,7 +255,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 10,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'Mad About Dog Fancy Collar 2',
                 'description' => 'Mad about dog presents pet collar charm. It is made from stone material and is suitable for dog’s . It is transparent in colour, has embellished design and has a rectangle shape.',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/01/81qZaUg5jIL._SL1500_.jpg',
@@ -263,7 +263,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 15,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'Mad About Dog Fancy Hats 1',
                 'description' => 'Mad about dog presents pet apparels and accessories. It is suitable for dog’s. It is made from velvet material and is red in colour. It has a plain. This item contains one piece hat',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/01/91ebS3m3dwL._SL1500_.jpg',
@@ -271,7 +271,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 14,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'Mad About Dog Fancy Hats 2',
                 'description' => 'Mad about dog presents pet apparels and accessories. It is suitable for dog’s. It is made from net material and is navy blue in colour. It has a plain. This item contains one piece hat.',
                 'images' => 'http://www.dogbazar.org/wp-content/uploads/2017/01/A13hrYeJanL._SL1500_.jpg',
@@ -281,24 +281,6 @@ class ProductTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
 
-            [
-                'title' => '',
-                'description' => 'Max Power cat food is the best brand 1',
-                'images' => 'https://www.petmart.vn/wp-content/uploads/2017/09/thuc-an-cho-meo-anf-skin-care-350x350.jpg',
-                'categoryId' => '3',
-                'price' => 12,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [
-                'title' => 'ANF SALMON & POTATO',
-                'description' => 'Max Power cat food is the best brand 2',
-                'images' => 'https://www.petmart.vn/wp-content/uploads/2017/09/thuc-an-cho-meo-vi-ca-hoi-khoai-tay-anf-salmon-potato-595x595.jpg',
-                'categoryId' => '3',
-                'price' => 13,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
 
             [
                 'title' => 'Cat for cat TT',
@@ -362,7 +344,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 8,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'CAT CAT FISH CAT',
                 'description' => 'Mouse-shaped toys made of multicolored fabric, used as toys for cats',
                 'images' => 'http://petstore.com.vn/215-356-large/can-cau-meo-fat-cat-tt.jpg',
@@ -370,7 +352,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 13,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'Cat scratches',
                 'description' => 'Cats\' nail grippers - using natural jute material that surrounds the wood, are essential to avoid scratching the inside of your home such as couches, car seats, etc.',
                 'images' => 'http://petstore.com.vn/212-408-large/ban-meo-cao.jpg',
@@ -378,7 +360,7 @@ class ProductTableSeeder extends Seeder
                 'price' => 14,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
+            ], [
                 'title' => 'Spring-loaded felt felt',
                 'description' => 'A cat-and-mouse toy with a dummy mouse is attached to the sole by a hard rubber spring that covers the outside of the environment, swings back and forth repeatedly to attract attention and stimulate the mat. the power of cats.',
                 'images' => 'http://petstore.com.vn/211-407-large/chuot-lo-xo-bc-ni.jpg',
@@ -386,24 +368,92 @@ class ProductTableSeeder extends Seeder
                 'price' => 18,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
+            ],[
+                'title' => 'Weruva Classics Mideast Feast with Grilled Tilapia in Gravy Wet Cat Food',
+                'description' => 'Weruva Classics natural cat food, made with the highest quality cuts of meat or lean fish loins provide high protein and low fat recipes. All meat is hand flaked right off the bone and hand packed for optimal quality.',
+                'images' => 'https://petco.scene7.com/is/image/PETCO/2892436-center-1?$PLP-category$',
+                'categoryId' => '4',
+                'price' => 8,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],[
+                'title' => 'Weruva Classics Paw Lickin\' Chicken Chicken Recipe in Gravy Wet Cat Food',
+                'description' => 'Weruva Classics natural cat food, made with the highest quality cuts of meat or lean fish loins provide high protein and low fat recipes. All meat is hand flaked right off the bone and hand packed for optimal quality.',
+                'images' => 'https://petco.scene7.com/is/image/PETCO/2892532-center-1?$ProductDetail-large$',
+                'categoryId' => '4',
+                'price' => 19,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
-
             [
-                'title' => 'Foods',
-                'description' => 'WholeHearted Grain Free Chicken Formula Dry Cat Food, 12 lbs.',
-                'images' => 'https://petco.scene7.com/is/image/PETCO/2668821-center-1?$ProductDetail-large$',
-                'categoryId' => '3',
+                'title' => 'Soulistic Aqua Grill Tilapia & Tuna Dinner Adult Canned Cat Food in Gravy',
+                'description' => 'Your cat will love the wholesome, tasty meats and juices in Soulistic Adult Canned Cat Food in Gravy, available exclusively from Petco.',
+                'images' => 'https://s7d1.scene7.com/is/image/PETCO/1229117-center-1?$ProductDetail-large$',
+                'categoryId' => '4',
+                'price' => 8,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'title' => 'Fancy Feast Seafood Gourmet Cat Food Variety Pack',
+                'description' => 'Fancy Feast Gourmet Cat Food Variety Pack',
+                'images' => 'https://petco.scene7.com/is/image/PETCO/840505-center-1?$ProductDetail-large$',
+                'categoryId' => '4',
+                'price' => 23,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'title' => 'Fancy Feast Broths Creamy Collection Cat Food Complement, Case of 12, 1.4 oz.',
+                'description' => 'Fancy Feast Broths Creamy Collection Cat Food Complement, Case of 12, 1.4 oz.',
+                'images' => 'https://s7d1.scene7.com/is/image/PETCO/2411882-center-1?$ProductDetail-large$',
+                'categoryId' => '4',
+                'price' => 14,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'title' => 'Fancy Feast Purely Skipjack Tuna Adult Cat Food Trays, 2 oz., Case of 10',
+                'description' => 'Fancy Feast Purely Adult Cat Food Trays are real, natural seafood, poultry or beef plus vitamins & minerals, in a delicate broth crafted without by-products or fillers. A fresh taste your cat truly desires.',
+                'images' => 'https://petco.scene7.com/is/image/PETCO/2464554-center-1?$ProductDetail-large$',
+                'categoryId' => '4',
+                'price' => 22,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'title' => 'Fancy Feast Broths Creamy Tuna, Chicken & Whitefish Cat Food Complement',
+                'description' => 'Feed your feline family member Fancy Feast Broths Classic Cat Food Complements. These gourmet broths feature real meat in a decadent, silky broth. Choose from delectable flavors including tuna, salmon, mackerel and more. The savory, delicate broth is filled with tender morsels of real meat that your cat is sure to love. No by-products or fillers are included. Each wet cat food pouch is easy to open and provides a tasty way to add texture to your cat s daily meals. Serve these Fancy Feast cat food complements in addition to your cat s regular food.',
+                'images' => 'https://s7d1.scene7.com/is/image/PETCO/2411874-center-1?$ProductDetail-large$',
+                'categoryId' => '4',
+                'price' => 15,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'title' => 'Fancy Feast Broths Classic Collection Cat Food Complement',
+                'description' => 'Fancy Feast Broths Classic Collection Cat Food Complement, Case of 12, 1.4 oz.Savory wet cat food recipes featuring flavorful broth',
+                'images' => 'https://s7d1.scene7.com/is/image/PETCO/2411891-center-1?$ProductDetail-large$  ',
+                'categoryId' => '4',
+                'price' => 13,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'title' => 'Fancy Feast Broths Classic Tuna, Shrimp & Whitefish Cat Food ',
+                'description' => 'Fancy Feast Broths Classic Tuna, Shrimp & Whitefish Cat Food Complement, 1.4 oz.',
+                'images' => 'https://s7d1.scene7.com/is/image/PETCO/2278815-center-1?$ProductDetail-large$',
+                'categoryId' => '4',
                 'price' => 10,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
-
             [
-                'title' => 'Grain-Free Natural Nutrition',
-                'description' => 'Max Power cat food is the best brand',
-                'images' => 'https://www.petmart.vn/wp-content/uploads/2018/05/thuc-an-cho-meo-grain-free-natural-nutrition-595x595.jpg',
-                'categoryId' => '3',
-                'price' => 11,
+                'title' => 'Royal Canin Feline Health Nutrition Kitten Instinctive Thin Slices In Gravy Wet Cat Food',
+                'description' => 'Feline Health Nutrition wet canned formulas are designed around a cat\'s nutritional needs and instinctive preferences. Our formulas were created with the optimal balance between proteins,',
+                'images' => 'https://petco.scene7.com/is/image/PETCO/2416878-left-1?$ProductDetail-large$',
+                'categoryId' => '4',
+                'price' => 8,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
