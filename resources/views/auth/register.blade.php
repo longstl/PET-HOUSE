@@ -1,11 +1,13 @@
-@extends('layouts.app')
-
+@extends('layouts.master')
+@section('slide-show')
+    @include('partials.slideshow')
+    @endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('REGISTER') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
@@ -66,6 +68,15 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                Already have an account?
+                                <a class="btn btn-link" href="/login">
+                                    {{ __('Sign in here! ') }}
+                                </a>
                             </div>
                         </div>
                     </form>

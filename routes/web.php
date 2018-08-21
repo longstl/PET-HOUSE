@@ -76,16 +76,20 @@ Auth::routes();
 
 Route::group(['milldeware' => ['web','auth']],function (){
     Route::get('/',function (){
-        return view('welcome');
+        return view('shop.index');
     });
 
     Route::get('/home',function (){
+        return view('home');
+    });
+
+    Route::get('/admin',function (){
         if (Auth::user()->admin == 0){
             return view('home');
         }else{
             $users['users'] = \App\User::all();
-            return view('adminhome',$users);
+            return view('dashboard.index',$users);
         }
-    });
+    })->name('admin');
 });
 

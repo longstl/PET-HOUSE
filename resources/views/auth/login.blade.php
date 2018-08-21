@@ -1,11 +1,13 @@
-@extends('layouts.app')
-
+@extends('layouts.master')
+@section('slide-show')
+    @include('partials.slideshow')
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">{{ __('LOGIN') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
@@ -59,6 +61,14 @@
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
+                                </a>
+                            </div>
+                        </div><br>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                Don't have an account?
+                                <a class="btn btn-link" href="/register">
+                                     {{ __('Sign up here! ') }}
                                 </a>
                             </div>
                         </div>
