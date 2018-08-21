@@ -25,17 +25,8 @@
 
                     </ul>
                 </li>
-                <li class="nav-item dropdown text-uppercase pb_letter-spacing-2">
-                    <a style="color: black" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        Shop Accessories
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a style="color: black" class="dropdown-item" href="accessoriesdog">Dog</a></li>
-                        <li><a style="color: black" class="dropdown-item" href="accessoriescat">Cat</a></li>
-
-                    </ul>
-                </li>
+                <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger" href="/accessories">SHOP ACCESSORIES</a></li>
+                <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger" href="/foodpet">FOOD FOR PET</a></li>
                 <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger" href="spa">PET SPA</a></li>
                 <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger" href="contact">CONTACT</a></li>
                 <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger" href="about">ABOUT</a></li>

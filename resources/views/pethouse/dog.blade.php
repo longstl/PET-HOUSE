@@ -22,7 +22,7 @@
     <br>
     <form class="woocommerce-ordering" method="get">
         <select name="orderby" class="orderby">
-            <option value="menu_order" selected="selected">Cat</option>
+            <option value="menu_order" selected="selected">Dog</option>
             <option value="popularity">Sort by popularity</option>
             <option value="rating">Sort by average rating</option>
             <option value="date">Sort by newness</option>
@@ -37,8 +37,8 @@
                 <div class="col-12">
                     <ol class="breadcrumb">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html">Dog Accessories</a></li>
-                        <li class="active">Chó Béc Dê</li>
+                        <li><a href="index.html">Adopt A Pet / Dog</a></li>
+                        <li class="active">Dog</li>
                     </ol>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-4">
@@ -47,204 +47,29 @@
         </div>
     </div>
     <br>
-    <header class="woocommerce-products-header">
-        <h1 class="woocommerce-products-header__title page-title">Shop Accessories</h1>
-
-    </header>
+    <div class="nm-divider separator_align_center">
+        <h1 class="nm-divider-title medium">Accessories</h1>
+        <br>
+        <div class="nm-divider-line" style></div>
+    </div>
     <br>
     <div class="container text-center">
         <div class="row">
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-17-1492164409898.jpg"
-                                        alt=""></a>
-                            <h2>$12</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
+            @foreach($product as $key => $exp)
+                <div class="col-sm-3">
+                    <div class="item-image-wrapper">
+                        <div class="single-items">
+                            <div class="iteminfo text-xs-center">
+                                <a data-toggle="modal" data-target="#product_view"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <h2>${{$exp->price}}</h2>
+                                <p style="height: 50px;">{{$exp->title}}</p>
+                                <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                                class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-72-1492164409934.jpg"
-                                        alt=""></a>
-                            <h2>$20</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://kenh14cdn.com/2018/4/9/photo-1-15232339956202010719818.jpg "
-                                        alt=""></a>
-                            <h2>$17</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="http://nanapet.com/upload/4-Herman-After-Square-5792a4493f0cf__700.jpg"
-                                        alt=""></a>
-                            <h2>$9</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://kenh14cdn.com/2016/dog14-1456186399564.jpg" alt=""></a>
-                            <h2>$21</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://baomoi-photo-1-td.zadn.vn/w700_r1/16/11/06/144/20761107/1_129770.jpg"
-                                        alt=""></a>
-                            <h2>$7</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="http://nanapet.com/upload/HAIRY-before-and-after-transformations-of-dog-haircuts-5794202062053__700.jpg"
-                                        alt=""></a>
-                            <h2>$22</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="http://static2.yan.vn/YanNews/2167221/201804/nhung-hinh-anh-cho-thay-husky-la-giong-cho-ngo-ngan-so-mot-221cf383.jpg"
-                                        alt=""></a>
-                            <h2>$10</h2>
-                            <p>Is a dog</p>
-                            <center><a href="" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add
-                                    to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://kenh14cdn.com/2016/c1-1470817918028.jpg" alt=""></a>
-                            <h2>$21</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="http://nanapet.com/upload/5-Raider_After-Square-5792a3d1f0e81__700.jpg"
-                                        alt=""></a>
-                            <h2>$7</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://cdn.pose.com.vn/legacy/images/baiviet/201607/scrape_14679018215976_s4-1467787655531.jpg"
-                                        alt=""></a>
-                            <h2>$22</h2>
-                            <p>Is dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvKTU0yxe8QHzGQIrxRc7AbEJNF20-8X5GpalsaJkEp_tEBrrnyQ"
-                                        alt=""></a>
-                            <h2>$10</h2>
-                            <p>Dog</p>
-                            <center><a href="" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add
-                                    to cart</a></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <div class="modal fade product_view" id="product_view">

@@ -8,7 +8,7 @@
     position: relative;
     z-index: 100;
     display: inline-block;
-    font-size: 22px;
+    font-size: 32px;
     line-height: 1.6;
     padding-right: 14px;
     background: #fff;
@@ -18,7 +18,7 @@ element.style {
 }
 
 .woocommerce-ordering {
-
+    margin-top: 7px;
     padding-top: 4px;
     float: right;
 }
@@ -30,6 +30,7 @@ element.style {
 
 .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering {
     float: right;
+
 }
 
 .bg-grey {
@@ -41,7 +42,7 @@ element.style {
     margin: 0;
     font-weight: 300;
     padding-left: 0;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 .breadcrumb a {

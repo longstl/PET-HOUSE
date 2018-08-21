@@ -26,22 +26,21 @@ Route::get('/spa',function () {
 Route::get('/accessories',function (){
     return view('access.accessori');
 });
-Route::get('/accessoriesdog',function (){
-    return view('access.shopaccessories.accessoriesdog');
-});
+
 Route::get('/accessoriescat',function (){
     return view('access.shopaccessories.accessoriescat');
 });
 Route::get('/petspa',function (){
     return view('petspa.spa');
 });
-Route::get('/pethousedog',function (){
-    return view('pethouse.dog');
-});
 
-Route::get('/pethousecat',function (){
-    return view('pethouse.cat');
-});
+Route::get('/pethousedog','ProductsallController@getListDog');
+
+Route::get('/pethousecat','ProductsallController@getListCat');
+
+Route::get('/accessories','ProductsallController@getListAccessoriDog');
+
+Route::get('/foodpet','ProductsallController@getListFoodDog');
 
 Route::get('/404',function (){
     return view('error.404');

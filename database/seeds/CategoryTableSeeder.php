@@ -37,7 +37,14 @@ class CategoryTableSeeder extends Seeder
                 'images' => 'https://ae01.alicdn.com/kf/HTB1AD2yIpXXXXcIXFXXq6xXFXXXa/223076411/HTB1AD2yIpXXXXcIXFXXq6xXFXXXa.jpg',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ]
+            ],
+            [
+                'title' => 'Foodpet',
+                'description' => 'Food pet',
+                'images' => 'https://www.petmart.vn/wp-content/uploads/2017/09/thuc-an-cho-meo-vi-ca-hoi-khoai-tay-anf-salmon-potato-595x595.jpg',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
         ]);
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }

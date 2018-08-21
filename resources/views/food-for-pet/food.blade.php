@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">    <br>
     <form class="woocommerce-ordering" method="get">
         <select name="orderby" class="orderby">
-            <option value="menu_order" selected="selected">Necklace</option>
+            <option value="menu_order" selected="selected">food</option>
             <option value="popularity">Sort by popularity</option>
             <option value="rating">Sort by average rating</option>
             <option value="date">Sort by newness</option>
@@ -39,8 +39,8 @@
                 <div class="col-12">
                     <ol class="breadcrumb">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html">Accessories</a></li>
-                        <li class="active">Necklace</li>
+                        <li><a href="index.html">Food For Pet</a></li>
+                        <li class="active">food</li>
                     </ol>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-4">
@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="nm-divider separator_align_center">
-        <h1 class="nm-divider-title medium">Accessories</h1>
+        <h1 class="nm-divider-title medium">Food for pet</h1>
         <br>
         <div class="nm-divider-line" style></div>
     </div>
@@ -64,7 +64,7 @@
                             <div class="iteminfo text-xs-center">
                                 <a data-toggle="modal" data-target="#product_view"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
                                 <h2>${{$exp->price}}</h2>
-                                <p style="height: 50px;">{{$exp->title}}</p>
+                                <p style="height: 70px;">{{$exp->title}}</p>
                                 <center><a href="#" class="btn btn-secondary add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a></center>
                             </div>
@@ -112,17 +112,17 @@
             </div>
         </div>
     </div>
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-            </li>
-        </ul>
-    </nav>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
 @endsection

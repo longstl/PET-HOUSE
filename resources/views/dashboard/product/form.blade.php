@@ -69,6 +69,7 @@
                                             <option value="1">Dogs</option>
                                             <option value="2">Cats</option>
                                             <option value="3">Accessories</option>
+                                            <option value="4">Food for pet</option>
                                         </select>
                                     </div>
                                 </div>
