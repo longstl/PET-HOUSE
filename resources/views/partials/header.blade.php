@@ -61,6 +61,7 @@
             </li>
         </ul>
     </div>
+    <nav>
     <div class="collapse navbar-collapse" >
         <ul class="nav navbar-nav ml-auto text-uppercase">
             <li class="nav-item" role="presentation">
@@ -86,6 +87,7 @@
             </li>
         </ul>
     </div>
+    </nav>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             @if(Auth::check())
