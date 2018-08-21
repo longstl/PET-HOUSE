@@ -50,3 +50,9 @@ $(document).ready(function(){
         $(".remove").click();
     });
 });
+function generateModal(image, price, title, description ) {
+    document.getElementById("modalImg").src = image;
+    document.getElementById("modalTitle").innerHTML = title;
+    document.getElementById("modalDescription").innerHTML = description;
+    document.getElementById("modalPrice").innerText = '$'+price;
+}

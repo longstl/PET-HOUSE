@@ -62,7 +62,7 @@
                     <div class="item-image-wrapper">
                         <div class="single-items">
                             <div class="iteminfo text-xs-center">
-                                <a data-toggle="modal" data-target="#product_view"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <a data-toggle="modal" data-target="#product_view" onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
                                 <h2>${{$exp->price}}</h2>
                                 <p style="height: 70px;">{{$exp->title}}</p>
                                 <center><a href="#" class="btn btn-secondary add-to-cart"><i
@@ -80,16 +80,15 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6 product_img">
-                            <img src="https://media2.vatgia.vn/pictures/fullsize/2016/07/15/htciw1468569739.png"
+                            <img id="modalImg" src="https://media2.vatgia.vn/pictures/fullsize/2016/07/15/htciw1468569739.png"
                                  class="img-fluid">
                         </div>
                         <div class="col-md-6 product_content">
-                            <h3>Name <span>Necklace with lead</span></h3>
+                            <h3><span id="modalTitle"></span></h3>
                             <hr>
-                            <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p id="modalDescription"></p>
                             <center>
-                                <h3 class="cost"><span class="glyphicon glyphicon-usd"></span> $10
+                                <h3 class="cost" id="modalPrice"><span class="glyphicon glyphicon-usd"></span> $10
                                     <small class="pre-cost"></small>
                                 </h3>
                             </center>
@@ -117,4 +116,5 @@
         <div class="links" style="margin-left: 470px">
             {{$product->links()}}</div>
     </div>
+
 @endsection
