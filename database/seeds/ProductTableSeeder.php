@@ -109,7 +109,7 @@ class ProductTableSeeder extends Seeder
             ],
             [
                 'title' => 'Missy',
-                'description' => 'Why hello there!My name is Missy,Everyone always says how pretty I am, but I\'m smart too! I\'m playful, cheeky, and I even know how to play fetch - what more could you want?!After a good long walk and play in the garden I love nothing more than curling up somewhere warm and cosy.I have my paws crossed to hear from you, Missy xx',
+                'description' => 'Why hello there!My name is Missy,Everyone always says how pretty I am, but Im smart too! Im playful, cheeky, and I even know how to play fetch - what more could you want?!After a good long walk and play in the garden I love nothing more than curling up somewhere warm and cosy.I have my paws crossed to hear from you, Missy xx',
                 'images' => 'https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/185134/462301.jpg?itok=CPdLD-Wc',
                 'categoryId' => '1',
                 'price' => 300,
@@ -167,7 +167,7 @@ class ProductTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ], [
                 'title' => 'NooNoo',
-                'description' => 'I came to the Blue Cross as a stray where I have been given a warm place to stay and food to eat. But apparently life gets even better than this, so I\'ve been told.I\'m a lovely older girl with a lot of love to give, I\'m not typical of my breed and love to have a fuss and be friends with everyone.',
+                'description' => 'I came to the Blue Cross as a stray where I have been given a warm place to stay and food to eat. But apparently life gets even better than this, so Ive been told.Im a lovely older girl with a lot of love to give, Im not typical of my breed and love to have a fuss and be friends with everyone.',
                 'images' => 'https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/1105808/461958.jpg?itok=c4tGCBea',
                 'categoryId' => '1',
                 'price' => 317,
@@ -271,8 +271,7 @@ class ProductTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'title' => 'A gorgeous blue cream
-',
+                'title' => 'A gorgeous blue cream',
                 'description' => 'molly is looking for her forever home...she is 11wks.. comes vet ck,wormed1st shot papers $500 Blue cream & white dilute tortoiseshell persian.',
                 'images' => 'https://kenh14cdn.com/2017/taken-byhana-kitty-13-png-700-1491293405359.jpg',
                 'categoryId' => '2',
@@ -316,8 +315,8 @@ class ProductTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],[
-                'title' => ' Lola',
-                'description' => 'I\'m a beautiful tortie girl with a winning personality. I just love people and am so affectionate with everyone I meet. I\'m currently spending time at a foster carer\'s who has given me a glowing report; I really am a good girl!I like to play at times and will come and sit in your lap for attention. If you\'d like to know a bit more about me or find out if we\'d be a suitable match- fill out a homefinder today!',
+                'title' => 'Lola',
+                'description' => 'Im a beautiful tortie girl with a winning personality. I just love people and am so affectionate with everyone I meet. Im currently spending time at a foster carers who has given me a glowing report; I really am a good girl!I like to play at times and will come and sit in your lap for attention. If youd like to know a bit more about me or find out if wed be a suitable match- fill out a homefinder today!',
                 'images' => 'https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/411340.jpg?itok=btqDszMt',
                 'categoryId' => '2',
                 'price' => 153,
@@ -325,7 +324,7 @@ class ProductTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],[
                 'title' => 'Beatrix',
-                'description' => 'I was found along with my two siblings in a wall cavity covered in dust with no mum. The team here have been hand rearing me but now I am old enough to start looking for my new home. I am very playful energetic and love falling asleep in strange positions. I can be a little enthusiastic at times during play as haven\'t had a mum how to teach me. Because of this I could live with children pending a meet but will need to be older children.',
+                'description' => 'I was found along with my two siblings in a wall cavity covered in dust with no mum. The team here have been hand rearing me but now I am old enough to start looking for my new home. I am very playful energetic and love falling asleep in strange positions. I can be a little enthusiastic at times during play as haven had a mum how to teach me. Because of this I could live with children pending a meet but will need to be older children.',
                 'images' => 'https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/462429.jpg?itok=bVBzti9H',
                 'categoryId' => '2',
                 'price' => 133,
@@ -341,7 +340,7 @@ class ProductTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],[
                 'title' => 'Winnie',
-                'description' => 'Harry and Winnie are sensitive souls and are looking for a quieter home, with people who are happy to give them time and space to settle in.One they are comfortable, they\'re both super sweet and no trouble at all.Harry and Winnie can live with older children. They\'ve never lived with dogs, but we\'d be happy to discuss with anyone who has dogs to see if they\'d be a right match!',
+                'description' => 'Harry and Winnie are sensitive souls and are looking for a quieter home, with people who are happy to give them time and space to settle in.One they are comfortable, theyre both super sweet and no trouble at all.Harry and Winnie can live with older children. Theyve never lived with dogs, but wed be happy to discuss with anyone who has dogs to see if theyd be a right match!',
                 'images' => 'https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/446648.jpg?itok=FG1b7h_b',
                 'categoryId' => '2',
                 'price' => 145,
@@ -349,7 +348,7 @@ class ProductTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],[
                 'title' => 'Libby',
-                'description' => 'I\'ve been here at the cattery in Grimsby for over 40 days now, during this time I have not one person interested in me. I just don\'t understand I hear the staff saying that I\'m every so pretty I know I\'m friendly.My previous owner loved me very much but unfortunately she had to move and the landlord wasn\'t to happy with me staying.',
+                'description' => 'I have been here at the cattery in Grimsby for over 40 days now, during this time I have not one person interested in me. I just dont understand I hear the staff saying that Im every so pretty I know Im friendly.My previous owner loved me very much but unfortunately she had to move and the landlord wasnt to happy with me staying.',
                 'images' => 'https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/2105072/461646.jpg?itok=Z5jGQUqs',
                 'categoryId' => '2',
                 'price' => 188,
@@ -357,7 +356,7 @@ class ProductTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],[
                 'title' => 'Buffy',
-                'description' => 'I’m gentle and sweet when I know you, and do like a little fuss and occasionally a nice warm lap to perch on. I’m quite happy pottering about the home and garden doing my own thing if you’re busy though! As long as there’s plenty of sun to bask in, and comfy spots to snooze the day away, I think I’ll be very content indeed!',
+                'description' => 'Im gentle and sweet when I know you, and do like a little fuss and occasionally a nice warm lap to perch on. Im quite happy pottering about the home and garden doing my own thing if youre busy though! As long as there’s plenty of sun to bask in, and comfy spots to snooze the day away, I think Ill be very content indeed!',
                 'images' => 'https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/2103474/451218.jpg?itok=VjnrbOqH',
                 'categoryId' => '2',
                 'price' => 113,
@@ -365,7 +364,7 @@ class ProductTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],[
                 'title' => 'Mr Tom',
-                'description' => 'I am a confident chap who loves to be the centre of attention. I like strokes and really enjoy a good brush. I\'m playful as well. I\'m the whole package, to be honest!I have been told once I am settled in my new home I can start to go outside which I am very excited about! I wouldn\'t mind if you are out at work during the day as long as I have access to the outdoors so I can come and go when I want.',
+                'description' => 'I am a confident chap who loves to be the centre of attention. I like strokes and really enjoy a good brush. Im playful as well. Im the whole package, to be honest!I have been told once I am settled in my new home I can start to go outside which I am very excited about! I wouldnt mind if you are out at work during the day as long as I have access to the outdoors so I can come and go when I want.',
                 'images' => 'https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/465804.jpg?itok=M3JkNk_3',
                 'categoryId' => '2',
                 'price' => 188,
@@ -389,7 +388,7 @@ class ProductTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],[
                 'title' => 'Leila',
-                'description' => 'I enjoy snoozing and will sometimes seek a cuddle and fuss from you on your lap but I do enjoy finding somewhere cosy to snuggle up in and have some alone time. I\'d really love some toys in my new home as well as I find these really exciting and enjoy play with my current family on a daily basis. I love the outdoors, I often supplement my diet with the odd snack!',
+                'description' => 'I enjoy snoozing and will sometimes seek a cuddle and fuss from you on your lap but I do enjoy finding somewhere cosy to snuggle up in and have some alone time. Id really love some toys in my new home as well as I find these really exciting and enjoy play with my current family on a daily basis. I love the outdoors, I often supplement my diet with the odd snack!',
                 'images' => 'https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/2104954/449403.jpg?itok=2xtHE9f4',
                 'categoryId' => '2',
                 'price' => 146,
@@ -658,7 +657,7 @@ class ProductTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
-                'title' => 'Weruva Classics Paw Lickin\' Chicken Chicken Recipe in Gravy Wet Cat Food',
+                'title' => 'Weruva Classics Paw Lickin Chicken Chicken Recipe in Gravy Wet Cat Food',
                 'description' => 'Weruva Classics natural cat food, made with the highest quality cuts of meat or lean fish loins provide high protein and low fat recipes. All meat is hand flaked right off the bone and hand packed for optimal quality.',
                 'images' => 'https://petco.scene7.com/is/image/PETCO/2892532-center-1?$ProductDetail-large$',
                 'categoryId' => '4',
