@@ -30,7 +30,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <textarea type="text" name="description" class="form-control">{{$obj->description}}</textarea>
+                                        <textarea type="text" name="description" class="form-control" id="product-edit-ckeditor">{{$obj->description}}</textarea>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
@@ -112,4 +112,8 @@
             </div>
         </div>
     </div>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'product-edit-ckeditor' );
+    </script>
 @endsection

@@ -94,7 +94,7 @@
                             <ul class="nav">
                                 @if($current_menu == 'category_manager' && $current_sub_menu == 'edit')
                                     <li class="active">
-                                        <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                        <a href="{{ url()->current() }}">Edit Category</a>
                                     </li>
                                 @endif
                                 <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
@@ -110,7 +110,7 @@
                             <ul class="nav">
                                 @if($current_menu == 'category_manager' && $current_sub_menu == 'edit')
                                     <li class="active">
-                                        <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                        <a href="{{ url()->current() }}">Edit Category</a>
                                     </li>
                                 @endif
                                 <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
@@ -135,7 +135,7 @@
                             <ul class="nav">
                                 @if($current_menu == 'product_manager' && $current_sub_menu == 'edit')
                                     <li class="active">
-                                        <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                        <a href="{{ url()->current() }}">Edit Category</a>
                                     </li>
                                 @endif
                                 <li class="{{ ($current_menu == 'product_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
@@ -151,7 +151,7 @@
                             <ul class="nav">
                                 @if($current_menu == 'product_manager' && $current_sub_menu == 'edit')
                                     <li class="active">
-                                        <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                        <a href="{{ url()->current() }}">Edit Category</a>
                                     </li>
                                 @endif
                                 <li class="{{ ($current_menu == 'product_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
@@ -176,7 +176,7 @@
                             <ul class="nav">
                                 @if($current_menu == 'article_manager' && $current_sub_menu == 'edit')
                                     <li class="active">
-                                        <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                        <a href="{{ url()->current() }}">Edit Category</a>
                                     </li>
                                 @endif
                                 <li class="{{ ($current_menu == 'article_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
@@ -192,7 +192,7 @@
                             <ul class="nav">
                                 @if($current_menu == 'article_manager' && $current_sub_menu == 'edit')
                                     <li class="active">
-                                        <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                        <a href="{{ url()->current() }}">Edit Category</a>
                                     </li>
                                 @endif
                                 <li class="{{ ($current_menu == 'article_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">

@@ -38,7 +38,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty{{$errors->has('description')?' has-error':''}}">
                                         <label class="control-label"></label>
-                                        <input type="text" name="description" class="form-control{{$errors->has('description')?' error':''}}">
+                                        <textarea type="text" name="description" class="form-control{{$errors->has('description')?' error':''}}" id="product-form-ckeditor"></textarea>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
@@ -91,4 +91,8 @@
             </div>
         </div>
     </div>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'product-form-ckeditor' );
+    </script>
 @endsection
