@@ -141,4 +141,10 @@ class ArticleController extends Controller
         $obj->save();
         return response()->json(['message' => 'Deleted'], 200);
     }
+
+    public function getListBreed()
+    {
+        $article = Article::where('userId', 1)->where('status',1)->get();
+        return view('breedEncyClopedia.article')->with('article', $article);
+    }
 }

@@ -101,16 +101,14 @@ class ArticleTableSeeder extends Seeder
             [
                 'title' => 'American Curl',
                 'content' => 'The American Curl cat is small, graceful and lean with extraordinary curled ears and an exceptional, affectionate and people-loving personality.',
-                'images' => 'https://www.cat-breeds-encyclopedia.com/images/American-curl-cat.jpg-',
+                'images' => 'https://www.cat-breeds-encyclopedia.com/images/American-curl-cat.jpg',
                 'userId' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'title' => 'American Shorthair',
-                'content' => '
-Portrait of an American Shorthair Cat
-The American Shorthair cat is a robust, classically built cat with a beautiful, expressive face, full cheeks, broad ears, a muscular body and full, round paws. ',
+                'content' => 'Portrait of an American Shorthair Cat The American Shorthair cat is a robust, classically built cat with a beautiful, expressive face, full cheeks, broad ears, a muscular body and full, round paws. ',
                 'images' => 'https://www.cat-breeds-encyclopedia.com/images/American-shorthair-cat1.jpg',
                 'userId' => '1',
                 'created_at' => Carbon::now(),
@@ -143,7 +141,7 @@ The American Shorthair cat is a robust, classically built cat with a beautiful, 
             [
                 'title' => 'Tiger Cat',
                 'content' => 'Tiger cats come in two main styles, either a brown or beige body color, with black or brown stripes, or a red or orange body color with stripes that are a darker shade of red or orange.',
-                'images' => 'https://yandex.com/collections/card/5a7385132a6f93c49a454426/',
+                'images' => 'http://www.dogbazar.org/wp-content/themes/twentytwelve/images/breed-encyclopedia/c/chihuahuaSmoothThumb.jpg',
                 'userId' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -151,7 +149,7 @@ The American Shorthair cat is a robust, classically built cat with a beautiful, 
             [
                 'title' => 'Turkish Angora',
                 'content' => 'The Turkish Angora cat is an ancient, naturally occurring breed, originally from the Angora or Ankara region of Turkey. They are classic, elegant and wonderful companions.',
-                'images' => 'https://www.pinterest.ca/pin/321303754637930694/',
+                'images' => 'http://www.dogbazar.org/wp-content/themes/twentytwelve/images/breed-encyclopedia/c/chineseCrestedThumb.jpg',
                 'userId' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -159,7 +157,7 @@ The American Shorthair cat is a robust, classically built cat with a beautiful, 
             [
                 'title' => 'Snowshoe',
                 'content' => 'Portrait of a Snowshoe Cat The Snowshoe cat is a large, sturdy cat with stunning coloring and a stellar personality. This is an excellent family pet that is exceptionally loving.',
-                'images' => 'https://pt.depositphotos.com/119725150/stock-photo-snowshoe-cat-a-new-breed.html',
+                'images' => 'http://www.dogbazar.org/wp-content/themes/twentytwelve/images/breed-encyclopedia/c/chowChowThumb.jpg',
                 'userId' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -168,14 +166,6 @@ The American Shorthair cat is a robust, classically built cat with a beautiful, 
                 'title' => 'Somali',
                 'content' => 'The Somali cat is an elegant, striking and slightly wild-looking cat with a full, beautiful coat and tail.  ',
                 'images' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmm8R7XuySNud69w3Bn0SU6LzKlTONyOPxqT_sRlVk6hQdq3TZ',
-                'userId' => '1',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'title' => 'Ragdoll',
-                'content' => 'The Ragdoll cat is easily one of the largest domestic cat breeds, and although size is what they are best known for they have a whole lot more to offer.',
-                'images' => 'https://besthqwallpapers.com/Uploads/4-12-2017/31942/thumb2-4k-ragdoll-cat-pets-blue-eyes-cute-animals.jpg',
                 'userId' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()

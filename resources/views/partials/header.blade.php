@@ -36,9 +36,11 @@
                 <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger"
                                                             href="spa">PET SPA</a></li>
                 <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger"
-                                                            href="contact">CONTACT</a></li>
+                                                            href="/breed">BREED ENCYCLOPDIA</a></li>
                 <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger"
-                                                            href="about">ABOUT</a></li>
+                                                            href="/contact">CONTACT</a></li>
+                <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger"
+                                                            href="/about">ABOUT</a></li>
             </ul>
         </div>
     </div>
