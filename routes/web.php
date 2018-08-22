@@ -31,6 +31,7 @@ Route::get('/pethousecat','ProductsallController@getListCat');
 Route::get('/accessories','ProductsallController@getListAccessoriDog');
 
 Route::get('/foodpet','ProductsallController@getListFoodDog');
+Route::get('/breed','ArticleController@getListBreed');
 
 Route::get('/','ProductsallController@getListHome');
 

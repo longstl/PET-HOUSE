@@ -24,3 +24,6 @@
 #mainNav button:hover{
     border: #dddddd;
 }
+.nav-item{
+    font-size: 16px;
+}
