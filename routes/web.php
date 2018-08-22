@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('shop.index');
-});
 /* shop dog*/
 
 Route::get('/spa',function () {
@@ -34,6 +31,8 @@ Route::get('/pethousecat','ProductsallController@getListCat');
 Route::get('/accessories','ProductsallController@getListAccessoriDog');
 
 Route::get('/foodpet','ProductsallController@getListFoodDog');
+
+Route::get('/','ProductsallController@getListHome');
 
 
 Route::get('/404',function (){
@@ -68,9 +67,6 @@ Route::resource('dashboard/product', 'ProductController');
 Auth::routes();
 
 Route::group(['milldeware' => ['web','auth']],function (){
-    Route::get('/',function (){
-        return view('shop.index');
-    });
 
     Route::get('/home',function (){
         return view('home');

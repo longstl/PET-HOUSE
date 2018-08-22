@@ -80,8 +80,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6 product_img">
-                            <img id="modalImg" src="https://media2.vatgia.vn/pictures/fullsize/2016/07/15/htciw1468569739.png"
-                                 class="img-fluid">
+                            <img id="modalImg" class="img-fluid">
                         </div>
                         <div class="col-md-6 product_content">
                             <h3><span id="modalTitle"></span></h3>

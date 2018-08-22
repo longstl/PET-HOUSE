@@ -50,71 +50,83 @@
             </div>
         </div>
     </section><br><br>
-    <center><h1 class="text-muted section-subheading">New Product</h1  ></center>
-    <hr>
     <div class="container text-center">
+        <center><h2 class="text-muted section-subheading">New Dog</h2  ></center>
+        <hr>
         <div class="row">
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-17-1492164409898.jpg"
-                                        alt=""></a>
-                            <h2>$12</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
+            @foreach($product as $key => $exp)
+                <div class="col-sm-3">
+                    <div class="item-image-wrapper">
+                        <div class="single-items">
+                            <div class="iteminfo text-xs-center">
+                                <a data-toggle="modal" data-target="#product_view" onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <h2>${{$exp->price}}</h2>
+                                <p style="height: 70px;">{{$exp->title}}</p>
+                                <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                                class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://kenh14cdn.com/2017/cute-dog-shiba-inu-ryuji-japan-72-1492164409934.jpg"
-                                        alt=""></a>
-                            <h2>$20</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
+            @endforeach
+        </div>
+        <center><h2 class="text-muted section-subheading">New kitten</h2  ></center>
+        <hr>
+        <div class="row">
+            @foreach($product2 as $key => $exp)
+                <div class="col-sm-3">
+                    <div class="item-image-wrapper">
+                        <div class="single-items">
+                            <div class="iteminfo text-xs-center">
+                                <a data-toggle="modal" data-target="#product_view" onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <h2>${{$exp->price}}</h2>
+                                <p style="height: 70px;">{{$exp->title}}</p>
+                                <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                                class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="https://kenh14cdn.com/2018/4/9/photo-1-15232339956202010719818.jpg "
-                                        alt=""></a>
-                            <h2>$17</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
+            @endforeach
+        </div>
+        <center><h2 class="text-muted section-subheading">New Accessories</h2  ></center>
+        <hr>
+        <div class="row">
+            @foreach($product3 as $key => $exp)
+                <div class="col-sm-3">
+                    <div class="item-image-wrapper">
+                        <div class="single-items">
+                            <div class="iteminfo text-xs-center">
+                                <a data-toggle="modal" data-target="#product_view" onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <h2>${{$exp->price}}</h2>
+                                <p style="height: 70px;">{{$exp->title}}</p>
+                                <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                                class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="item-image-wrapper">
-                    <div class="single-items">
-                        <div class="iteminfo text-xs-center">
-                            <a data-toggle="modal" data-target="#product_view"><img
-                                        src="http://nanapet.com/upload/4-Herman-After-Square-5792a4493f0cf__700.jpg"
-                                        alt=""></a>
-                            <h2>$9</h2>
-                            <p>Is a dog</p>
-                            <center><a href="#" class="btn btn-secondary add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a></center>
+            @endforeach
+        </div>
+        <center><h2 class="text-muted section-subheading">New Food</h2  ></center>
+        <hr>
+        <div class="row">
+            <h3></h3>
+            @foreach($product4 as $key => $exp)
+                <div class="col-sm-3">
+                    <div class="item-image-wrapper">
+                        <div class="single-items">
+                            <div class="iteminfo text-xs-center">
+                                <a data-toggle="modal" data-target="#product_view" onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <h2>${{$exp->price}}</h2>
+                                <p style="height: 70px;">{{$exp->title}}</p>
+                                <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                                class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
     <div class="modal fade product_view" id="product_view">
@@ -123,12 +135,12 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6 product_img">
-                            <img src="https://cdn.pose.com.vn/legacy/images/baiviet/201609/scrape_14734787708583_m10-1473395779257.jpg" class="img-fluid">
+                            <img id="modalImg" class="img-fluid">
                         </div>
                         <div class="col-md-6 product_content">
-                            <h3>Name <span>Necklace with lead</span></h3><hr>
-                            <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <center><h3 class="cost"><span class="glyphicon glyphicon-usd"></span> $10 <small class="pre-cost"></small></h3></center>
+                            <h3 id="modalTitle"> <span></span></h3><hr>
+                            <p id="modalDescription"></p>
+                            <center><h3 id="modalPrice" class="cost"><span class="glyphicon glyphicon-usd"></span> <small class="pre-cost"></small></h3></center>
                             <div class="row">
                                 <p class="pp">Quantity : </p>
                                 <footer class="content">
