@@ -52,7 +52,7 @@
     </section><br><br>
     <div class="container text-center">
         <center><h2 class="text-muted section-subheading">New Dog</h2  ></center>
-        <hr>
+        <br>
         <div class="row">
             @foreach($product as $key => $exp)
                 <div class="col-sm-3">
@@ -69,9 +69,11 @@
                     </div>
                 </div>
             @endforeach
+                <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">Are You Interested In Dogs? Take a look at our store:</p><a href="/pethousedog" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a>
         </div>
-        <center><h2 class="text-muted section-subheading">New kitten</h2  ></center>
         <hr>
+        <center><h2 class="text-muted section-subheading">New kitten</h2  ></center>
+        <br>
         <div class="row">
             @foreach($product2 as $key => $exp)
                 <div class="col-sm-3">
@@ -88,9 +90,10 @@
                     </div>
                 </div>
             @endforeach
+                <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">Are You Interested In kitten? Take a look at our store:</p><figcaption><a href="/pethousecat" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a></figcaption>
         </div>
-        <center><h2 class="text-muted section-subheading">New Accessories</h2  ></center>
         <hr>
+        <center><h2 class="text-muted section-subheading">New Accessories</h2  ></center><br>
         <div class="row">
             @foreach($product3 as $key => $exp)
                 <div class="col-sm-3">
@@ -107,9 +110,12 @@
                     </div>
                 </div>
             @endforeach
+                <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">Do you want to shop for your pet? Take a look at our store:</p><figcaption><a href="/accessories" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a></figcaption>
         </div>
-        <center><h2 class="text-muted section-subheading">New Food</h2  ></center>
         <hr>
+
+        <center><h2 class="text-muted section-subheading">New Food</h2  ></center>
+        <br>
         <div class="row">
             <h3></h3>
             @foreach($product4 as $key => $exp)
@@ -127,6 +133,8 @@
                     </div>
                 </div>
             @endforeach
+            <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">You want to purchase the food for the beast,take a look at our store:</p><figcaption><a href="/foodpet" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a></figcaption>
+
         </div>
     </div>
     <div class="modal fade product_view" id="product_view">
