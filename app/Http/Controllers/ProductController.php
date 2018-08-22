@@ -42,7 +42,7 @@ class ProductController extends Controller
             'categoryId'=> 'required',
             'title' => 'required|max:50|min:10',
             'description' => 'required',
-            'price' => 'required|numeric',
+            'price' => 'required|numeric|min:0',
             'images' => 'required'
         ], [
             'title.required' => 'Please enter title product.',
@@ -106,7 +106,7 @@ class ProductController extends Controller
         $request->validate([
             'title' => 'required|max:50|min:10' . $validate_unique,
             'description' => 'required',
-            'price' => 'required|numberic',
+            'price' => 'required|numberic|min:0',
             'images' => 'required'
         ], [
             'title.required' => 'Please enter title product.',
@@ -114,7 +114,7 @@ class ProductController extends Controller
             'title.max' => 'title too long, maximum 50 characters.',
             'title.unique' => 'title have been exist, try another name.',
             'price.required' => 'Please enter Price product.',
-            'price.errorCharacter' => 'Please enter only numberic.',
+            'price.errorCharacter' => 'Please enter only numberic and only integer',
             'description.required' => 'Please enter description product',
             'images.required' => 'Please enter image url',
         ]);
