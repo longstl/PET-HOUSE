@@ -12,8 +12,8 @@
     <div class="container">
         <br><br>
         <br>
-        <p class="text-center">Thú cưng của bạn cũng cần được làm đẹp ! Hãy để chúng tối giúp bạn làm đẹp cho thú
-            cưng với những bước chăm sóc tuyệt vời.<br>
+        <p class="text-center">Your pet can you need to be beautiful! Please make it to make your make up for the pets for the perfect.</p>
+        <br>
         <hr>
         <div class="row">
             <aside class="col-md-6">
@@ -107,7 +107,7 @@
             <h3>Schedule Calendars Now</h3>
             <h4>Let Us Know Information!</h4>
             <fieldset>
-                <input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30">
+                <input id="party" type="datetime-local" name="partydate" value="{{Carbon\Carbon::now(new DateTimeZone('Asia/Ho_Chi_Minh'))->format('Y-m-d')."T".Carbon\Carbon::now(new DateTimeZone('Asia/Ho_Chi_Minh'))->format('H:i:s')}}"/>
             </fieldset>
             <br>
             <fieldset>
@@ -127,7 +127,7 @@
             </fieldset>
             <br>
             <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Oder Now</button>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Book Pet Spa</button>
             </fieldset>
         </form>
 
