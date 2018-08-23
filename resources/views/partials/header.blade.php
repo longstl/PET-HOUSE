@@ -1,11 +1,10 @@
 <link rel="stylesheet" href="/css/header.css" type="text/css">
 <link rel="stylesheet" href="/css/cursor.css" type="text/css">
-<link rel="stylesheet" href="/css/login-register.css" type="text/css">
 <nav class="navbar navbar-expand-lg fixed-top font-weight-bold" id="mainNav" style="height: 70px;">
     <div class="container">
         <a class="navbar-brand" href="#page-top"><a
                     class="nav-link text-uppercase pb_letter-spacing-2" href="/">
-                <img src="images/logo/logo.png"
+                <img src="https://scontent.fhan2-2.fna.fbcdn.net/v/t1.15752-9/39883571_251810632204217_8441754694119849984_n.png?_nc_cat=0&oh=24f7385111965eea1312a6dc5ebfb39e&oe=5C36F55D"
                      alt="PET HOUSE Logo" class="light"
                      style="width: 85px; height: 85px;">
             </a>
@@ -64,7 +63,7 @@
                     @if(Auth::user()->admin == 1)
                     <button type="button" onclick="window.location.href='{{route('admin')}}'" class="btn btn-info"
                             style="color: black; background: none; border: none"><i
-                                class="fas fa-user"></i>
+                                class="fas fa-list-alt"></i>
                     </button>
                         @else
                         <button type="button" onclick="window.location.href='/login'" class="btn btn-info"
