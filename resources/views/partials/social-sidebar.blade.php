@@ -11,19 +11,15 @@
             <div class="sticky-container">
                 <ul class="sticky">
                     <li>
-                        <a href="https://www.linkedin.com/in/rosalie-rebel/" target="_blank"><i
+                        <a href="https://www.facebook.com/khanhtnd00540/" target="_blank"><i
                                     class="fab fa-facebook-square facebook-icon"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/rosalie-rebel/" target="_blank"><i
-                                    class="fab fa-tripadvisor tripadvisor-icon"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/rosalie-rebel/" target="_blank"><i
+                        <a href="https://www.instagram.com/pethouse91/" target="_blank"><i
                                     class="fab fa-instagram instagram-icon"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/rosalie-rebel/" target="_blank"><i
+                        <a href="https://twitter.com/PetHouse17" target="_blank"><i
                                     class="fab fa-twitter-square twitter-icon"></i></a>
                     </li>
                 </ul>

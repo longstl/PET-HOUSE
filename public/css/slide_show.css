@@ -80,7 +80,3 @@ figure.slider figure figcaption {
     border: #007bff;
     background: rgba(0, 0, 0, 0.4);
 }
-.slider a:hover{
-    background: #007bff;
-    color: #ffffff;
-}

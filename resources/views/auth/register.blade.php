@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/login-register.css" type="text/css">
 @extends('layouts.master')
 @section('slide-show')
     @include('partials.slideshow')
@@ -7,8 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('REGISTER') }}</div>
-
+                <div class="card-header text-xl-center">{{ __('SIGN UP') }}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
@@ -66,7 +66,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('SIGN UP') }}
                                 </button>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                             <div class="col-md-8 offset-md-4">
                                 Already have an account?
                                 <a class="btn btn-link" href="/login">
-                                    {{ __('Sign in here! ') }}
+                                    <i class="fas fa-sign-in-alt"></i>  {{ __('Sign in here! ') }}
                                 </a>
                             </div>
                         </div>

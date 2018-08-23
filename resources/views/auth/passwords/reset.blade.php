@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/login-register.css" type="text/css">
 @extends('layouts.master')
 @section('slide-show')
     @include('partials.slideshow')
@@ -56,6 +57,14 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Reset Password') }}
                                 </button>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                Already have an account?
+                                <a class="btn btn-link" href="/login">
+                                    <i class="fas fa-sign-in-alt"></i>  {{ __('Sign in here! ') }}
+                                </a>
                             </div>
                         </div>
                     </form>
