@@ -20,7 +20,8 @@ class CreateOrdersTable extends Migration
             $table->string('shipName');
             $table->string('shipPhone');
             $table->string('shipAddress');
-            $table->integer('status')->default(0); // 0:Process; 1:Active; 2:Shipping; 3: Done.
+            $table->integer('price');
+            $table->integer('status')->default(0); // -1:Cancel ;0:Process; 1:Active; 2:Shipping; 3: Done.
             $table->timestamps();
         });
     }

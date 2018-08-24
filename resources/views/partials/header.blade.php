@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav ml-auto text-uppercase">
             <li class="nav-item" role="presentation">
-                <button type="button" onclick="window.location.href='/cart'" class="btn btn-info" id="cart" data-toggle="modal"
+                <button type="button" onclick="window.location.href='/cart-view'" class="btn btn-info" id="cart" data-toggle="modal"
                         data-target="#cart_Modal"
                         style="color: black; background: none; border: none"><i
                             class="fas fa-cart-arrow-down"></i>

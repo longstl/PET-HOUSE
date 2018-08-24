@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/css/index.css" type="text/css">
     <link rel="stylesheet" href="/css/cursor.css" type="text/css">
     <link rel="stylesheet" href="/css/cart-sale.css" type="text/css">
-    @endsection
+@endsection
 @section('slide-show')
     @include('partials.slideshow')
 @endsection
@@ -28,30 +28,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-muted section-subheading">Welcome to the Pet House</h2  >
+                    <h2 class="text-muted section-subheading">Welcome to the Pet House</h2>
                 </div>
-            </div><br><br>
+            </div>
+            <br><br>
             <div class="row text-center">
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i
                                 class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i></span>
                     <h4 class="section-heading">Order easily</h4>
-                    <p class="text-muted">When see the product, the customer could be cick given the output to the store and the order to take a quick way and convenient.</p>
+                    <p class="text-muted">When see the product, the customer could be cick given the output to the store
+                        and the order to take a quick way and convenient.</p>
                 </div>
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i
                                 class="fas fa-truck fa-stack-1x fa-inverse"></i></span>
                     <h4 class="section-heading">Delivery fast</h4>
-                    <p class="text-muted">After successful ordering, we will process and check orders. Staff will review orders, contact with customers and ship quickly.</p>
+                    <p class="text-muted">After successful ordering, we will process and check orders. Staff will review
+                        orders, contact with customers and ship quickly.</p>
                 </div>
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i
                                 class="far fa-handshake fa-stack-1x fa-inverse"></i></span>
                     <h4 class="section-heading">Friendly employee</h4>
-                    <p class="text-muted">Online consultants are very enthusiastic and detailed, in addition our stores have beautiful and friendly staff.</p>
+                    <p class="text-muted">Online consultants are very enthusiastic and detailed, in addition our stores
+                        have beautiful and friendly staff.</p>
                 </div>
             </div>
         </div>
     </section><br><br>
     <div class="container text-center">
-        <center><h2 class="text-muted section-subheading">New Dog</h2  ></center>
+        <center><h2 class="text-muted section-subheading">New Dog</h2></center>
         <br>
         <div class="row">
             @foreach($product as $key => $exp)
@@ -59,20 +63,25 @@
                     <div class="item-image-wrapper">
                         <div class="single-items">
                             <div class="iteminfo text-xs-center">
-                                <a data-toggle="modal" data-target="#product_view" onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <a data-toggle="modal" data-target="#product_view"
+                                   onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img
+                                            src="{{$exp->images}} " style="height: 250px;" alt=""></a>
                                 <h2>${{$exp->price}}</h2>
                                 <p style="height: 70px;">{{$exp->title}}</p>
-                                <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                <center><a href="/add-to-cart?id={{$exp->id}}&quantity=1"
+                                           class="btn btn-secondary add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a></center>
                             </div>
                         </div>
                     </div>
                 </div>
             @endforeach
-                <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">Are You Interested In Dogs? Take a look at our store:</p><a href="/pethousedog" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a>
+            <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">Are You Interested In Dogs? Take a look at
+                our store:</p><a href="/pethousedog" class="btn btn">View More <i
+                        class="fas fa-hand-point-right"></i></a>
         </div>
         <hr>
-        <center><h2 class="text-muted section-subheading">New kitten</h2  ></center>
+        <center><h2 class="text-muted section-subheading">New kitten</h2></center>
         <br>
         <div class="row">
             @foreach($product2 as $key => $exp)
@@ -80,41 +89,54 @@
                     <div class="item-image-wrapper">
                         <div class="single-items">
                             <div class="iteminfo text-xs-center">
-                                <a data-toggle="modal" data-target="#product_view" onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <a data-toggle="modal" data-target="#product_view"
+                                   onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img
+                                            src="{{$exp->images}} " style="height: 250px;" alt=""></a>
                                 <h2>${{$exp->price}}</h2>
                                 <p style="height: 70px;">{{$exp->title}}</p>
-                                <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                <center><a href="/add-to-cart?id={{$exp->id}}&quantity=1"
+                                           class="btn btn-secondary add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a></center>
                             </div>
                         </div>
                     </div>
                 </div>
             @endforeach
-                <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">Are You Interested In kitten? Take a look at our store:</p><figcaption><a href="/pethousecat" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a></figcaption>
+            <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">Are You Interested In kitten? Take a look
+                at our store:</p>
+            <figcaption><a href="/pethousecat" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a>
+            </figcaption>
         </div>
         <hr>
-        <center><h2 class="text-muted section-subheading">New Accessories</h2  ></center><br>
+        <center><h2 class="text-muted section-subheading">New Accessories</h2></center>
+        <br>
         <div class="row">
             @foreach($product3 as $key => $exp)
                 <div class="col-sm-3">
                     <div class="item-image-wrapper">
                         <div class="single-items">
                             <div class="iteminfo text-xs-center">
-                                <a data-toggle="modal" data-target="#product_view" onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <a data-toggle="modal" data-target="#product_view"
+                                   onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img
+                                            src="{{$exp->images}} " style="height: 250px;" alt=""></a>
                                 <h2>${{$exp->price}}</h2>
                                 <p style="height: 70px;">{{$exp->title}}</p>
-                                <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                <center><a href="/add-to-cart?id={{$exp->id}}&quantity=1"
+                                           class="btn btn-secondary add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a></center>
                             </div>
                         </div>
                     </div>
                 </div>
             @endforeach
-                <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">Do you want to shop for your pet? Take a look at our store:</p><figcaption><a href="/accessories" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a></figcaption>
+            <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">Do you want to shop for your pet? Take a
+                look at our store:</p>
+            <figcaption><a href="/accessories" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a>
+            </figcaption>
         </div>
         <hr>
 
-        <center><h2 class="text-muted section-subheading">New Food</h2  ></center>
+        <center><h2 class="text-muted section-subheading">New Food</h2></center>
         <br>
         <div class="row">
             <h3></h3>
@@ -123,17 +145,23 @@
                     <div class="item-image-wrapper">
                         <div class="single-items">
                             <div class="iteminfo text-xs-center">
-                                <a data-toggle="modal" data-target="#product_view" onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <a data-toggle="modal" data-target="#product_view"
+                                   onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img
+                                            src="{{$exp->images}} " style="height: 250px;" alt=""></a>
                                 <h2>${{$exp->price}}</h2>
                                 <p style="height: 70px;">{{$exp->title}}</p>
-                                <center><a href="#" class="btn btn-secondary add-to-cart"><i
+                                <center><a href="/add-to-cart?id={{$exp->id}}&quantity=1"
+                                           class="btn btn-secondary add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a></center>
                             </div>
                         </div>
                     </div>
                 </div>
             @endforeach
-            <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">You want to purchase the food for the beast,take a look at our store:</p><figcaption><a href="/foodpet" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a></figcaption>
+            <p class="text-muted" style="margin-top: 8px; margin-left: 15px;">You want to purchase the food for the
+                beast,take a look at our store:</p>
+            <figcaption><a href="/foodpet" class="btn btn">View More <i class="fas fa-hand-point-right"></i></a>
+            </figcaption>
 
         </div>
     </div>
@@ -146,9 +174,14 @@
                             <img id="modalImg" class="img-fluid">
                         </div>
                         <div class="col-md-6 product_content">
-                            <h3 id="modalTitle"> <span></span></h3><hr>
+                            <h3 id="modalTitle"><span></span></h3>
+                            <hr>
                             <p id="modalDescription"></p>
-                            <center><h3 id="modalPrice" class="cost"><span class="glyphicon glyphicon-usd"></span> <small class="pre-cost"></small></h3></center>
+                            <center>
+                                <h3 id="modalPrice" class="cost"><span class="glyphicon glyphicon-usd"></span>
+                                    <small class="pre-cost"></small>
+                                </h3>
+                            </center>
                             <div class="row">
                                 <p class="pp">Quantity : </p>
                                 <footer class="content">
@@ -160,7 +193,9 @@
 
                             <div class="space-ten"></div>
                             <div class="btn-ground">
-                                <center><a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a></center>
+                                <center><a href="#"
+                                           class="btn btn-secondary add-to-cart"><i
+                                                class="fa fa-shopping-cart"></i>Add to cart</a></center>
                             </div>
                         </div>
                     </div>
