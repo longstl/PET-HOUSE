@@ -52,10 +52,6 @@ Route::get('/user/register',function (){
     return view('partials.login-register');
 });
 
-Route::get('/cart',function (){
-    return view('shop.cart');
-});
-
 Route::get('/dashboard ',function (){
     return view('dashboard.index');
 });
@@ -83,3 +79,15 @@ Route::group(['milldeware' => ['web','auth']],function (){
     })->name('admin');
 });
 
+// Cart
+Route::get('/add-to-cart', 'ShoppingCartController@addToCart');
+Route::get('/cart-view', 'ShoppingCartController@showCart');
+Route::get('/delete-cart', 'ShoppingCartController@destroyCart');
+Route::put('/edit-cart', 'ShoppingCartController@updateCart');
+Route::post('/send-cart', 'ShoppingCartController@checkoutCart');
+
+Route::get('/test', 'ShoppingCartController@demoTransaction');
+
+// Order Manager
+Route::get('/dashboard/order', 'OrderController@index');
+Route::get('/dashboard/order/change-status', 'OrderController@changeStatus');
