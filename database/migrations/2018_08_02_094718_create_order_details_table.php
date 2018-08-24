@@ -20,7 +20,6 @@ class CreateOrderDetailsTable extends Migration
             $table->integer('productId')->unsigned();
             $table->foreign('productId')->references('id')->on('products');
             $table->integer('quantity');
-            $table->integer('price');
             $table->timestamps();
         });
     }
