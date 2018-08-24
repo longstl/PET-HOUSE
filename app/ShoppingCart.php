@@ -23,7 +23,7 @@ class ShoppingCart
     function getTotalMoney(){
         $total_money = 0;
         foreach ($this->items as $item){
-            $total_money += $item->product->discountPrice * $item->quantity;
+            $total_money += $item->product->price * $item->quantity;
         }
         return $total_money;
     }
