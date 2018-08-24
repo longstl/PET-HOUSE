@@ -65,6 +65,10 @@ Route::resource('dashboard/category', 'CategoryController');
 Route::resource('dashboard/article','ArticleController');
 
 Route::resource('dashboard/product', 'ProductController');
+
+Route::resource('petspa', 'spaController');
+///verify/153504992215b7f00c23d373
+Route::resource('verify', 'VerifyController');
 Auth::routes();
 
 Route::group(['milldeware' => ['web','auth']],function (){

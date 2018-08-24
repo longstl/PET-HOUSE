@@ -102,8 +102,8 @@
     </article>
 
     <div class="container" id="contact-spa">
-        <form id="contact" action="" method="post">
-
+        <form id="contact" action="/petspa" method="post">
+            {{csrf_field()}}
             <h3>Schedule Calendars Now</h3>
             <h4>Let Us Know Information!</h4>
             <fieldset>
@@ -111,19 +111,19 @@
             </fieldset>
             <br>
             <fieldset>
-                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                <input placeholder="Your name" name="name" type="text" tabindex="1" required autofocus>
             </fieldset>
             <br>
             <fieldset>
-                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                <input placeholder="Your Email Address" name="email" type="email" tabindex="2" required>
             </fieldset>
             <br>
             <fieldset>
-                <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+                <input placeholder="Your Phone Number" name="phone" type="tel" tabindex="3" required>
             </fieldset>
             <br>
             <fieldset>
-                <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+                <textarea name="message" placeholder="Type your Message Here...." tabindex="5" required></textarea>
             </fieldset>
             <br>
             <fieldset>
