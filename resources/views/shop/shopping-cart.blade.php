@@ -56,22 +56,34 @@
                 </article>
             @endforeach
         </section>
-
         <footer id="site-footer">
             <div class="container clearfix">
                 <div class="left">
                     <h1 class="total">Total: <span>{{$shopping_cart->getTotalMoneyWithFormat()}}</span>($)</h1>
                 </div>
-                <div class="right">
+                <div class="right" style="width: 300px">
                     <h1 class="build-details">Bill Details</h1>
-                    <div class="input-field">
-                        <label>Name</label>
-                        <input id="register-name" type="text" name="name" placeholder="Your name" required>
-                        <p class="label-error"></p>
-                    </div>
-                    <center><a class="btn">Checkout</a></center>
+                        <form id="contact" action="/send-cart" method="post">
+                            {{csrf_field()}}
+                            <br>
+                            <fieldset>
+                                <input style="width: 300px" placeholder="Your name" name="shipName" type="text" tabindex="1" required="required" autofocus>
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <input style="width: 300px" placeholder="Your Phone Number" name="shipPhone" type="tel" tabindex="3" required="required">
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <input style="width: 300px" placeholder="Your Address" name="shipAddress" type="text" tabindex="4" required="required">
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <center><button class="btn" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Checkout</button></center>
+                            </fieldset>
+                        </form>
                 </div>
             </div>
         </footer>
     </div>
-@endsection
+@endsection*
