@@ -27,44 +27,51 @@
     <div id="" class="container">
         <section id="petCart">
             @foreach($shopping_cart->items as $item)
-            <article class="product">
-                <header>
-                    <a class="remove" href="/delete-cart">
-                        <img src="{{$item->product->images}}" alt="{{$item->product->name}}">
+                <article class="product">
+                    <header>
+                        <a class="remove" href="/delete-cart">
+                            <img src="{{$item->product->images}}" alt="{{$item->product->name}}">
 
-                        <h3>Remove product</h3>
-                    </a>
-                </header>
+                            <h3>Remove product</h3>
+                        </a>
+                    </header>
 
-                <div class="content">
-                    <h1>{{$item->product->name}}</h1>
-                    {{$item->product->description}}
-                </div>
+                    <div class="content">
+                        <h1>{{$item->product->name}}</h1>
+                        {{$item->product->description}}
+                    </div>
 
-                <footer class="content">
-                    <span class="qt-minus">-</span>
-                    <span class="qt">{{$item->quantity}}</span>
-                    <span class="qt-plus">+</span>
+                    <footer class="content">
+                        <span class="qt-minus">-</span>
+                        <span class="qt">{{$item->quantity}}</span>
+                        <span class="qt-plus">+</span>
 
-                    <h2 class="full-price">
-                        {{$item->getTotalPriceWithFormat()}} ($)
-                    </h2>
+                        <h2 class="full-price">
+                            {{$item->getTotalPriceWithFormat()}} ($)
+                        </h2>
 
-                    <h2 class="price">
-                        {{$item->product->price}} ($)
-                    </h2>
-                </footer>
-            </article>
+                        <h2 class="price">
+                            {{$item->product->price}} ($)
+                        </h2>
+                    </footer>
+                </article>
             @endforeach
         </section>
 
         <footer id="site-footer">
             <div class="container clearfix">
-                <div class="right">
+                <div class="left">
                     <h1 class="total">Total: <span>{{$shopping_cart->getTotalMoneyWithFormat()}}</span>($)</h1>
-                    <a class="btn">Checkout</a>
                 </div>
-
+                <div class="right">
+                    <h1 class="build-details">Bill Details</h1>
+                    <div class="input-field">
+                        <label>Name</label>
+                        <input id="register-name" type="text" name="name" placeholder="Your name" required>
+                        <p class="label-error"></p>
+                    </div>
+                    <center><a class="btn">Checkout</a></center>
+                </div>
             </div>
         </footer>
     </div>
