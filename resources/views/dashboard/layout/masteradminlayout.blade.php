@@ -164,7 +164,7 @@
                         </div>
                     @endif
                 </li>
-                <li class="{{ $current_menu == 'product_manager' ? 'active' : '' }}">
+                <li class="{{ $current_menu == 'article_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#formsExamples">
                         <i class="material-icons">apps</i>
                         <p>Article
@@ -220,24 +220,48 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="{{ $current_menu == 'user_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#mapsExamples">
-                        <i class="material-icons">place</i>
+                        <i class="material-icons">apps</i>
                         <p>User
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="mapsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="maps/google.html">Create new User</a>
-                            </li>
-                            <li>
-                                <a href="maps/google.html">List User</a>
-                            </li>
-                        </ul>
-                    </div>
+                    @if($current_menu == 'user_manager')
+                        <div class="collapse in" id="mapsExamples">
+                            <ul class="nav">
+                                @if($current_menu == 'user_manager' && $current_sub_menu == 'edit')
+                                    <li class="active">
+                                        <a href="{{ url()->current() }}">Edit Category</a>
+                                    </li>
+                                @endif
+                                <li class="{{ ($current_menu == 'user_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
+                                    <a href="/dashboard/user/create">Add User </a>
+                                </li>
+                                <li class="{{ ($current_menu == 'user_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/dashboard/user">List User</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                        <div class="collapse" id="mapsExamples">
+                            <ul class="nav">
+                                @if($current_menu == 'user_manager' && $current_sub_menu == 'edit')
+                                    <li class="active">
+                                        <a href="{{ url()->current() }}">Edit Category</a>
+                                    </li>
+                                @endif
+                                <li class="{{ ($current_menu == 'user_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
+                                    <a href="/dashboard/user/create">Add User</a>
+                                </li>
+                                <li class="{{ ($current_menu == 'user_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/dashboard/user">List User</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @endif
                 </li>
+                {{--#mapsExamples--}}
                 <li>
                     <a href="charts.html">
                         <i class="material-icons">timeline</i>

@@ -1,6 +1,6 @@
 @extends('dashboard.layout.masteradminlayout', [
-   'page_title'=>'List Product | PET HOUSE Admin Page',
-    'current_menu'=>'product_manager',
+   'page_title'=>'List User | PET HOUSE Admin Page',
+    'current_menu'=>'user_manager',
     'current_sub_menu'=>'list_item'
 ])
 @section('content')
@@ -10,7 +10,7 @@
                 <i class="material-icons">assignment</i>
             </div>
             <div class="card-content">
-                <h4 class="card-title">List Product</h4>
+                <h4 class="card-title">List User</h4>
                 <div class="toolbar">
                     <!--        Here you can write extra buttons/actions for the toolbar              -->
                 </div>
@@ -34,20 +34,12 @@
                                                 aria-label="Name: activate to sort column descending">Name
                                             </th>
                                             <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
+                                                colspan="1" style="width:700px;"
+                                                aria-label="Image: activate to sort column ascending">Email
+                                            </th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
                                                 colspan="1" style="width: 150px;"
-                                                aria-label="Image: activate to sort column ascending">Description
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
-                                                colspan="1" style="width: 100px;"
-                                                aria-label="Price: activate to sort column ascending">Price
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
-                                                colspan="1" style="width: 156px;"
-                                                aria-label="Price: activate to sort column ascending">Images
-                                            </th>
-                                            <th class="disabled-sorting text-right sorting" tabindex="0"
-                                                aria-controls="datatables" rowspan="1" colspan="1" style="width: 149px;"
-                                                aria-label="Actions: activate to sort column ascending">Action
+                                                aria-label="Image: activate to sort column ascending">Kind
                                             </th>
                                         </tr>
                                         </thead>
@@ -55,19 +47,12 @@
                                         @foreach($list_obj as $item)
                                             <tr role="row" class="odd">
                                                 <td>{{$item->id}}</td>
-                                                <td tabindex="0" class="sorting_1">{{$item->title}}</td>
-                                                <td>{{$item->description}}</td>
-                                                <td>{{$item->price}}</td>
-                                                <td>
-                                                    <div class="card"
-                                                         style="width: 100px;height: 80px;background-image: url('{{$item->images}}'); background-size: cover">
-                                                    </div>
-                                                </td>
+                                                <td tabindex="0" class="sorting_1">{{$item->name}}</td>
+                                                <td>{{$item->email}}</td>
+                                                <td>{{$item->admin?"Admin":"Member"}}</td>
                                                 <td class="text-right">
-                                                    <a href="/dashboard/product/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
+                                                    <a href="/dashboard/user/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
                                                                 class="material-icons">edit</i></a>
-                                                    <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete-product"><i
-                                                                class="material-icons">close</i></a>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -75,8 +60,8 @@
                                     </table>
                             </div>
                             @else
-                                <div class="alert alert-info">Hiện tại không có danh mục sản phẩm. Vui lòng click <a
-                                            href="/dashboard/product/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
+                                <div class="alert alert-info">Hiện tại không có. Vui lòng click <a
+                                            href="/dashboard/user/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
                                 </div>
                             @endif
                         </div>
