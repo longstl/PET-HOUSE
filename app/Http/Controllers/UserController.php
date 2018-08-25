@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -13,7 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $limit = 10;
+        $list_obj = User::orderBy('created_at', 'DESC')->paginate($limit);
+        return view('dashboard.user.list')->with('list_obj', $list_obj);
     }
 
     /**
@@ -23,7 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.user.form');
     }
 
     /**
@@ -34,7 +38,30 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $obj =new User();
+        $request->validate([
+            'admin'=> 'required',
+            'name' => 'required|max:50|min:4',
+            'email' => 'required|max:50|min:10',
+            'password' => 'required|numeric|min:0',
+        ], [
+            'name.required' => 'Please enter name user.',
+            'name.min' => 'name too short, please enter at least 4 characters.',
+            'name.max' => 'name too long, maximum 50 characters.',
+            'name.unique' => 'name have been exist, try another name.',
+            'email.required' => 'Please enter name user.',
+            'email.min' => 'email too short, please enter at least 10 characters.',
+            'email.max' => 'email too long, maximum 50 characters.',
+            'email.unique' => 'email have been exist, try another name.',
+            'pasword.required' => 'Please enter Password user.',
+            'password.errorCharacter' => 'Please enter only numberic.',
+        ]);
+        $obj->name = $request->get('name');
+        $obj->email = $request->get('email');
+        $obj->password = Hash::make($request->get('password'));
+        $obj->admin = $request->get('admin');
+        $obj->save();
+        return redirect('/dashboard/user');
     }
 
     /**
@@ -56,7 +83,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $obj = User::find($id);
+        if ($obj == null) {
+            return view('/404');
+        }
+        return view('dashboard.user.edit')->with('obj', $obj);
     }
 
     /**
@@ -68,7 +99,37 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $obj = User::find($id);
+        $validate_unique = '';
+        if($obj->name != $request->get('name')){
+            $validate_unique = '|unique:users';
+        }
+        $request->validate([
+            'name' => 'required|max:50|min:4' . $validate_unique,
+            'email' => 'required|max:50|min:10',
+            'password' => 'required|numeric|min:0',
+
+        ], [
+            'name.required' => 'Please enter name user.',
+            'name.min' => 'name too short, please enter at least 4 characters.',
+            'name.max' => 'name too long, maximum 50 characters.',
+            'name.unique' => 'name have been exist, try another name.',
+            'email.required' => 'Please enter name user.',
+            'email.min' => 'email too short, please enter at least 10 characters.',
+            'email.max' => 'email too long, maximum 50 characters.',
+            'email.unique' => 'email have been exist, try another name.',
+            'pasword.required' => 'Please enter Password user.',
+            'password.errorCharacter' => 'Please enter only numberic.',
+        ]);
+        if ($obj == null) {
+            return view('404');
+        }
+        $obj->name = $request->get('name');
+        $obj->email = $request->get('email');
+        $obj->password = $request->get('password');
+        $obj->admin = $request->get('admin');
+        $obj->save();
+        return redirect('/dashboard/user');
     }
 
     /**
@@ -79,6 +140,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }
