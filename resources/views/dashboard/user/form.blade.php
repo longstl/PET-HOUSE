@@ -1,6 +1,6 @@
 @extends('dashboard.layout.masteradminlayout', [
-    'page_title' => 'Create new Product | PET HOUSE Admin Page',
-    'current_menu' => 'product_manager',
+    'page_title' => 'Create new User | PET HOUSE Admin Page',
+    'current_menu' => 'User_manager',
     'current_sub_menu' => 'create_new',
 ])
 @section('content')
@@ -11,7 +11,7 @@
                     <i class="material-icons">add</i>
                 </div>
                 <div class="card-content">
-                    <h4 class="card-title">Create New Product</h4>
+                    <h4 class="card-title">Create New User</h4>
                     @if ($errors->any())
                         <div class="alert alert-rose">
                             <ul>
@@ -21,55 +21,51 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="post" action="/dashboard/product" class="form-horizontal">
+                    <form method="post" action="/dashboard/user" class="form-horizontal">
                         {{csrf_field()}}
                         <div class="card-content">
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Title</label>
+                                <label class="col-sm-2 label-on-left">Name</label>
                                 <div class="col-sm-4">
-                                    <div class="form-group label-floating is-empty{{$errors->has('title')?' has-error':''}}">
+                                    <div class="form-group label-floating is-empty{{$errors->has('name')?' has-error':''}}">
                                         <label class="control-label"></label>
-                                        <input type="text" name="title" class="form-control{{$errors->has('title')?' error':''}}">
+                                        <input type="text" name="name" class="form-control{{$errors->has('name')?' error':''}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Description</label>
+                                <label class="col-sm-2 label-on-left">Email</label>
                                 <div class="col-sm-8">
-                                    <div class="form-group label-floating is-empty{{$errors->has('description')?' has-error':''}}">
+                                    <div class="form-group label-floating is-empty{{$errors->has('email')?' has-error':''}}">
                                         <label class="control-label"></label>
-                                        <textarea type="text" name="description" class="form-control{{$errors->has('description')?' error':''}}" id="product-form-ckeditor"></textarea>
+                                        <input type="text" name="email" class="form-control{{$errors->has('email')?' error':''}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Price</label>
+                                <label class="col-sm-2 label-on-left">PassWord</label>
                                 <div class="col-sm-8">
-                                    <div class="form-group label-floating is-empty{{$errors->has('price')?' has-error':''}}">
+                                    <div class="form-group label-floating is-empty{{$errors->has('password')?' has-error':''}}">
                                         <label class="control-label"></label>
-                                        <input type="text" name="price" class="form-control{{$errors->has('price')?' error':''}}">
+                                        <input type="password" name="password" class="form-control{{$errors->has('password')?' error':''}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Images</label>
-                                <div class="col-sm-8">
-                                    <div class="form-group label-floating is-empty{{$errors->has('images')?' has-error':''}}">
-                                        <label class="control-label"></label>
-                                        <input type="text" name="images" class="form-control{{$errors->has('images')?' error':''}}">
-                                        <span class="material-input"></span></div>
+                                <label class="col-sm-2 label-on-left">PassWord</label>
+                                <div class="col-md-8">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                                 </div>
                             </div>
+                            </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">CategoryId</label>
+                                <label class="col-sm-2 label-on-left">Kind</label>
                                 <div class="col-sm-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <select name="categoryId" class="form-control">
-                                            <option value="1">Dogs</option>
-                                            <option value="2">Cats</option>
-                                            <option value="3">Accessories</option>
-                                            <option value="4">Food Pet</option>
+                                        <select name="admin" class="form-control">
+                                            <option value="1">admin</option>
+                                            <option value="0">member</option>
                                         </select>
                                     </div>
                                 </div>
