@@ -37,8 +37,7 @@
                     </header>
 
                     <div class="content">
-                        <h1>{{$item->product->name}}</h1>
-                        {{$item->product->description}}
+                        <h1>{{$item->product->title}}</h1>
                     </div>
 
                     <footer class="content">
