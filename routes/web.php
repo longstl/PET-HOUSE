@@ -55,8 +55,14 @@ Route::get('/user/register',function (){
 Route::get('/dashboard ',function (){
     return view('dashboard.index');
 });
+Route::get('/detail', function () {
+    return view('detail.detail-product');
+});
+
 
 Route::resource('dashboard/category', 'CategoryController');
+
+Route::resource('dashboard/user', 'UserController');
 
 Route::resource('dashboard/article','ArticleController');
 
