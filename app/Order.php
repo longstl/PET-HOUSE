@@ -14,7 +14,7 @@ class Order extends Model
 
     public function getShipInformationAttribute()
     {
-        return ' - '. $this->shipphone . '<br> - '. $this->shipname . '<br> - ' . $this->shipaddress;
+        return ' - '. $this->shipPhone . '<br> - '. $this->shipName . '<br> - ' . $this->shipAddress;
     }
 
     public function getStatusLabelAttribute()

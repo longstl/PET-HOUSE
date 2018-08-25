@@ -215,7 +215,7 @@
                     <div class="collapse" id="tablesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="tables/regular.html">List Order</a>
+                                <a href="/dashboard/order">List Order</a>
                             </li>
                         </ul>
                     </div>
