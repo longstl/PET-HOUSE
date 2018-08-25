@@ -1,6 +1,6 @@
 @extends('dashboard.layout.masteradminlayout', [
-     'page_title' => 'Edit Product | PET HOUSE Admin Page',
-    'current_menu' => 'product_manager',
+     'page_title' => 'Edit User | PET HOUSE Admin Page',
+    'current_menu' => 'user_manager',
     'current_sub_menu' => 'edit',
 ])
 @section('content')
@@ -11,8 +11,8 @@
                     <i class="material-icons">edit</i>
                 </div>
                 <div class="card-content">
-                    <h4 class="card-title">Product Edit</h4>
-                    <form method="post" action="/dashboard/product/{{$obj->id}}" class="form-horizontal">
+                    <h4 class="card-title">User Edit</h4>
+                    <form method="post" action="/dashboard/user/{{$obj->id}}" class="form-horizontal">
                         @method('PUT')
                         {{csrf_field()}}
                         <div class="card-content">
@@ -21,76 +21,51 @@
                                 <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="title" class="form-control" value="{{$obj->title}}">
+                                        <input type="text" name="name" class="form-control" value="{{$obj->name}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Description</label>
+                                <label class="col-sm-2 label-on-left">Email</label>
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <textarea type="text" name="description" class="form-control" id="product-edit-ckeditor">{{$obj->description}}</textarea>
+                                        <input type="text" name="email" class="form-control" value="{{$obj->email}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Price</label>
+                                <label class="col-sm-2 label-on-left">PassWord</label>
                                 <div class="col-sm-8">
-                                    <div class="form-group label-floating is-empty">
+                                    <div class="form-group label-floating is-empty{{$errors->has('password')?' has-error':''}}">
                                         <label class="control-label"></label>
-                                        <input type="number" name="price" class="form-control" value="{{$obj->price}}">
+                                        <input type="password" name="password" class="form-control{{$errors->has('password')?' error':''}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Images</label>
-                                <div class="col-sm-8">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="control-label"></label>
-                                        <input type="text" name="images" class="form-control" value="{{$obj->images}}">
-                                        <span class="material-input"></span></div>
+                                <label class="col-sm-2 label-on-left">PassWord</label>
+                                <div class="col-md-8">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">Current CategoryId</label>
+                                <label class="col-sm-2 label-on-left">Current Kind</label>
                                 <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="categoryId" class="form-control" value="{{($obj->categoryId==1?"Dogs":($obj->categoryId==2?"Cats":"Accessories"))}}" disabled>
+                                        <input type="text" name="admin" class="form-control" value="{{($obj->admin==1?"Admin":($obj->admin==0?"member":"Accessories"))}}" disabled>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">CategoryId</label>
+                                <label class="col-sm-2 label-on-left">Kind</label>
                                 <div class="col-sm-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <select name="categoryId" class="form-control">
-                                            <option value="1">Dogs</option>
-                                            <option value="2">Cats</option>
-                                            <option value="3">Accessories</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-sm-2 label-on-left">Current Status</label>
-                                <div class="col-sm-4">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="control-label"></label>
-                                        <input type="text" name="status" class="form-control" value="{{$obj->status?"Active":"Delete"}}" disabled>
-                                        <span class="material-input"></span></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-sm-2 label-on-left">Status</label>
-                                <div class="col-sm-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="control-label"></label>
-                                        <select name="status" class="form-control">
-                                            <option value="0">Delete</option>
-                                            <option value="1">Active</option>
+                                        <select name="admin" class="form-control">
+                                            <option value="1">admin</option>
+                                            <option value="0">member</option>
                                         </select>
                                     </div>
                                 </div>
