@@ -44,6 +44,33 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <label class="col-sm-2 label-on-left">Father</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" name="father" class="form-control" value="{{$obj->father}}">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Mother</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" name="mother" class="form-control" value="{{$obj->mother}}">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Paper</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" name="paper" class="form-control" value="{{$obj->paper}}">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <label class="col-sm-2 label-on-left">Images</label>
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">

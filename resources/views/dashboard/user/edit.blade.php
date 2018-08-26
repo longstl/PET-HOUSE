@@ -35,18 +35,29 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">PassWord</label>
+                                <label class="col-sm-2 label-on-left">Old Password</label>
                                 <div class="col-sm-8">
-                                    <div class="form-group label-floating is-empty{{$errors->has('password')?' has-error':''}}">
+                                    <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="password" name="password" class="form-control{{$errors->has('password')?' error':''}}">
+                                        <input type="password" name="old_password" class="form-control" value="{{$obj->password}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">PassWord</label>
-                                <div class="col-md-8">
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <label class="col-sm-2 label-on-left">New Password</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="password" name="new_password" class="form-control">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div> <div class="row">
+                                <label class="col-sm-2 label-on-left">Retype password</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="password" name="comfirm_new_password" class="form-control" >
+                                        <span class="material-input"></span></div>
                                 </div>
                             </div>
                             <div class="row">
