@@ -30,7 +30,8 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <textarea type="text" name="description" class="form-control" id="product-edit-ckeditor">{{$obj->description}}</textarea>
+                                        <textarea type="text" name="description" class="form-control"
+                                                  id="product-edit-ckeditor">{{$obj->description}}</textarea>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
@@ -84,7 +85,9 @@
                                 <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="categoryId" class="form-control" value="{{($obj->categoryId==1?"Dogs":($obj->categoryId==2?"Cats":"Accessories"))}}" disabled>
+                                        <input type="text" name="categoryId" class="form-control"
+                                               value="{{($obj->categoryId==1?"Dogs":($obj->categoryId==2?"Cats":"Accessories"))}}"
+                                               disabled>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
@@ -106,7 +109,8 @@
                                 <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="status" class="form-control" value="{{$obj->status?"Active":"Delete"}}" disabled>
+                                        <input type="text" name="status" class="form-control"
+                                               value="{{$obj->status?"Active":"Delete"}}" disabled>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
@@ -116,8 +120,8 @@
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
                                         <select name="status" class="form-control">
-                                            <option value="0">Delete</option>
                                             <option value="1">Active</option>
+                                            <option value="0">Delete</option>
                                         </select>
                                     </div>
                                 </div>
@@ -141,6 +145,6 @@
     </div>
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
-        CKEDITOR.replace( 'product-edit-ckeditor' );
+        CKEDITOR.replace('product-edit-ckeditor');
     </script>
 @endsection
