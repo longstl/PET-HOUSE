@@ -42,7 +42,7 @@
                                         @foreach($list_obj as $item)
                                             <tr role="row" class="odd">
                                                 <td class="col-1">{{$item->id}}</td>
-                                                <td class="col-1">xuanhung2401</td>
+                                                <td class="col-1">{{$item->userId->name}}</td>
                                                 <td class="col-2">{!! $item->shipInformation !!}</td>
                                                 <td class="col-2">{{$item->created_at}}</td>
                                                 <td class="col-2">
