@@ -126,7 +126,7 @@ class ProductController extends Controller
             'mother' => 'required|max:50|min:3',
             'paper' => 'required',
             'description' => 'required',
-            'price' => 'required|numberic|min:0',
+            'price' => 'required|numeric|min:0',
             'images' => 'required'
         ], [
             'title.required' => 'Please enter title product.',
@@ -156,9 +156,6 @@ class ProductController extends Controller
         $obj->description = $request->get('description');
         $obj->price = $request->get('price');
         $obj->images = $request->get('images');
-        $obj->father = $request->get('father');
-        $obj->mother = $request->get('mother');
-        $obj->paper = $request->get('paper');
         $obj->categoryId = $request->get('categoryId');
         $obj->status = $request->get('status');
         $obj->save();
