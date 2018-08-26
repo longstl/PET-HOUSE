@@ -12,6 +12,10 @@ class Order extends Model
         return $this->hasMany('App\OrderDetail', 'orderId');
     }
 
+    public function user(){
+        return $this->belongsTo('App\User','userId');
+    }
+
     public function getShipInformationAttribute()
     {
         return ' - '. $this->shipPhone . '<br> - '. $this->shipName . '<br> - ' . $this->shipAddress;

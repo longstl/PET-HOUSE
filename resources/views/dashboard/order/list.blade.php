@@ -42,7 +42,7 @@
                                         @foreach($list_obj as $item)
                                             <tr role="row" class="odd">
                                                 <td class="col-1">{{$item->id}}</td>
-                                                <td class="col-1">{{$item->userId->name}}</td>
+                                                <td class="col-1">{{$item->user->name}}</td>
                                                 <td class="col-2">{!! $item->shipInformation !!}</td>
                                                 <td class="col-2">{{$item->created_at}}</td>
                                                 <td class="col-2">
@@ -55,11 +55,11 @@
                                                 <td class="col-1">{{$item->statusLabel}}</td>
                                                 <td class="col-3">
                                                     @if($item->status==0)
-                                                        <a href="/dashboard/order/change-status?id={{$item->id}}&status=1" onclick="return confirm('Bạn có chắc muốn xác nhận đơn hàng?')"
+                                                        <a href="/dashboard/order/change-status?id={{$item->id}}&status=1" onclick="return confirm('Do you want to accept order?')"
                                                            class="btn btn-simple btn-success btn-icon edit"><i
                                                                     class="material-icons">how_to_reg</i></a>
                                                     @elseif($item->status==1)
-                                                        <a href="/dashboard/order/change-status?id={{$item->id}}&status=2" onclick="return confirm('Bạn có chắc muốn hoàn thành đơn hàng?')"
+                                                        <a href="/dashboard/order/change-status?id={{$item->id}}&status=2" onclick="return confirm('Do you want to complete order?')"
                                                            class="btn btn-simple btn-success btn-icon edit"><i
                                                                     class="material-icons">done</i></a>
                                                     @endif
@@ -74,7 +74,7 @@
                                     </table>
                             </div>
                             @else
-                                <div class="alert alert-info">Hiện tại không có đơn hàng.
+                                <div class="alert alert-info">List Order is Empty.
                                 </div>
                             @endif
                         </div>
@@ -98,13 +98,13 @@
         $('.btn-delete').click(function () {
             var thisButton = $(this);
             swal({
-                text: "Bạn có chắc muốn xoá danh mục này không?",
+                text: "Do you want to delete Order?",
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger',
-                confirmButtonText: 'Đồng ý',
-                cancelButtonText: 'Huỷ bỏ',
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'Cancel',
                 buttonsStyling: false
             }).then(function() {
                 var id = thisButton.attr('href');
@@ -116,7 +116,7 @@
                     },
                     success: function (response) {
                         swal({
-                            text: 'Danh mục đã bị xoá.',
+                            text: 'Order has been deleted',
                             type: 'success',
                             confirmButtonClass: "btn btn-success",
                             buttonsStyling: false
@@ -127,7 +127,7 @@
                     },
                     error: function () {
                         swal({
-                            text: 'Có lỗi xảy ra, vui lòng thử lại sau.',
+                            text: 'Have been error please try again later.',
                             type: 'warning',
                             confirmButtonClass: "btn btn-danger",
                             buttonsStyling: false
