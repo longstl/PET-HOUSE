@@ -205,20 +205,30 @@
                         </div>
                     @endif
                 </li>
-                <li>
+                <li class="{{ $current_menu == 'order_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#tablesExamples">
-                        <i class="material-icons">grid_on</i>
+                        <i class="material-icons">apps</i>
                         <p>Order
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="tablesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="/dashboard/order">List Order</a>
-                            </li>
-                        </ul>
-                    </div>
+                    @if($current_menu == 'order_manager')
+                        <div class="collapse in" id="tablesExamples">
+                            <ul class="nav">
+                                <li class="{{ ($current_menu == 'order_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/dashboard/order">List Order</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                        <div class="collapse" id="tablesExamples">
+                            <ul class="nav">
+                                <li class="{{ ($current_menu == 'order_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/dashboard/order">List Order</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @endif
                 </li>
                 <li class="{{ $current_menu == 'user_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#mapsExamples">
