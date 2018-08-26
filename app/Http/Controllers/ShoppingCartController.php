@@ -8,6 +8,7 @@ use App\Order;
 use App\OrderDetail;
 use App\Product;
 use App\ShoppingCart;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
@@ -111,15 +112,15 @@ class ShoppingCartController extends Controller
             try {
                 DB::beginTransaction();
                 $shopping_cart = Session::get('cart');
-                $ship_name = Input::get('shipname');
-                $ship_address = Input::get('shipaddress');
-                $ship_phone = Input::get('shipphone');
+                $ship_name = Input::get('shipName');
+                $ship_address = Input::get('shipAddress');
+                $ship_phone = Input::get('shipPhone');
                 $order = new Order();
                 $order->userId = 1;
-                $order->shipname = $ship_name;
-                $order->shipaddress = $ship_address;
-                $order->shipphone = $ship_phone;
-                $order->totalprice = 0;
+                $order->shipName = $ship_name;
+                $order->shipAddress = $ship_address;
+                $order->shipPhone = $ship_phone;
+                $order->total_price = 0;
                 $order->save();
                 $order_id = $order->id;
                 $order_details = array();
@@ -130,11 +131,13 @@ class ShoppingCartController extends Controller
                     }
                     $quantity = $item->quantity;
                     $order_detail = new OrderDetail();
-                    $order_detail->order_id = $order_id;
-                    $order_detail->product_id = $product->id;
+                    $order_detail->orderId = $order_id;
+                    $order_detail->productId = $product->id;
                     $order_detail->quantity = $quantity;
-                    $order_detail->unit_price = $product->discountPrice;
+                    $order_detail->unit_price = $product->price;
                     $order->total_price += $order_detail->unit_price * $order_detail->quantity;
+                    $order_detail->created_at = Carbon::now();
+                    $order_detail->updated_at = Carbon::now();
                     $order_detail->save();
                     array_push($order_details, $order_detail);
                 }

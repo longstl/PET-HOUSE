@@ -205,20 +205,30 @@
                         </div>
                     @endif
                 </li>
-                <li>
+                <li class="{{ $current_menu == 'order_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#tablesExamples">
-                        <i class="material-icons">grid_on</i>
+                        <i class="material-icons">apps</i>
                         <p>Order
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="tablesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="tables/regular.html">List Order</a>
-                            </li>
-                        </ul>
-                    </div>
+                    @if($current_menu == 'order_manager')
+                        <div class="collapse in" id="tablesExamples">
+                            <ul class="nav">
+                                <li class="{{ ($current_menu == 'order_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/dashboard/order">List Order</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                        <div class="collapse" id="tablesExamples">
+                            <ul class="nav">
+                                <li class="{{ ($current_menu == 'order_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/dashboard/order">List Order</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @endif
                 </li>
                 <li class="{{ $current_menu == 'user_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#mapsExamples">
@@ -516,6 +526,7 @@
 <script src="{{asset('js/quen.js')}}"></script>
 <script src="{{asset('js/product.js')}}"></script>
 <script src="{{asset('js/article.js')}}"></script>
+<script src="{{asset('js/order.js')}}"></script>
 
 <!-- Mirrored from demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2017 21:32:16 GMT -->
 </html>

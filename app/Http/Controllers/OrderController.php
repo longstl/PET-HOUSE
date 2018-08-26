@@ -30,4 +30,15 @@ class OrderController extends Controller
         $order->save();
         return redirect('/dashboard/order');
     }
+
+    public function destroy($id)
+    {
+        $obj = Order::find($id);
+        if ($obj == null) {
+            return response()->json(['message' => 'Order does not exist or Deleted!'], 404);
+        }
+        $obj->status = -1;
+        $obj->save();
+        return response()->json(['message' => 'Deleted'], 200);
+    }
 }
