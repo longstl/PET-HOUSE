@@ -8,6 +8,7 @@ use App\Order;
 use App\OrderDetail;
 use App\Product;
 use App\ShoppingCart;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
@@ -135,6 +136,8 @@ class ShoppingCartController extends Controller
                     $order_detail->quantity = $quantity;
                     $order_detail->unit_price = $product->price;
                     $order->total_price += $order_detail->unit_price * $order_detail->quantity;
+                    $order_detail->created_at = Carbon::now();
+                    $order_detail->updated_at = Carbon::now();
                     $order_detail->save();
                     array_push($order_details, $order_detail);
                 }
