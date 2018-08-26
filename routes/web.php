@@ -101,3 +101,4 @@ Route::get('/test', 'ShoppingCartController@demoTransaction');
 // Order Manager
 Route::get('/dashboard/order', 'OrderController@index');
 Route::get('/dashboard/order/change-status', 'OrderController@changeStatus');
+Route::delete('/dashboard/order/delete/{id}', 'OrderController@destroy');

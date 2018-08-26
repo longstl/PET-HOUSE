@@ -64,7 +64,7 @@
                                                                     class="material-icons">done</i></a>
                                                     @endif
                                                     @if($item->status==0)
-                                                        <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i
+                                                        <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete-cart"><i
                                                                     class="material-icons">close</i></a>
                                                     @endif
                                                 </td>
@@ -94,48 +94,4 @@
         </div>
         <!--  end card  -->
     </div>
-    <script>
-        $('.btn-delete').click(function () {
-            var thisButton = $(this);
-            swal({
-                text: "Do you want to delete Order?",
-                type: 'warning',
-                showCancelButton: true,
-                confirmButtonClass: 'btn btn-success',
-                cancelButtonClass: 'btn btn-danger',
-                confirmButtonText: 'Yes',
-                cancelButtonText: 'Cancel',
-                buttonsStyling: false
-            }).then(function() {
-                var id = thisButton.attr('href');
-                $.ajax({
-                    'url': '/dashboard/category/' + id,
-                    'method': 'DELETE',
-                    'data':{
-                        '_token':$('meta[name="csrf-token"]').attr('content')
-                    },
-                    success: function (response) {
-                        swal({
-                            text: 'Order has been deleted',
-                            type: 'success',
-                            confirmButtonClass: "btn btn-success",
-                            buttonsStyling: false
-                        })
-                        setTimeout(function () {
-                            window.location.reload();
-                        }, 2*1000);
-                    },
-                    error: function () {
-                        swal({
-                            text: 'Have been error please try again later.',
-                            type: 'warning',
-                            confirmButtonClass: "btn btn-danger",
-                            buttonsStyling: false
-                        })
-                    }
-                });
-            });
-            return false;
-        })
-    </script>
 @endsection
