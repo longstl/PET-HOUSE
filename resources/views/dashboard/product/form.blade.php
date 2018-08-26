@@ -52,6 +52,31 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <label class="col-sm-2 label-on-left">Father</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group label-floating is-empty{{$errors->has('father')?' has-error':''}}">
+                                        <label class="control-label"></label>
+                                        <input type="text" name="father" class="form-control{{$errors->has('father')?' error':''}}">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div><div class="row">
+                                <label class="col-sm-2 label-on-left">Mother</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group label-floating is-empty{{$errors->has('mother')?' has-error':''}}">
+                                        <label class="control-label"></label>
+                                        <input type="text" name="mother" class="form-control{{$errors->has('mother')?' error':''}}">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div><div class="row">
+                                <label class="col-sm-2 label-on-left">Paper</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group label-floating is-empty{{$errors->has('paper')?' has-error':''}}">
+                                        <label class="control-label"></label>
+                                        <input type="text" name="paper" class="form-control{{$errors->has('paper')?' error':''}}">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <label class="col-sm-2 label-on-left">Images</label>
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty{{$errors->has('images')?' has-error':''}}">

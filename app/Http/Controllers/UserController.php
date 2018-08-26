@@ -55,6 +55,7 @@ class UserController extends Controller
             'email.unique' => 'email have been exist, try another name.',
             'pasword.required' => 'Please enter Password user.',
             'password.errorCharacter' => 'Please enter only numberic.',
+            'password.min' =>'password too short,plaese enter at least 6 characters',
         ]);
         $obj->name = $request->get('name');
         $obj->email = $request->get('email');
@@ -107,7 +108,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|max:50|min:4' . $validate_unique,
             'email' => 'required|max:50|min:10',
-            'password' => 'required|numeric|min:0',
+            'password' => 'required|numeric|min:6',
 
         ], [
             'name.required' => 'Please enter name user.',
@@ -120,13 +121,26 @@ class UserController extends Controller
             'email.unique' => 'email have been exist, try another name.',
             'pasword.required' => 'Please enter Password user.',
             'password.errorCharacter' => 'Please enter only numberic.',
+            'password.min' =>'password too short,plaese enter at least 6 characters',
         ]);
         if ($obj == null) {
             return view('404');
         }
         $obj->name = $request->get('name');
         $obj->email = $request->get('email');
-        $obj->password = $request->get('password');
+        $old_password_encrypt = Hash::make($request->get('old_password'));
+        $get_old_password = $obj->password;
+        if ($old_password_encrypt != $get_old_password){
+            //trả về lỗi mật khẩu không khớp / Old Password doesn't exist
+        }else{
+            $new_password = $request->get('new_password');
+            $new_password_comfirm = $request->get('comfirm_new_password');
+            if ($new_password != $new_password_comfirm){
+                //trả về lỗi / New password and Confirm password doesn't exist
+            }else{
+                $obj->password = Hash::make($request->get('new_password'));
+            }
+        }
         $obj->admin = $request->get('admin');
         $obj->save();
         return redirect('/dashboard/user');

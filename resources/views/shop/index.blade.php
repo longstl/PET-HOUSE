@@ -63,11 +63,9 @@
                     <div class="item-image-wrapper">
                         <div class="single-items">
                             <div class="iteminfo text-xs-center">
-                                <a data-toggle="modal" data-target="#product_view"
-                                   onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img
-                                            src="{{$exp->images}} " style="height: 250px;" alt=""></a>
-                                <h2>${{$exp->price}}</h2>
+                                <a href="{{route('detaildog',$exp->id)}}"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
                                 <p style="height: 70px;">{{$exp->title}}</p>
+                                <h2>${{$exp->price}}</h2>
                                 <center><a href="/add-to-cart?id={{$exp->id}}&quantity=1"
                                            class="btn btn-secondary add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a></center>
@@ -89,11 +87,9 @@
                     <div class="item-image-wrapper">
                         <div class="single-items">
                             <div class="iteminfo text-xs-center">
-                                <a data-toggle="modal" data-target="#product_view"
-                                   onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img
-                                            src="{{$exp->images}} " style="height: 250px;" alt=""></a>
-                                <h2>${{$exp->price}}</h2>
+                                <a href="{{route('detailcat',$exp->id)}}"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
                                 <p style="height: 70px;">{{$exp->title}}</p>
+                                <h2>${{$exp->price}}</h2>
                                 <center><a href="/add-to-cart?id={{$exp->id}}&quantity=1"
                                            class="btn btn-secondary add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a></center>
@@ -116,11 +112,9 @@
                     <div class="item-image-wrapper">
                         <div class="single-items">
                             <div class="iteminfo text-xs-center">
-                                <a data-toggle="modal" data-target="#product_view"
-                                   onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img
-                                            src="{{$exp->images}} " style="height: 250px;" alt=""></a>
-                                <h2>${{$exp->price}}</h2>
+                                <a href="{{route('detaildetailaccessories',$exp->id)}}"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
                                 <p style="height: 70px;">{{$exp->title}}</p>
+                                <h2>${{$exp->price}}</h2>
                                 <center><a href="/add-to-cart?id={{$exp->id}}&quantity=1"
                                            class="btn btn-secondary add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a></center>
@@ -145,11 +139,9 @@
                     <div class="item-image-wrapper">
                         <div class="single-items">
                             <div class="iteminfo text-xs-center">
-                                <a data-toggle="modal" data-target="#product_view"
-                                   onclick="generateModal('{{$exp->images}}','{{$exp->price}}','{{$exp->title}}','{{$exp->description}}')"><img
-                                            src="{{$exp->images}} " style="height: 250px;" alt=""></a>
-                                <h2>${{$exp->price}}</h2>
+                                <a href="{{route('detailfood',$exp->id)}}"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
                                 <p style="height: 70px;">{{$exp->title}}</p>
+                                <h2>${{$exp->price}}</h2>
                                 <center><a href="/add-to-cart?id={{$exp->id}}&quantity=1"
                                            class="btn btn-secondary add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a></center>
@@ -165,42 +157,42 @@
 
         </div>
     </div>
-    <div class="modal fade product_view" id="product_view">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 product_img">
-                            <img id="modalImg" class="img-fluid">
-                        </div>
-                        <div class="col-md-6 product_content">
-                            <h3 id="modalTitle"><span></span></h3>
-                            <hr>
-                            <p id="modalDescription"></p>
-                            <center>
-                                <h3 id="modalPrice" class="cost"><span class="glyphicon glyphicon-usd"></span>
-                                    <small class="pre-cost"></small>
-                                </h3>
-                            </center>
-                            <div class="row">
-                                <p class="pp">Quantity : </p>
-                                <footer class="content">
-                                    <span class="qt-minus">-</span>
-                                    <span class="qt">1</span>
-                                    <span class="qt-plus">+</span>
-                                </footer>
-                            </div>
+    {{--<div class="modal fade product_view" id="product_view">--}}
+        {{--<div class="modal-dialog">--}}
+            {{--<div class="modal-content">--}}
+                {{--<div class="modal-body">--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-md-6 product_img">--}}
+                            {{--<img id="modalImg" class="img-fluid">--}}
+                        {{--</div>--}}
+                        {{--<div class="col-md-6 product_content">--}}
+                            {{--<h3 id="modalTitle"><span></span></h3>--}}
+                            {{--<hr>--}}
+                            {{--<p id="modalDescription"></p>--}}
+                            {{--<center>--}}
+                                {{--<h3 id="modalPrice" class="cost"><span class="glyphicon glyphicon-usd"></span>--}}
+                                    {{--<small class="pre-cost"></small>--}}
+                                {{--</h3>--}}
+                            {{--</center>--}}
+                            {{--<div class="row">--}}
+                                {{--<p class="pp">Quantity : </p>--}}
+                                {{--<footer class="content">--}}
+                                    {{--<span class="qt-minus">-</span>--}}
+                                    {{--<span class="qt">1</span>--}}
+                                    {{--<span class="qt-plus">+</span>--}}
+                                {{--</footer>--}}
+                            {{--</div>--}}
 
-                            <div class="space-ten"></div>
-                            <div class="btn-ground">
-                                <center><a href="#"
-                                           class="btn btn-secondary add-to-cart"><i
-                                                class="fa fa-shopping-cart"></i>Add to cart</a></center>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                            {{--<div class="space-ten"></div>--}}
+                            {{--<div class="btn-ground">--}}
+                                {{--<center><a href="#"--}}
+                                           {{--class="btn btn-secondary add-to-cart"><i--}}
+                                                {{--class="fa fa-shopping-cart"></i>Add to cart</a></center>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 @endsection

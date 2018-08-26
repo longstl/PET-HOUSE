@@ -24,6 +24,14 @@ Route::get('/petspa',function (){
     return view('petspa.spa');
 });
 
+Route::get('detaildog/{id}', ['as'=>'detaildog','uses'=>'ProductsallController@detaildog']);
+
+Route::get('detailcat/{id}', ['as'=>'detailcat','uses'=>'ProductsallController@detailcat']);
+
+Route::get('detailaccessories/{id}', ['as'=>'detaildetailaccessories','uses'=>'ProductsallController@detailaccess']);
+
+Route::get('detailfood/{id}', ['as'=>'detailfood','uses'=>'ProductsallController@detailfood']);
+
 Route::get('/pethousedog','ProductsallController@getListDog');
 
 Route::get('/pethousecat','ProductsallController@getListCat');
@@ -31,6 +39,7 @@ Route::get('/pethousecat','ProductsallController@getListCat');
 Route::get('/accessories','ProductsallController@getListAccessoriDog');
 
 Route::get('/foodpet','ProductsallController@getListFoodDog');
+
 Route::get('/breed','ArticleController@getListBreed');
 
 Route::get('/','ProductsallController@getListHome');
@@ -54,9 +63,6 @@ Route::get('/user/register',function (){
 
 Route::get('/dashboard ',function (){
     return view('dashboard.index');
-});
-Route::get('/detail', function () {
-    return view('detail.detail-product');
 });
 
 

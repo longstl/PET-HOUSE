@@ -41,6 +41,9 @@ class ProductController extends Controller
         $request->validate([
             'categoryId'=> 'required',
             'title' => 'required|max:50|min:10',
+            'father' => 'required|max:50|min:3',
+            'mother' => 'required|max:50|min:3',
+            'paper' => 'required',
             'description' => 'required',
             'price' => 'required|numeric|min:0',
             'images' => 'required'
@@ -49,6 +52,17 @@ class ProductController extends Controller
             'title.min' => 'title too short, please enter at least 10 characters.',
             'title.max' => 'title too long, maximum 50 characters.',
             'title.unique' => 'title have been exist, try another name.',
+
+            'father.min' => 'title too short, please enter at least 3 characters.',
+            'father.max' => 'title too long, maximum 50 characters.',
+            'father.unique' => 'title have been exist, try another name.',
+
+            'mother.min' => 'title too short, please enter at least 3 characters.',
+            'mother.max' => 'title too long, maximum 50 characters.',
+            'mother.unique' => 'title have been exist, try another name.',
+
+            'paper.required' => 'Please enter image url or commit',
+
             'price.required' => 'Please enter Price product.',
             'price.errorCharacter' => 'Please enter only numberic.',
             'description.required' => 'Please enter description product',
@@ -57,6 +71,9 @@ class ProductController extends Controller
         $obj->title = $request->get('title');
         $obj->description = $request->get('description');
         $obj->price = $request->get('price');
+        $obj->father = $request->get('father');
+        $obj->mother = $request->get('mother');
+        $obj->paper = $request->get('paper');
         $obj->images = $request->get('images');
         $obj->categoryId = $request->get('categoryId');
         $obj->save();
@@ -101,10 +118,13 @@ class ProductController extends Controller
         $obj = Product::find($id);
         $validate_unique = '';
         if($obj->title != $request->get('title')){
-            $validate_unique = '|unique:categories';
+            $validate_unique = '|unique:products';
         }
         $request->validate([
             'title' => 'required|max:50|min:10' . $validate_unique,
+            'father' => 'required|max:50|min:3',
+            'mother' => 'required|max:50|min:3',
+            'paper' => 'required',
             'description' => 'required',
             'price' => 'required|numberic|min:0',
             'images' => 'required'
@@ -113,6 +133,17 @@ class ProductController extends Controller
             'title.min' => 'title too short, please enter at least 10 characters.',
             'title.max' => 'title too long, maximum 50 characters.',
             'title.unique' => 'title have been exist, try another name.',
+
+            'father.min' => 'title too short, please enter at least 3 characters.',
+            'father.max' => 'title too long, maximum 50 characters.',
+            'father.unique' => 'title have been exist, try another name.',
+
+            'mother.min' => 'title too short, please enter at least 3 characters.',
+            'mother.max' => 'title too long, maximum 50 characters.',
+            'mother.unique' => 'title have been exist, try another name.',
+
+            'paper.required' => 'Please enter image url or commit',
+
             'price.required' => 'Please enter Price product.',
             'price.errorCharacter' => 'Please enter only numberic and only integer',
             'description.required' => 'Please enter description product',
@@ -125,6 +156,9 @@ class ProductController extends Controller
         $obj->description = $request->get('description');
         $obj->price = $request->get('price');
         $obj->images = $request->get('images');
+        $obj->father = $request->get('father');
+        $obj->mother = $request->get('mother');
+        $obj->paper = $request->get('paper');
         $obj->categoryId = $request->get('categoryId');
         $obj->status = $request->get('status');
         $obj->save();

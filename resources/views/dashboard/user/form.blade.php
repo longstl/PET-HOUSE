@@ -42,22 +42,30 @@
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
+
                             <div class="row">
-                                <label class="col-sm-2 label-on-left">PassWord</label>
+                                <label class="col-sm-2 label-on-left">Pasword</label>
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty{{$errors->has('password')?' has-error':''}}">
-                                        <label class="control-label"></label>
-                                        <input type="password" name="password" class="form-control{{$errors->has('password')?' error':''}}">
-                                        <span class="material-input"></span></div>
+                                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                                        @if ($errors->has('password'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                        @endif
                                 </div>
                             </div>
-                            <div class="row">
-                                <label class="col-sm-2 label-on-left">PassWord</label>
-                                <div class="col-md-8">
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+
+                                <div class="row">
+                                    <label class="col-sm-2 label-on-left">Confirm Password</label>
+                                    <div class="col-sm-8">
+                                        <div class="form-group label-floating is-empty{{$errors->has('password')?' has-error':''}}">
+                                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                    </div>
                                 </div>
-                            </div>
-                            </div>
+                                </div>
                             <div class="row">
                                 <label class="col-sm-2 label-on-left">Kind</label>
                                 <div class="col-sm-1">
