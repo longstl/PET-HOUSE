@@ -273,12 +273,13 @@
                     @endif
                 </li>
                 {{--#mapsExamples--}}
-                <li>
+                <li class="{{ $current_menu == 'chart_manager' ? 'active' : '' }}">
                     <a href="/dashboard/chart">
                         <i class="material-icons">timeline</i>
                         <p>Charts</p>
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>
