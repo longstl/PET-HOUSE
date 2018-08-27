@@ -15,6 +15,15 @@ class ShoppingCart
     /**
      * ShoppingCart constructor.
      */
+
+    public static function getCart()
+    {
+        if (Session::has('cart')) {
+            return Session::get('cart');
+        }
+        return new ShoppingCart();
+    }
+
     function __construct()
     {
         $this->items = array();
@@ -31,4 +40,25 @@ class ShoppingCart
     function getTotalMoneyWithFormat(){
         return sprintf('%s', number_format($this->getTotalMoney(), 0));
     }
+
+    public static function getTotalItem()
+    {
+        $count = 0;
+        if (Session::has('cart')) {
+            $shopping_cart = Session::get('cart');
+            $count = self::calculateTotalItem($shopping_cart);
+        }
+        return $count;
+    }
+
+    public static function calculateTotalItem($shopping_cart)
+    {
+        $count = 0;
+        foreach ($shopping_cart->items as $item) {
+            $count += $item->quantity;
+        }
+        return $count;
+    }
+
+
 }
