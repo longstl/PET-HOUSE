@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 class OrderController extends Controller
@@ -21,8 +23,8 @@ class OrderController extends Controller
 
     public function getChartDataApi()
     {
-        $start_date = '2018-07-20';
-        $end_date = '2018-08-25';
+        $start_date = '2018-08-10';
+        $end_date = Carbon::now();
         $chart_data = Order::select(DB::raw('sum(total_price) as revenue'), DB::raw('date(created_at) as day'))
             ->whereBetween('created_at', array($start_date, $end_date))
             ->groupBy('day')

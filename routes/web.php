@@ -26,11 +26,11 @@ Route::get('/petspa',function (){
 
 Route::get('detaildog/{id}', ['as'=>'detaildog','uses'=>'ProductsallController@detaildog']);
 
-Route::get('detailcat/{id}', ['as'=>'detailcat','uses'=>'ProductsallController@detailcat']);
+Route::get('/detailcat/{id}', ['as'=>'detailcat','uses'=>'ProductsallController@detailcat']);
 
-Route::get('detailaccessories/{id}', ['as'=>'detaildetailaccessories','uses'=>'ProductsallController@detailaccess']);
+Route::get('/detailaccessories/{id}', ['as'=>'detaildetailaccessories','uses'=>'ProductsallController@detailaccess']);
 
-Route::get('detailfood/{id}', ['as'=>'detailfood','uses'=>'ProductsallController@detailfood']);
+Route::get('/detailfood/{id}', ['as'=>'detailfood','uses'=>'ProductsallController@detailfood']);
 
 Route::get('/pethousedog','ProductsallController@getListDog');
 
@@ -66,13 +66,17 @@ Route::get('/dashboard ',function (){
 });
 
 
-Route::resource('dashboard/category', 'CategoryController');
+Route::resource('/dashboard/category', 'CategoryController');
 
-Route::resource('dashboard/user', 'UserController');
+Route::resource('/dashboard/user', 'UserController');
 
-Route::resource('dashboard/article','ArticleController');
+Route::resource('/dashboard/article','ArticleController');
 
-Route::resource('dashboard/product', 'ProductController');
+Route::resource('/dashboard/product', 'ProductController');
+
+Route::get('/dashboard/chart', function (){
+    return view('dashboard.charts.chart');
+});
 
 Route::resource('petspa', 'spaController');
 ///verify/153504992215b7f00c23d373
@@ -108,3 +112,6 @@ Route::get('/test', 'ShoppingCartController@demoTransaction');
 Route::get('/dashboard/order', 'OrderController@index');
 Route::get('/dashboard/order/change-status', 'OrderController@changeStatus');
 Route::delete('/dashboard/order/delete/{id}', 'OrderController@destroy');
+
+// chart
+Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
