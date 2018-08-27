@@ -10,9 +10,8 @@
 
             <!-- Grid column -->
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Company name</h6>
-                <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.</p>
+                <h6 class="text-uppercase mb-4 font-weight-bold">Pet House</h6>
+                <p>Want to buy a dog or cat to feed? Let us help you find and make many choices for you. We will confidently bring satisfaction and trust when coming to Pet <House class=""></House></p>
             </div>
             <!-- Grid column -->
 
@@ -22,16 +21,16 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
                 <p>
-                    <a href="#" style="color: white">MDBootstrap</a>
+                    <a href="/pethousedog" style="color: white">Shop Dog</a>
                 </p>
                 <p>
-                    <a href="#" style="color: white">MDWordPress</a>
+                    <a href="/pethousecat" style="color: white">Shop Cat</a>
                 </p>
                 <p>
-                    <a href="#" style="color: white">BrandFlow</a>
+                    <a href="/accessories" style="color: white">Shop Accessories</a>
                 </p>
                 <p>
-                    <a href="#" style="color: white">Bootstrap Angular</a>
+                    <a href="/foodpet" style="color: white">Shop Food For Pet</a>
                 </p>
             </div>
             <!-- Grid column -->
@@ -40,18 +39,18 @@
 
             <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+                <h6 class="text-uppercase mb-4 font-weight-bold">Other Pages</h6>
                 <p>
-                    <a href="#" style="color: white">Your Account</a>
+                    <a href="/petspa" style="color: white">Pet Spa</a>
                 </p>
                 <p>
-                    <a href="#" style="color: white">Become an Affiliate</a>
+                    <a href="/breed" style="color: white">Breed Encyclopdia</a>
                 </p>
                 <p>
-                    <a href="#"  style="color: white">Shipping Rates</a>
+                    <a href="/contact"  style="color: white">Contact</a>
                 </p>
                 <p>
-                    <a href="#" style="color: white">Help</a>
+                    <a href="/about" style="color: white">About</a>
                 </p>
             </div>
 
