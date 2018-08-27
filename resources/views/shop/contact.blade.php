@@ -23,31 +23,32 @@
                 </div>
                 <div class="col-md-6">
                     <h2 class="text-uppercase mt-3 font-weight-bold text">CONTACT</h2>
-                    <form action="">
+                    <form action="/contact-us" method="post">
+                        {{csrf_field()}}
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control mt-2" placeholder="First Name" required>
+                                    <input type="text" name="firstName" class="form-control mt-2" placeholder="First Name" required>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control mt-2" placeholder="Last Name" required>
+                                    <input type="text" name="lastName" class="form-control mt-2" placeholder="Last Name" required>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control mt-2" placeholder="Email" required>
+                                    <input type="email" name="email" class="form-control mt-2" placeholder="Email" required>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="tel" class="form-control mt-2" placeholder="Phone" required>
+                                    <input type="tel" name="phone" class="form-control mt-2" placeholder="Phone" required>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3" required></textarea>
+                                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" placeholder="Message" rows="3" required></textarea>
                                 </div>
                             </div>
                             <div class="col-12">
