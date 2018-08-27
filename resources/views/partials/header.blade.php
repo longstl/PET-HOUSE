@@ -9,8 +9,8 @@
         </button>
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <form class="form-inline" action="#">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search Pets" style="width: 300px; margin-left: 310px;   ">
+            <form class="form-inline" method="get" id="searchform" action="{{route('search')}}">
+                <input class="form-control mr-sm-2" type="text" name="key" placeholder="Search Pets" style="width: 300px; margin-left: 310px;   ">
                 <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
             </form>
         </div>
