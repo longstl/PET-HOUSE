@@ -10,6 +10,15 @@
                 <div class="card-header card-header-icon" data-background-color="purple">
                     <i class="material-icons">edit</i>
                 </div>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="card-content">
                     <h4 class="card-title">User Edit</h4>
                     <form method="post" action="/dashboard/user/{{$obj->id}}" class="form-horizontal">
@@ -39,7 +48,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="password" name="old_password" class="form-control" value="{{$obj->password}}">
+                                        <input type="password" name="password" class="form-control" value="{{$obj->password}}">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
@@ -48,7 +57,7 @@
                                 <div class="col-sm-8">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="password" name="new_password" class="form-control">
+                                        <input type="password" name="new_password" class="form-control" >
                                         <span class="material-input"></span></div>
                                 </div>
                             </div> <div class="row">
@@ -65,7 +74,7 @@
                                 <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label"></label>
-                                        <input type="text" name="admin" class="form-control" value="{{($obj->admin==1?"Admin":($obj->admin==0?"member":"Accessories"))}}" disabled>
+                                        <input type="text" name="admin" class="form-control" value="{{($obj->admin==1?"Admin":"Member")}}" disabled>
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
