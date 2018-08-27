@@ -108,7 +108,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|max:50|min:4' . $validate_unique,
             'email' => 'required|max:50|min:10',
-            'password' => 'required|numeric|min:6',
+            'password' => 'required|min:6',
 
         ], [
             'name.required' => 'Please enter name user.',
@@ -128,7 +128,7 @@ class UserController extends Controller
         }
         $obj->name = $request->get('name');
         $obj->email = $request->get('email');
-        $old_password_encrypt = Hash::make($request->get('old_password'));
+        $old_password_encrypt = Hash::make($request->get('password'));
         $get_old_password = $obj->password;
         if ($old_password_encrypt != $get_old_password){
             //trả về lỗi mật khẩu không khớp / Old Password doesn't exist
