@@ -116,3 +116,8 @@ Route::delete('/dashboard/order/delete/{id}', 'OrderController@destroy');
 
 // chart
 Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
+
+Route::get('search',[
+   'as'=>'search',
+    'uses'=>'ProductsallController@getSearch'
+]);
