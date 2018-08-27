@@ -115,7 +115,7 @@
                 <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger"
                                                             href="/foodpet">FOOD FOR PET</a></li>
                 <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger"
-                                                            href="spa">PET SPA</a></li>
+                                                            href="/spa">PET SPA</a></li>
                 <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger"
                                                             href="/breed">BREED ENCYCLOPDIA</a></li>
                 <li class="nav-item" role="presentation"><a style="color: black" class="nav-link js-scroll-trigger"
