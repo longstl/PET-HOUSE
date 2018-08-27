@@ -146,7 +146,7 @@ class ShoppingCartController extends Controller
                 // clear session cart.
                 Session::remove('cart');
                 // send mail or sms.
-                return view('customer.order-success')->with('order', $order)->with('order_details', $order_details);
+                return view('shop.animation');
             } catch (\Exception $exception) {
                 DB::rollBack();
                 return 'Error.' . $exception->getMessage();

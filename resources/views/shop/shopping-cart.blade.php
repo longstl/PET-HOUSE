@@ -86,4 +86,4 @@
             </div>
         </footer>
     </div>
-@endsection*
+@endsection
