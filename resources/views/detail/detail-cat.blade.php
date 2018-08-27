@@ -38,7 +38,7 @@
                         <h5 class="product-title">{{$product_detail->title}}</h5>
                         <p>{{$product_detail->description}}</p>
                         <br><center><h4 class="price"> <span>$ {{$product_detail->price}}</span></h4></center><br>
-                        <a href="#" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                        <a href="/add-to-cart?id={{$product_detail->id}}&quantity=1" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                     </div>
                 </div>
                 <br>

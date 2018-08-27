@@ -19,17 +19,17 @@
 @section('content')
 
     <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">    <br>
-    <form class="woocommerce-ordering" method="get">
-        <select name="orderby" class="orderby">
-            <option value="menu_order" selected="selected">Cat</option>
-            <option value="popularity">Sort by popularity</option>
-            <option value="rating">Sort by average rating</option>
-            <option value="date">Sort by newness</option>
-            <option value="price">Sort by price: low to high</option>
-            <option value="price-desc">Sort by price: high to low</option>
-        </select>
-        <input type="hidden" name="paged" value="1">
-    </form>
+    {{--<form class="woocommerce-ordering" method="get">--}}
+        {{--<select name="orderby" class="orderby">--}}
+            {{--<option value="menu_order" selected="selected">Cat</option>--}}
+            {{--<option value="popularity">Sort by popularity</option>--}}
+            {{--<option value="rating">Sort by average rating</option>--}}
+            {{--<option value="date">Sort by newness</option>--}}
+            {{--<option value="price">Sort by price: low to high</option>--}}
+            {{--<option value="price-desc">Sort by price: high to low</option>--}}
+        {{--</select>--}}
+        {{--<input type="hidden" name="paged" value="1">--}}
+    {{--</form>--}}
     <div class="bread-bar bg-grey">
         <div class="container">
             <div class="row">
