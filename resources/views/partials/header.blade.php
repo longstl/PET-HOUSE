@@ -38,7 +38,7 @@
                                         class="fas fa-list-alt"></i>
                             </button>
                         @else
-                            <button type="button" onclick="window.location.href='/login'" class="btn btn-info"
+                            <button type="button" onclick="window.location.href='/history-order/{{auth()->user()->id}}'" class="btn btn-info"
                                     style="color: black; background: none; border: none"><i
                                         class="fas fa-history"></i>
                             </button>

@@ -49,9 +49,9 @@ class ContactController extends Controller
         $obj->verifyCode = $verifyCode;
         $obj->save();
 
-        Mail::send('mail.verify', ['code'=>$verifyCode,'mail'=>$request->get('email')],function ($message) use ($request) {
+        Mail::send('mail.verifycontact', ['code'=>$verifyCode,'mail'=>$request->get('email')],function ($message) use ($request) {
             $message->to($request->get('email'),$request->get('lastName'))
-                ->subject('Verify');
+                ->subject('Verifycontact');
         });
         return View('mail.verifyRequest');
     }
