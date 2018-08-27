@@ -1,17 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Thuong
- * Date: 2018-08-24
- * Time: 02:00
- */
 
 namespace App\Http\Controllers;
 
 use App\BookSpa;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
-class VerifyController extends Controller
+class SpaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,6 +16,7 @@ class VerifyController extends Controller
     public function index()
     {
         //
+        return view('shop.contact');
     }
 
     /**
@@ -30,6 +26,7 @@ class VerifyController extends Controller
      */
     public function create()
     {
+        return redirect('/');
     }
 
     /**
@@ -39,7 +36,21 @@ class VerifyController extends Controller
      */
     public function store(Request $request)
     {
+        $obj = new BookSpa();
+        $obj->partydate = $request->get('partydate');
+        $obj->name = $request->get('name');
+        $obj->email = $request->get('email');
+        $obj->phone = $request->get('phone');
+        $obj->message = $request->get('message');
+        $verifyCode = time().uniqid(true);
+        $obj->verifyCode = $verifyCode;
+        $obj->save();
 
+        Mail::send('mail.verify', ['code'=>$verifyCode,'mail'=>$request->get('email')],function ($message) use ($request) {
+            $message->to($request->get('email'),$request->get('name'))
+                ->subject('Verify');
+        });
+        return View('mail.verifyRequest');
 
     }
     /**
@@ -50,20 +61,7 @@ class VerifyController extends Controller
      */
     public function show($id)
     {
-        // lay spa trong db theo email.
-        $email = Input::get('mail');
-
-        $obj = bookSpa::where('email',$email)->first();
-        if ($obj == null) {
-            return view('404');
-        }
-        if (($obj->verifyCode) !== $id){
-            return view('400');
-        }
-        $obj->status = 1;
-        $obj->save();
-        return view('mail.confirmed');
-
+        //
     }
 
     /**
@@ -87,7 +85,6 @@ class VerifyController extends Controller
     public function update(Request $request, $id)
     {
         //
-
     }
 
     /**

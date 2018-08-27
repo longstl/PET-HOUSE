@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\bookSpa;
+use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-class spaController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,19 +26,22 @@ class spaController extends Controller
      */
     public function create()
     {
+        //
         return redirect('/');
     }
 
     /**
+     * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $obj = new bookSpa();
-        $obj->partydate = $request->get('partydate');
-        $obj->name = $request->get('name');
+        //
+        $obj = new Contact();
+        $obj->firstName = $request->get('firstName');
+        $obj->lastName = $request->get('lastName');
         $obj->email = $request->get('email');
         $obj->phone = $request->get('phone');
         $obj->message = $request->get('message');
@@ -47,12 +50,12 @@ class spaController extends Controller
         $obj->save();
 
         Mail::send('mail.verify', ['code'=>$verifyCode,'mail'=>$request->get('email')],function ($message) use ($request) {
-            $message->to($request->get('email'),$request->get('name'))
+            $message->to($request->get('email'),$request->get('lastName'))
                 ->subject('Verify');
         });
         return View('mail.verifyRequest');
-
     }
+
     /**
      * Display the specified resource.
      *
