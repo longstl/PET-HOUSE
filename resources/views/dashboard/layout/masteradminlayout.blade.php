@@ -22,6 +22,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+    @yield('styles')
 </head>
 
 <body>
@@ -273,7 +274,7 @@
                 </li>
                 {{--#mapsExamples--}}
                 <li>
-                    <a href="charts.html">
+                    <a href="/dashboard/chart">
                         <i class="material-icons">timeline</i>
                         <p>Charts</p>
                     </a>
@@ -527,6 +528,6 @@
 <script src="{{asset('js/product.js')}}"></script>
 <script src="{{asset('js/article.js')}}"></script>
 <script src="{{asset('js/order.js')}}"></script>
-
+@yield('scripts')
 <!-- Mirrored from demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2017 21:32:16 GMT -->
 </html>
