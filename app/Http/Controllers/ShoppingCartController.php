@@ -9,6 +9,7 @@ use App\OrderDetail;
 use App\Product;
 use App\ShoppingCart;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
@@ -108,52 +109,57 @@ class ShoppingCartController extends Controller
 
     public function checkoutCart()
     {
-        if (Session::has('cart')) {
-            try {
-                DB::beginTransaction();
-                $shopping_cart = Session::get('cart');
-                $ship_name = Input::get('shipName');
-                $ship_address = Input::get('shipAddress');
-                $ship_phone = Input::get('shipPhone');
-                $order = new Order();
-                $order->userId = 1;
-                $order->shipName = $ship_name;
-                $order->shipAddress = $ship_address;
-                $order->shipPhone = $ship_phone;
-                $order->total_price = 0;
-                $order->save();
-                $order_id = $order->id;
-                $order_details = array();
-                foreach ($shopping_cart->items as $item) {
-                    $product = Product::find($item->product->id);
-                    if ($product == null || $product->status != 1) {
-                        return view('error.404');
+        if(auth()->check()){
+            if (Session::has('cart')) {
+                try {
+                    DB::beginTransaction();
+                    $shopping_cart = Session::get('cart');
+                    $ship_name = Input::get('shipName');
+                    $ship_address = Input::get('shipAddress');
+                    $ship_phone = Input::get('shipPhone');
+                    $order = new Order();
+                    $order->userId = auth()->user()->id;
+                    $order->shipName = $ship_name;
+                    $order->shipAddress = $ship_address;
+                    $order->shipPhone = $ship_phone;
+                    $order->total_price = 0;
+                    $order->save();
+                    $order_id = $order->id;
+                    $order_details = array();
+                    foreach ($shopping_cart->items as $item) {
+                        $product = Product::find($item->product->id);
+                        if ($product == null || $product->status != 1) {
+                            return view('error.404');
+                        }
+                        $quantity = $item->quantity;
+                        $order_detail = new OrderDetail();
+                        $order_detail->orderId = $order_id;
+                        $order_detail->productId = $product->id;
+                        $order_detail->quantity = $quantity;
+                        $order_detail->unit_price = $product->price;
+                        $order->total_price += $order_detail->unit_price * $order_detail->quantity;
+                        $order_detail->created_at = Carbon::now();
+                        $order_detail->updated_at = Carbon::now();
+                        $order_detail->save();
+                        array_push($order_details, $order_detail);
                     }
-                    $quantity = $item->quantity;
-                    $order_detail = new OrderDetail();
-                    $order_detail->orderId = $order_id;
-                    $order_detail->productId = $product->id;
-                    $order_detail->quantity = $quantity;
-                    $order_detail->unit_price = $product->price;
-                    $order->total_price += $order_detail->unit_price * $order_detail->quantity;
-                    $order_detail->created_at = Carbon::now();
-                    $order_detail->updated_at = Carbon::now();
-                    $order_detail->save();
-                    array_push($order_details, $order_detail);
+                    $order->save();
+                    DB::commit();
+                    // clear session cart.
+                    Session::remove('cart');
+                    // send mail or sms.
+                    return view('shop.animation');
+                } catch (\Exception $exception) {
+                    DB::rollBack();
+                    return 'Error.' . $exception->getMessage();
                 }
-                $order->save();
-                DB::commit();
-                // clear session cart.
-                Session::remove('cart');
-                // send mail or sms.
-                return view('shop.animation');
-            } catch (\Exception $exception) {
-                DB::rollBack();
-                return 'Error.' . $exception->getMessage();
-            }
 
-        } else {
-            return redirect('/')->with('message', 'Cart is empty.');
+            } else {
+                return redirect('/')->with('message', 'Cart is empty.');
+            }
+        }else{
+            return redirect('/login');
         }
+
     }
 }

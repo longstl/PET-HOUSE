@@ -16,7 +16,7 @@ class SpaController extends Controller
     public function index()
     {
         //
-        return view('shop.contact');
+        return view('petspa.spa');
     }
 
     /**

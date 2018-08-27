@@ -82,6 +82,7 @@ Route::resource('/petspa', 'spaController');
 Route::resource('petspa', 'SpaController');
 Route::resource('contact-us', 'ContactController');
 Route::resource('verify', 'VerifyController');
+Route::resource('verifycontact', 'VerifyContactController');
 Auth::routes();
 
 Route::group(['milldeware' => ['web','auth']],function (){
@@ -113,6 +114,7 @@ Route::get('/test', 'ShoppingCartController@demoTransaction');
 Route::get('/dashboard/order', 'OrderController@index');
 Route::get('/dashboard/order/change-status', 'OrderController@changeStatus');
 Route::delete('/dashboard/order/delete/{id}', 'OrderController@destroy');
+Route::get('/history-order/{id}', 'OrderController@findById');
 
 // chart
 Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');

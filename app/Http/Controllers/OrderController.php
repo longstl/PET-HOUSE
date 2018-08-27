@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use Carbon\Carbon;
+use http\Env\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
@@ -19,6 +20,12 @@ class OrderController extends Controller
     {
         $list_obj = Order::paginate(10);
         return view('dashboard.order.list')->with('list_obj', $list_obj);
+    }
+
+    public function findById($id)
+    {
+        $list_obj = Order::where('userId',$id)->paginate(10);
+        return view('shop.history-order')->with('list_obj', $list_obj);
     }
 
     public function getChartDataApi()
