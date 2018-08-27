@@ -78,9 +78,9 @@ Route::get('/dashboard/chart', function (){
     return view('dashboard.charts.chart');
 });
 
+Route::resource('/petspa', 'spaController');
 Route::resource('petspa', 'SpaController');
 Route::resource('contact-us', 'ContactController');
-///verify/153504992215b7f00c23d373
 Route::resource('verify', 'VerifyController');
 Auth::routes();
 
