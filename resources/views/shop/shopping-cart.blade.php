@@ -67,11 +67,11 @@
                             {{csrf_field()}}
                             <br>
                             <fieldset>
-                                <input style="width: 300px" placeholder="Your name" name="shipName" type="text" tabindex="1" required="required" autofocus>
+                                <input style="width: 300px" placeholder="Your name" name="shipName" type="text" tabindex="1" required="required" autofocus pattern="^[A-Za-z0-9_]{5,15}$" title="Only Character (minimum 5).">
                             </fieldset>
                             <br>
                             <fieldset>
-                                <input style="width: 300px" placeholder="Your Phone Number" name="shipPhone" type="tel" tabindex="3" required="required">
+                                <input style="width: 300px" placeholder="Your Phone Number" name="shipPhone" type="tel" tabindex="3" required="required" pattern="[0-9]{10,14}" title="ten or more characters">
                             </fieldset>
                             <br>
                             <fieldset>
