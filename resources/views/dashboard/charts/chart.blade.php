@@ -15,7 +15,7 @@
                         <h4 class="card-title">Datetime Picker</h4>
                         <div class="form-group">
                             <label class="label-control">Start Picker</label>
-                            <input type="text" class="form-control datetimepicker" value="10/05/2016"/>
+                            <input type="datetime-local" class="form-control start-date" value="{{Carbon\Carbon::now()}}"/>
                         </div>
                     </div>
                 </div>
@@ -29,12 +29,13 @@
                         <h4 class="card-title">Datetime Picker</h4>
                         <div class="form-group">
                             <label class="label-control">End Date Picker</label>
-                            <input type="text" class="form-control datetimepicker" value="10/05/2016"/>
+                            <input type="datetime-local" class="form-control end-date" value="{{Carbon\Carbon::now()}}"/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <center><button type="submit" class="btn btn-rose btn-fill"><i class="material-icons">send</i> Send<div class="ripple-container"></div></button></center>
     </div>
     <div class="col-md-12">
         <div class="card">
@@ -79,11 +80,41 @@
                 },
                 height: 500,
                 hAxis: {
-                    format: 'dd/MM/yyyy'
+                    format: 'MM/dd/yyyy'
                 }
             };
             var chart = new google.charts.Line(document.getElementById('linechart_material'));
             chart.draw(data, google.charts.Line.convertOptions(options));
         }
+
+        $('.start-date').datetimepicker({
+            icons: {
+                time: "fa fa-clock-o",
+                date: "fa fa-calendar",
+                up: "fa fa-chevron-up",
+                down: "fa fa-chevron-down",
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-screenshot',
+                clear: 'fa fa-trash',
+                close: 'fa fa-remove',
+                inline: true
+            }
+        });
+
+        $('.end-date').datetimepicker({
+            icons: {
+                time: "fa fa-clock-o",
+                date: "fa fa-calendar",
+                up: "fa fa-chevron-up",
+                down: "fa fa-chevron-down",
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-screenshot',
+                clear: 'fa fa-trash',
+                close: 'fa fa-remove',
+                inline: true
+            }
+        });
     </script>
 @endsection

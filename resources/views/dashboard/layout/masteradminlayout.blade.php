@@ -524,7 +524,6 @@
         demo.initDashboardPageCharts();
         demo.initVectorMap();
     });</script>
-
 <script src="{{asset('js/quen.js')}}"></script>
 <script src="{{asset('js/product.js')}}"></script>
 <script src="{{asset('js/article.js')}}"></script>

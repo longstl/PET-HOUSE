@@ -28,8 +28,10 @@ class OrderController extends Controller
         return view('shop.history-order')->with('list_obj', $list_obj);
     }
 
-    public function getChartDataApi()
+    public function getChartDataApi(Request $request)
     {
+//        $start_date = $request->start_date;
+//        $end_date = $request->end_date;
         $start_date = '2018-08-10';
         $end_date = Carbon::now();
         $chart_data = Order::select(DB::raw('sum(total_price) as revenue'), DB::raw('date(created_at) as day'))
@@ -50,7 +52,7 @@ class OrderController extends Controller
         }
         $order->status = $status;
         $order->save();
-        return redirect('/admin/order');
+        return redirect('/dashboard/order');
     }
 
     public function destroy($id)
