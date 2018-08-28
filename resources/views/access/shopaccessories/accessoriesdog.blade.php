@@ -22,36 +22,31 @@
 @section('content')
 
     <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">    <br>
-    {{--<form class="woocommerce-ordering" method="get">--}}
-        {{--<select name="orderby" class="orderby">--}}
-            {{--<option value="menu_order" selected="selected">Necklace</option>--}}
-            {{--<option value="popularity">Sort by popularity</option>--}}
-            {{--<option value="rating">Sort by average rating</option>--}}
-            {{--<option value="date">Sort by newness</option>--}}
-            {{--<option value="price">Sort by price: low to high</option>--}}
-            {{--<option value="price-desc">Sort by price: high to low</option>--}}
-        {{--</select>--}}
-        {{--<input type="hidden" name="paged" value="1">--}}
-    {{--</form>--}}
     <div class="bread-bar bg-grey">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-4">
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
                         <li><a href="/accessories">Accessories</a></li>
-                        <li class="active">Necklace</li>
                     </ol>
                 </div>
+
                 <div class="col-md-4 col-sm-6 col-xs-4">
                 </div>
             </div>
         </div>
     </div>
+
     <div class="nm-divider separator_align_center">
         <h1 class="nm-divider-title medium">Accessories</h1>
         <br>
-        <div class="nm-divider-line" style></div>
+        <form class="form-inline" action="{{route('accessories')}}" method="GET" style="font-size: 13px;margin-left: 10px;">
+            Min : <input class="formsr" type="number" name="min_price" style="margin-left: 10px;border-radius: .25rem;">
+            + Max :    <input class="formsr" type="number" name="max_price" style="margin-left: 10px; border-radius: .25rem;">
+            + Keyword :<input class="formsr" type="text" name="keyword" style="margin-left: 10px;border-radius: .25rem;">
+            <input class="btn btn-default" type="submit" value="Search" style="background-color: white; background-color: white;margin-left: 10px;">
+        </form>
     </div>
     <br>
 
@@ -79,5 +74,6 @@
         <div class="links" style="margin-left: 470px">
         {{$product->links()}}</div>
     </div>
+
 
 @endsection

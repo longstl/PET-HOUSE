@@ -20,17 +20,6 @@
 
     <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">
     <br>
-    {{--<form class="woocommerce-ordering" method="get">--}}
-        {{--<select name="orderby" class="orderby">--}}
-            {{--<option value="menu_order" selected="selected">Cat</option>--}}
-            {{--<option value="popularity">Sort by popularity</option>--}}
-            {{--<option value="rating">Sort by average rating</option>--}}
-            {{--<option value="date">Sort by newness</option>--}}
-            {{--<option value="price">Sort by price: low to high</option>--}}
-            {{--<option value="price-desc">Sort by price: high to low</option>--}}
-        {{--</select>--}}
-        {{--<input type="hidden" name="paged" value="1">--}}
-    {{--</form>--}}
     <div class="bread-bar bg-grey">
         <div class="container">
             <div class="row">
@@ -38,7 +27,6 @@
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
                         <li><a href="/pethousedog">Adopt A Pet / Dog</a></li>
-                        <li class="active">Dog</li>
                     </ol>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-4">
@@ -48,9 +36,14 @@
     </div>
     <br>
     <div class="nm-divider separator_align_center">
-        <h1 class="nm-divider-title medium">Accessories</h1>
-        <br>
-        <div class="nm-divider-line" style></div>
+        <h1 class="nm-divider-title medium">Shop Dog</h1>
+        <form class="form-inline" action="{{route('pethousedog')}}" method="GET" style="font-size: 13px;margin-left: 10px;">
+            Min : <input class="formsr" type="number" name="min_price" style="margin-left: 10px;border-radius: .25rem;">
+            + Max :    <input class="formsr" type="number" name="max_price" style="margin-left: 10px; border-radius: .25rem;">
+            + Keyword :<input class="formsr" type="text" name="keyword" style="margin-left: 10px;border-radius: .25rem;">
+            <input class="btn btn-default" type="submit" value="Search" style="background-color: white; background-color: white;margin-left: 10px;">
+        </form>
+
     </div>
     <br>
     <div class="container text-center">
@@ -73,7 +66,6 @@
             @endforeach
         </div>
     </div>
-    <br>
     <div class="row">
         <div class="links" style="margin-left: 470px">
             {{$product->links()}}</div>

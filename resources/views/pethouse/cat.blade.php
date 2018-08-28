@@ -19,17 +19,6 @@
 @section('content')
 
     <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">    <br>
-    {{--<form class="woocommerce-ordering" method="get">--}}
-        {{--<select name="orderby" class="orderby">--}}
-            {{--<option value="menu_order" selected="selected">Cat</option>--}}
-            {{--<option value="popularity">Sort by popularity</option>--}}
-            {{--<option value="rating">Sort by average rating</option>--}}
-            {{--<option value="date">Sort by newness</option>--}}
-            {{--<option value="price">Sort by price: low to high</option>--}}
-            {{--<option value="price-desc">Sort by price: high to low</option>--}}
-        {{--</select>--}}
-        {{--<input type="hidden" name="paged" value="1">--}}
-    {{--</form>--}}
     <div class="bread-bar bg-grey">
         <div class="container">
             <div class="row">
@@ -37,7 +26,6 @@
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
                         <li><a href="/pethousecat">Adopt A Pet / Cat</a></li>
-                        <li class="active">Cat</li>
                     </ol>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-4">
@@ -47,9 +35,13 @@
     </div>
     <br>
     <div class="nm-divider separator_align_center">
-        <h1 class="nm-divider-title medium">Accessories</h1>
-        <br>
-        <div class="nm-divider-line" style></div>
+        <h1 class="nm-divider-title medium">Shop Cat</h1>
+        <form class="form-inline" action="{{route('pethousecat')}}" method="GET" style="font-size: 13px;margin-left: 10px;">
+            Min : <input class="formsr" type="number" name="min_price" style="margin-left: 10px;border-radius: .25rem;">
+            + Max :    <input class="formsr" type="number" name="max_price" style="margin-left: 10px; border-radius: .25rem;">
+            + Keyword :<input class="formsr" type="text" name="keyword" style="margin-left: 10px;border-radius: .25rem;">
+            <input class="btn btn-default" type="submit" value="Search" style="background-color: white; background-color: white;margin-left: 10px;">
+        </form>
     </div>
     <br>
     <div class="container text-center">
@@ -72,34 +64,6 @@
             @endforeach
         </div>
     </div>
-
-    <div class="modal fade product_view" id="product_view">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 product_img">
-                            <img id="modalImg" class="img-fluid">
-                        </div>
-                        <div class="col-md-6 product_content">
-                            <h3><span id="modalTitle"></span></h3><hr>
-                            <p id="modalDescription"></p>
-                            <center>
-                                <h3 class="cost" id="modalPrice"><span class="glyphicon glyphicon-usd"></span>
-                                    <small class="pre-cost"></small>
-                                </h3>
-                            </center>
-                            <div class="space-ten"></div>
-                            <div class="btn-ground">
-                                <center><a href="" class="btn btn-secondary" id="view-more">View More</a></center>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
     <div class="row">
         <div class="links" style="margin-left: 470px">
             {{$product->links()}}</div>

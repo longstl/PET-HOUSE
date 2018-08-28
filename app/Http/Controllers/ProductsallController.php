@@ -6,30 +6,75 @@ use Illuminate\Http\Request;
 
 use App\Product;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Validation\Rules\In;
 
 class ProductsallController extends Controller
 {
-    public function getListDog()
-    {
-        $product = Product::where('categoryId', 1)->where('status', 1)->paginate(12);
+    public function getListDog(Request $request) {
+        $query = Product::orderBy('created_at','desc');
+        $query = $query->where('categoryId', 1)->Where('status', 1);
+        if($request->keyword){
+            // This will only executed if you received any keyword
+            $query = $query->where('title','like','%'.$request->keyword.'%');
+        }
+        if($request->min_price && $request->max_price){
+            // This will only executed if you received any price
+            // Make you you validated the min and max price properly
+            $query = $query->where('price','>=',$request->min_price);
+            $query = $query->where('price','<=',$request->max_price);
+        }
+        $product = $query->paginate(12);
         return view('pethouse.dog')->with('product', $product);
     }
 
-    public function getListCat()
-    {
-        $product = Product::where('categoryId', 2)->Where('status', 1)->paginate(12);
+    public function getListCat(Request $request) {
+        $query = Product::orderBy('created_at','desc');
+        $query = $query->where('categoryId', 2)->Where('status', 1);
+        if($request->keyword){
+            // This will only executed if you received any keyword
+            $query = $query->where('title','like','%'.$request->keyword.'%');
+        }
+        if($request->min_price && $request->max_price){
+            // This will only executed if you received any price
+            // Make you you validated the min and max price properly
+            $query = $query->where('price','>=',$request->min_price);
+            $query = $query->where('price','<=',$request->max_price);
+        }
+        $product = $query->paginate(12);
         return view('pethouse.cat')->with('product', $product);
     }
-
-    public function getListAccessoriDog()
-    {
-        $product = Product::where('categoryId', 3)->Where('status', 1)->paginate(12);
+    public function getListAccessoriDog(Request $request) {
+        $query = Product::orderBy('created_at','desc');
+        $query = $query->where('categoryId', 3)->Where('status', 1);
+        if($request->keyword){
+            // This will only executed if you received any keyword
+            $query = $query->where('title','like','%'.$request->keyword.'%');
+        }
+        if($request->min_price && $request->max_price){
+            // This will only executed if you received any price
+            // Make you you validated the min and max price properly
+            $query = $query->where('price','>=',$request->min_price);
+            $query = $query->where('price','<=',$request->max_price);
+        }
+        $product = $query->paginate(12);
         return view('access.shopaccessories.accessoriesdog')->with('product', $product);
     }
 
-    public function getListFoodDog()
-    {
-        $product = Product::where('categoryId', 4)->Where('status', 1)->paginate(12);
+    public function getListFood(Request $request) {
+        $query = Product::orderBy('created_at','desc');
+        $query = $query->where('categoryId', 4)->Where('status', 1);
+        if($request->keyword){
+            // This will only executed if you received any keyword
+            $query = $query->where('title','like','%'.$request->keyword.'%');
+        }
+        if($request->min_price && $request->max_price){
+            // This will only executed if you received any price
+            // Make you you validated the min and max price properly
+            $query = $query->where('price','>=',$request->min_price);
+            $query = $query->where('price','<=',$request->max_price);
+        }
+        $product = $query->paginate(12);
         return view('food-for-pet.food')->with('product', $product);
     }
 
@@ -79,7 +124,17 @@ class ProductsallController extends Controller
         $product = Product::where('title', 'like', '%' . $req->key . '%')
             ->orWhere('price', $req->key)
             ->get();
-        return view('partials.search')->with('product', $product);
+        if( $req->key){
+            return view('partials.search')->with('product', $product);
+        }
+        else
+        {
+            return view ( 'partials.search' )->withMessage ( 'No Products!' );
+        }
+
+    }
+    public function getSearchPrice(){
+
     }
 
 }
