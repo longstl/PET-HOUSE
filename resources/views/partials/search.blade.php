@@ -13,16 +13,15 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 @endsection
-@section('slide-show')
-    @include('partials.slideshow')
-@endsection
 @section('content')
 
-    <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">    <br>
-    <br>
+    <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">
+    <div class="container" style="margin-left:90px ;margin-top: 20px; margin-bottom: 20px;">
+            <img src="https://scontent.fhan3-2.fna.fbcdn.net/v/t1.15752-9/40192412_259062281603077_6883237403159429120_n.jpg?_nc_cat=0&oh=c89d25795af68478ae66c39b5daf78cc&oe=5C0494F6">
+    </div>
+
     <div class="nm-divider separator_align_center">
-        <h1 class="nm-divider-title medium">Products found :</h1>
-        <br>
+       <hr> <h5 style="font-size: 23px;" class="nm-divider-title medium">All products searched :</h5>
         <div class="nm-divider-line" style></div>
     </div>
     <br>

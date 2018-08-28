@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 /* shop dog*/
 
+
+
 Route::get('/spa',function () {
     return view('petspa.spa');
 });
@@ -32,13 +34,13 @@ Route::get('/detailaccessories/{id}', ['as'=>'detaildetailaccessories','uses'=>'
 
 Route::get('/detailfood/{id}', ['as'=>'detailfood','uses'=>'ProductsallController@detailfood']);
 
-Route::get('/pethousedog','ProductsallController@getListDog');
+Route::get('/pethousedog',['as'=>'pethousedog','uses'=>'ProductsallController@getListDog']);
 
-Route::get('/pethousecat','ProductsallController@getListCat');
+Route::get('/pethousecat',['as'=>'pethousecat','uses'=>'ProductsallController@getListCat']);
 
-Route::get('/accessories','ProductsallController@getListAccessoriDog');
+Route::get('/accessories',['as'=>'accessories','uses'=>'ProductsallController@getListAccessoriDog']);
 
-Route::get('/foodpet','ProductsallController@getListFoodDog');
+Route::get('/foodpet',['as'=>'foodpet','uses'=>'ProductsallController@getListFood']);
 
 Route::get('/breed','ArticleController@getListBreed');
 
