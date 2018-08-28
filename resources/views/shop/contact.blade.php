@@ -28,22 +28,22 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" name="firstName" class="form-control mt-2" placeholder="First Name" required>
+                                    <input type="text" name="firstName" class="form-control mt-2" placeholder="First Name" required pattern="^[A-Za-z_]{5,}$" title="Only Character (minimum 5).">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" name="lastName" class="form-control mt-2" placeholder="Last Name" required>
+                                    <input type="text" name="lastName" class="form-control mt-2" placeholder="Last Name" required pattern="^[A-Za-z_]{5,}$" title="Only Character (minimum 5).">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control mt-2" placeholder="Email" required>
+                                    <input type="email" name="email" class="form-control mt-2" placeholder="Email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" title="invalid email">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="tel" name="phone" class="form-control mt-2" placeholder="Phone" required>
+                                    <input type="tel" name="phone" class="form-control mt-2" placeholder="Phone" required pattern="[0-9]{10,14}" title="ten or more characters">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -63,8 +63,8 @@
                         <i class="fa fa-envelope mt-3"></i> <a href="">name@gmail.com</a><br>
                         <i class="fas fa-globe mt-3"></i><a>MỸ Đình - Nam Từ Liêm Hà Nội</a> <br>
                         <div class="my-4">
-                            <a href=""><i style="color: #007bff" class="fab fa-facebook fa-3x pr-4"></i></a>
-                            <a href=""><i style="color: #df4930" class="fab fa-google-plus fa-3x"></i></a>
+                            <a href="https://www.facebook.com/khanhtnd00540/"><i style="color: #007bff" class="fab fa-facebook fa-3x pr-4"></i></a>
+                            <a href="https://www.facebook.com/khanhtnd00540/"><i style="color: #df4930" class="fab fa-google-plus fa-3x"></i></a>
                         </div>
                     </div>
                 </div>

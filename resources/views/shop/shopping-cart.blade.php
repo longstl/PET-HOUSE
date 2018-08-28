@@ -67,7 +67,7 @@
                             {{csrf_field()}}
                             <br>
                             <fieldset>
-                                <input style="width: 300px" placeholder="Your name" name="shipName" type="text" tabindex="1" required="required" autofocus pattern="^[A-Za-z0-9_]{5,15}$" title="Only Character (minimum 5).">
+                                <input style="width: 300px" placeholder="Your name" name="shipName" type="text" tabindex="1" required="required" autofocus pattern="^[A-Za-z_]{5,15}$" title="Only Character (minimum 5).">
                             </fieldset>
                             <br>
                             <fieldset>
