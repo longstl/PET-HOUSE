@@ -43,7 +43,7 @@
                         </table>
                 </div>
                 @else
-                    <div class="alert alert-info">List Order is Empty.
+                    <div class="alert alert-info">We do not have a purchase history. Please <a href="/pethousedog">click here</a> to continue shopping.
                     </div>
                 @endif
             </div>
