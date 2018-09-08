@@ -13,6 +13,7 @@
                 <h4 class="card-title">LIST CATEGORY</h4>
                 <div class="toolbar">
                     <!--        Here you can write extra buttons/actions for the toolbar              -->
+                    <button id="btn-del-checked">Delete Checked</button>
                 </div>
                 <div class="material-datatables">
                     <div id="datatables_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
@@ -26,6 +27,11 @@
                                         <thead>
                                         <tr role="row">
                                             <th class="sorting_asc" tabindex="0" aria-controls="datatables" rowspan="1"
+                                                colspan="1" style="width: 50px;"
+                                                aria-label="ID: activate to sort column descending"><input type="checkbox" id="check-all" name="feature" value="scales">All
+
+                                            </th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="datatables" rowspan="1"
                                                 colspan="1" style="width: 50px;" aria-sort="ascending"
                                                 aria-label="ID: activate to sort column descending">ID
                                             </th>
@@ -34,7 +40,7 @@
                                                 aria-label="Name: activate to sort column descending">Name
                                             </th>
                                             <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
-                                                colspan="1" style="width: 303px;"
+                                                colspan="1" style="width: 253px;"
                                                 aria-label="Image: activate to sort column ascending">Description
                                             </th>
                                             <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1"
@@ -50,6 +56,7 @@
                                         <tbody>
                                         @foreach($list_obj as $item)
                                             <tr role="row" class="odd">
+                                                <td><input type="checkbox" class="item-checkbox" name="feature" value="{{$item->id}}"></td>
                                                 <td>{{$item->id}}</td>
                                                 <td tabindex="0" class="sorting_1">{{$item->title}}</td>
                                                 <td>{{$item->description}}</td>
@@ -91,4 +98,43 @@
         </div>
         <!--  end card  -->
     </div>
+
+    <script>
+        document.getElementById('check-all').onchange = function () {
+            var checkboxes = document.getElementsByClassName('item-checkbox');
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = this.checked;
+            }
+        };
+
+        (function () {
+            var checkboxes = document.getElementsByClassName('item-checkbox');
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].onchange = function () {
+                    if (!this.checked) {
+                        document.getElementById('check-all').checked = false;
+                    }
+                }
+            }
+
+            document.getElementById('btn-del-checked').onclick = function () {
+                var idsToDelete = [];
+                var itemCheckboxes = document.getElementsByClassName('item-checkbox')
+                for(var i = 0; i< itemCheckboxes.length; i++){
+                    if(itemCheckboxes[i].checked){
+                        idsToDelete.push(itemCheckboxes[i].value);
+                    }
+                }
+                var req = new XMLHttpRequest();
+                req.open('GET', '/api/categories?' + 'ids=' + idsToDelete);
+                req.setRequestHeader('X-CSRF-TOKEN', document.getElementsByTagName("meta")["_token"].getAttribute("content"));
+                req.onloadend = function () {
+                    if(this.status === 200){
+                        console.log(JSON.parse(this.responseText));
+                    }
+                }
+                req.send();
+            }
+        })();
+    </script>
 @endsection
