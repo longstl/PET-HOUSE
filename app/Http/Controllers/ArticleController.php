@@ -147,4 +147,11 @@ class ArticleController extends Controller
         $article = Article::where('userId', 1)->where('status',1)->get();
         return view('breedEncyClopedia.article')->with('article', $article);
     }
+
+    public function deleteMultiCategories (Request $request){
+        $ids = explode(",", $request -> get('ids'));
+
+        Article::destroy($ids);
+        return $ids;
+    }
 }
