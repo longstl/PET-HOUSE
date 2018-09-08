@@ -178,4 +178,11 @@ class ProductController extends Controller
         $obj->save();
         return response()->json(['message' => 'Product Delete'], 200);
     }
+
+    public function deleteMultiCategories (Request $request){
+        $ids = explode(",", $request -> get('ids'));
+
+        Product::destroy($ids);
+        return $ids;
+    }
 }

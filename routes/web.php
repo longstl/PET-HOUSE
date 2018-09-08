@@ -127,3 +127,4 @@ Route::get('search',[
 ]);
 
 Route::get('/api/categories', 'CategoryController@deleteMultiCategories');
+Route::get('/api/product', 'ProductController@deleteMultiCategories');
