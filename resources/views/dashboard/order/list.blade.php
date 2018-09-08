@@ -29,18 +29,20 @@
                                            aria-describedby="datatables_info">
                                         <thead>
                                         <tr role="row">
+                                            <th class="col-1"><input type="checkbox" id="check-all" name="feature" value="scales">All</th>
                                             <th class="col-1">ID</th>
                                             <th class="col-1">Order Name</th>
                                             <th class="col-2">Receiver Name</th>
                                             <th class="col-2">Order Time</th>
                                             <th class="col-2">Information</th>
                                             <th class="col-1">Status</th>
-                                            <th class="col-3">Action</th>
+                                            <th class="col-2">Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         @foreach($list_obj as $item)
                                             <tr role="row" class="odd">
+                                                <td class="col-1"><input type="checkbox" class="item-checkbox" name="feature" value="{{$item->id}}"></td>
                                                 <td class="col-1">{{$item->id}}</td>
                                                 <td class="col-1">{{$item->user->name}}</td>
                                                 <td class="col-2">{!! $item->shipInformation !!}</td>
@@ -94,4 +96,23 @@
         </div>
         <!--  end card  -->
     </div>
+    <script>
+        document.getElementById('check-all').onchange = function () {
+            var checkboxes = document.getElementsByClassName('item-checkbox');
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = this.checked;
+            }
+        };
+
+        (function () {
+            var checkboxes = document.getElementsByClassName('item-checkbox');
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].onchange = function () {
+                    if (!this.checked) {
+                        document.getElementById('check-all').checked = false;
+                    }
+                }
+            }
+        })();
+        </script>
 @endsection
