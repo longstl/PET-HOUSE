@@ -138,9 +138,9 @@ class CategoryController extends Controller
     }
 
     public function deleteMultiCategories (Request $request){
-        $ids = explode(",", $request -> get('ids'));
+    $ids = explode(",", $request -> get('ids'));
 
-        Category::destroy($ids);
-        return $ids;
-    }
+    Category::destroy($ids);
+    return $ids;
+}
 }
