@@ -57,7 +57,7 @@
                                                     @if($item->status==0)
                                                         <a href="/dashboard/order/change-status?id={{$item->id}}&status=1" onclick="return confirm('Do you want to accept order?')"
                                                            class="btn btn-simple btn-success btn-icon edit"><i
-                                                                    class="material-icons">how_to_reg</i></a>
+                                                                    class="material-icons">edit</i></a>
                                                     @elseif($item->status==1)
                                                         <a href="/dashboard/order/change-status?id={{$item->id}}&status=2" onclick="return confirm('Do you want to complete order?')"
                                                            class="btn btn-simple btn-success btn-icon edit"><i

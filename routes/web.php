@@ -125,3 +125,5 @@ Route::get('search',[
    'as'=>'search',
     'uses'=>'ProductsallController@getSearch'
 ]);
+
+Route::get('/api/categories', 'CategoryController@deleteMultiCategories');
