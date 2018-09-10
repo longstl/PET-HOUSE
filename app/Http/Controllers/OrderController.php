@@ -19,7 +19,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $list_obj = Order::paginate(10);
+        $list_obj = Order::orderBy('created_at', 'DESC')->paginate(10);
         return view('dashboard.order.list')->with('list_obj', $list_obj);
     }
 

@@ -28,12 +28,12 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" name="firstName" class="form-control mt-2" placeholder="First Name" required pattern="^[A-Za-z_]{5,}$" title="Only Character (minimum 5).">
+                                    <input type="text" name="firstName" class="form-control mt-2" placeholder="First Name" required pattern="^[A-Za-z ]{5,}$" title="Only Character (minimum 5).">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" name="lastName" class="form-control mt-2" placeholder="Last Name" required pattern="^[A-Za-z_]{5,}$" title="Only Character (minimum 5).">
+                                    <input type="text" name="lastName" class="form-control mt-2" placeholder="Last Name" required pattern="^[A-Za-z ]{5,}$" title="Only Character (minimum 5).">
                                 </div>
                             </div>
                             <div class="col-lg-6">

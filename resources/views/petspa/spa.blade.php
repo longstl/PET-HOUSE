@@ -108,18 +108,19 @@
             <h4>Let Us Know Information!</h4>
             <fieldset>
                 <input id="party" type="datetime-local" name="partydate" value="{{Carbon\Carbon::now(new DateTimeZone('Asia/Ho_Chi_Minh'))->format('Y-m-d')."T".Carbon\Carbon::now(new DateTimeZone('Asia/Ho_Chi_Minh'))->format('H:i:s')}}"/>
+
             </fieldset>
             <br>
             <fieldset>
-                <input placeholder="Your name" name="name" type="text" tabindex="1" required autofocus>
+                <input placeholder="Your name" name="name" type="text" tabindex="1" required autofocus pattern="^[A-Za-z ]{5,}$" title="Only Character (minimum 5).">
             </fieldset>
             <br>
             <fieldset>
-                <input placeholder="Your Email Address" name="email" type="email" tabindex="2" required>
+                <input placeholder="Your Email Address" name="email" type="email" tabindex="2" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" title="invalid email">
             </fieldset>
             <br>
             <fieldset>
-                <input placeholder="Your Phone Number" name="phone" type="tel" tabindex="3" required>
+                <input placeholder="Your Phone Number" name="phone" type="tel" tabindex="3" required pattern="[0-9]{10,14}" title="ten or more characters">
             </fieldset>
             <br>
             <fieldset>
@@ -130,7 +131,5 @@
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Book Pet Spa</button>
             </fieldset>
         </form>
-
-
     </div>
 @endsection
