@@ -34,16 +34,25 @@
             </div>
         </div>
     </div>
+    <center><h2 class="nm-divider-title medium">Shop Dog</h2></center>
     <br>
-    <div class="nm-divider separator_align_center">
-        <h1 class="nm-divider-title medium">Shop Dog</h1>
-        <form class="form-inline" action="{{route('pethousedog')}}" method="GET" style="font-size: 13px;margin-left: 10px;">
-            Min : <input class="formsr" type="number" name="min_price" style="margin-left: 10px;border-radius: .25rem;">
-            + Max :    <input class="formsr" type="number" name="max_price" style="margin-left: 10px; border-radius: .25rem;">
-            + Keyword :<input class="formsr" type="text" name="keyword" style="margin-left: 10px;border-radius: .25rem;">
-            <input class="btn btn-default" type="submit" value="Search" style="background-color: white; background-color: white;margin-left: 10px;">
+    <div class="nm-divider separator_align_center col-12">
+        <form class="form-inline" action="{{route('pethousedog')}}" method="GET"
+              style="font-size: 15px;margin-left: 10px;">
+            <h6 style="margin-top: 7px;">Search product by the price :</h6>
+            <div class="col-md-4">
+                Min ($) - <input class="formsr" type="number" name="min_price"
+                             style="margin-left: 10px;border-radius: .10rem;">
+            </div>
+            <div class="col-md-4">
+                Max ($) - <input class="formsr" type="number" name="max_price"
+                             style="margin-left: 10px; border-radius: .10rem;">
+            </div>
+            <div class="col-md-1">
+                <input class="btn btn-default" type="submit" value="Search"
+                       style="background-color: white; background-color: white;margin-left: 10px;">
+            </div>
         </form>
-
     </div>
     <br>
     <div class="container text-center">
@@ -53,7 +62,8 @@
                     <div class="item-image-wrapper">
                         <div class="single-items">
                             <div class="iteminfo text-xs-center">
-                                <a href="{{route('detaildog',$exp->id)}}"><img src="{{$exp->images}} " style="height: 250px;" alt=""></a>
+                                <a href="{{route('detaildog',$exp->id)}}"><img src="{{$exp->images}} "
+                                                                               style="height: 250px;" alt=""></a>
                                 <p style="height: 70px;">{{$exp->title}}</p>
                                 <h2>${{$exp->price}}</h2>
                                 <center><a href="/add-to-cart?id={{$exp->id}}&quantity=1"

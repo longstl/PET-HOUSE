@@ -84,8 +84,8 @@
                                     </table>
                             </div>
                             @else
-                                <div class="alert alert-info">Hiện tại không có danh mục sản phẩm. Vui lòng click <a
-                                            href="/dashboard/product/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
+                                <div class="alert alert-info">There are currently no product categories. Please click<a
+                                            href="/dashboard/product/create" title="Thêm mới sản phẩm" class="btn-link">come in</a> to create a new.
                                 </div>
                             @endif
                         </div>
