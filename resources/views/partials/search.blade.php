@@ -14,14 +14,13 @@
             crossorigin="anonymous"></script>
 @endsection
 @section('content')
-
     <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">
-    <div class="container" style="margin-left:90px ;margin-top: 20px; margin-bottom: 20px;">
-            <img src="https://scontent.fhan3-2.fna.fbcdn.net/v/t1.15752-9/40192412_259062281603077_6883237403159429120_n.jpg?_nc_cat=0&oh=c89d25795af68478ae66c39b5daf78cc&oe=5C0494F6">
+    <div class="container">
+            <img src="https://i.pinimg.com/originals/b6/0b/85/b60b85a2ddfe59b7a5da3ab4efe12d7d.jpg" style="width: 90%;margin-top: 30px;">
     </div>
-
+    <br><br>
     <div class="nm-divider separator_align_center">
-       <hr> <h5 style="font-size: 23px;" class="nm-divider-title medium">All products searched :</h5>
+       <center><h3 style="font-size: 35px;" class="nm-divider-title medium">All products searched :</h3></center>
         <div class="nm-divider-line" style></div>
     </div>
     <br>
@@ -45,4 +44,9 @@
             @endforeach
         </div>
     </div>
+    {{--@else--}}
+        {{--<div class="alert alert-info">No products found in the product list , please<a--}}
+                    {{--href="/" title="come back" class="btn-link">click here</a>to return to the home page.--}}
+        {{--</div>--}}
+    {{--@endif--}}
 @endsection

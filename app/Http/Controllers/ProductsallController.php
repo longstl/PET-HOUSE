@@ -14,10 +14,10 @@ class ProductsallController extends Controller
     public function getListDog(Request $request) {
         $query = Product::orderBy('created_at','desc');
         $query = $query->where('categoryId', 1)->Where('status', 1);
-        if($request->keyword){
-            // This will only executed if you received any keyword
-            $query = $query->where('title','like','%'.$request->keyword.'%');
-        }
+//        if($request->keyword){
+//            // This will only executed if you received any keyword
+//            $query = $query->where('title','like','%'.$request->keyword.'%');
+//        }
         if($request->min_price && $request->max_price){
             // This will only executed if you received any price
             // Make you you validated the min and max price properly
@@ -31,10 +31,6 @@ class ProductsallController extends Controller
     public function getListCat(Request $request) {
         $query = Product::orderBy('created_at','desc');
         $query = $query->where('categoryId', 2)->Where('status', 1);
-        if($request->keyword){
-            // This will only executed if you received any keyword
-            $query = $query->where('title','like','%'.$request->keyword.'%');
-        }
         if($request->min_price && $request->max_price){
             // This will only executed if you received any price
             // Make you you validated the min and max price properly
@@ -47,10 +43,6 @@ class ProductsallController extends Controller
     public function getListAccessoriDog(Request $request) {
         $query = Product::orderBy('created_at','desc');
         $query = $query->where('categoryId', 3)->Where('status', 1);
-        if($request->keyword){
-            // This will only executed if you received any keyword
-            $query = $query->where('title','like','%'.$request->keyword.'%');
-        }
         if($request->min_price && $request->max_price){
             // This will only executed if you received any price
             // Make you you validated the min and max price properly
@@ -64,10 +56,6 @@ class ProductsallController extends Controller
     public function getListFood(Request $request) {
         $query = Product::orderBy('created_at','desc');
         $query = $query->where('categoryId', 4)->Where('status', 1);
-        if($request->keyword){
-            // This will only executed if you received any keyword
-            $query = $query->where('title','like','%'.$request->keyword.'%');
-        }
         if($request->min_price && $request->max_price){
             // This will only executed if you received any price
             // Make you you validated the min and max price properly
@@ -123,14 +111,8 @@ class ProductsallController extends Controller
     {
         $product = Product::where('title', 'like', '%' . $req->key . '%')
             ->orWhere('price', $req->key)
-            ->get();
-        if( $req->key){
+            ->paginate(16);
             return view('partials.search')->with('product', $product);
-        }
-        else
-        {
-            return view ( 'partials.search' )->withMessage ( 'No Products!' );
-        }
 
     }
     public function getSearchPrice(){

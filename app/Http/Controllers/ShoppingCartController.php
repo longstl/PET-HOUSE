@@ -132,16 +132,20 @@ class ShoppingCartController extends Controller
                             return view('error.404');
                         }
                         $quantity = $item->quantity;
-                        $order_detail = new OrderDetail();
-                        $order_detail->orderId = $order_id;
-                        $order_detail->productId = $product->id;
-                        $order_detail->quantity = $quantity;
-                        $order_detail->unit_price = $product->price;
-                        $order->total_price += $order_detail->unit_price * $order_detail->quantity;
-                        $order_detail->created_at = Carbon::now();
-                        $order_detail->updated_at = Carbon::now();
-                        $order_detail->save();
-                        array_push($order_details, $order_detail);
+                        if($quantity <= 0){
+                            // tra ve loi
+                        }else{
+                            $order_detail = new OrderDetail();
+                            $order_detail->orderId = $order_id;
+                            $order_detail->productId = $product->id;
+                            $order_detail->quantity = $quantity;
+                            $order_detail->unit_price = $product->price;
+                            $order->total_price += $order_detail->unit_price * $order_detail->quantity;
+                            $order_detail->created_at = Carbon::now();
+                            $order_detail->updated_at = Carbon::now();
+                            $order_detail->save();
+                            array_push($order_details, $order_detail);
+                        }
                     }
                     $order->save();
                     DB::commit();

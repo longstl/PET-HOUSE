@@ -34,13 +34,24 @@
         </div>
     </div>
     <br>
-    <div class="nm-divider separator_align_center">
-        <h1 class="nm-divider-title medium">Shop Cat</h1>
-        <form class="form-inline" action="{{route('pethousecat')}}" method="GET" style="font-size: 13px;margin-left: 10px;">
-            Min : <input class="formsr" type="number" name="min_price" style="margin-left: 10px;border-radius: .25rem;">
-            + Max :    <input class="formsr" type="number" name="max_price" style="margin-left: 10px; border-radius: .25rem;">
-            + Keyword :<input class="formsr" type="text" name="keyword" style="margin-left: 10px;border-radius: .25rem;">
-            <input class="btn btn-default" type="submit" value="Search" style="background-color: white; background-color: white;margin-left: 10px;">
+    <center><h2 class="nm-divider-title medium">Shop Cat</h2></center>
+    <br>
+    <div class="nm-divider separator_align_center col-12">
+        <form class="form-inline" action="{{route('pethousecat')}}" method="GET"
+              style="font-size: 15px;margin-left: 10px;">
+            <h6 style="margin-top: 7px;">Search product by the price :</h6>
+            <div class="col-md-4">
+                Min ($) - <input class="formsr" type="number" name="min_price"
+                                 style="margin-left: 10px;border-radius: .10rem;">
+            </div>
+            <div class="col-md-4">
+                Max ($) - <input class="formsr" type="number" name="max_price"
+                                 style="margin-left: 10px; border-radius: .10rem;">
+            </div>
+            <div class="col-md-1">
+                <input class="btn btn-default" type="submit" value="Search"
+                       style="background-color: white; background-color: white;margin-left: 10px;">
+            </div>
         </form>
     </div>
     <br>
