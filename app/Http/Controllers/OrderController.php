@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use Carbon\Carbon;
+use Faker\Provider\DateTime;
 use http\Env\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -18,7 +19,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $list_obj = Order::paginate(10);
+        $list_obj = Order::orderBy('created_at', 'DESC')->paginate(10);
         return view('dashboard.order.list')->with('list_obj', $list_obj);
     }
 
@@ -28,12 +29,10 @@ class OrderController extends Controller
         return view('shop.history-order')->with('list_obj', $list_obj);
     }
 
-    public function getChartDataApi(Request $request)
+    public function getChartDataApi()
     {
-//        $start_date = $request->start_date;
-//        $end_date = $request->end_date;
-        $start_date = '2018-08-10';
-        $end_date = Carbon::now();
+        $start_date = Input::get('from').' 00:00:00';
+        $end_date = Input::get('to').' 23:59:00';
         $chart_data = Order::select(DB::raw('sum(total_price) as revenue'), DB::raw('date(created_at) as day'))
             ->whereBetween('created_at', array($start_date, $end_date))
             ->groupBy('day')

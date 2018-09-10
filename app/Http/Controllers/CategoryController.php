@@ -137,4 +137,10 @@ class CategoryController extends Controller
         return response()->json(['message' => 'Deleted'], 200);
     }
 
+    public function deleteMultiCategories (Request $request){
+    $ids = explode(",", $request -> get('ids'));
+
+    Category::destroy($ids);
+    return $ids;
+}
 }
