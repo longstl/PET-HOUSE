@@ -22,11 +22,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/spa',function () {
     return view('petspa.spa');
 });
+
 Route::get('/petspa',function (){
     return view('petspa.spa');
 });
 
-Route::get('detaildog/{id}', ['as'=>'detaildog','uses'=>'ProductsallController@detaildog']);
+Route::get('/detaildog/{id}', ['as'=>'detaildog','uses'=>'ProductsallController@detaildog']);
 
 Route::get('/detailcat/{id}', ['as'=>'detailcat','uses'=>'ProductsallController@detailcat']);
 
@@ -80,11 +81,10 @@ Route::get('/dashboard/chart', function (){
     return view('dashboard.charts.chart');
 });
 
-Route::resource('/petspa', 'spaController');
-Route::resource('petspa', 'SpaController');
-Route::resource('contact-us', 'ContactController');
-Route::resource('verify', 'VerifyController');
-Route::resource('verifycontact', 'VerifyContactController');
+Route::resource('/petspa', 'SpaController');
+Route::resource('/contact-us', 'ContactController');
+Route::resource('/verify', 'VerifyController');
+Route::resource('/verifycontact', 'VerifyContactController');
 Auth::routes();
 
 Route::group(['milldeware' => ['web','auth']],function (){
