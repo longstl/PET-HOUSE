@@ -13,9 +13,6 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 @endsection
-@section('slide-show')
-    @include('partials.slideshow')
-@endsection
 @section('content')
 
     <link rel="stylesheet" href="/css/accessories-product.css" type="text/css">    <br>

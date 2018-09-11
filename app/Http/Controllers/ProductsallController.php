@@ -2,22 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 
 use App\Product;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Validation\Rules\In;
-
 class ProductsallController extends Controller
 {
     public function getListDog(Request $request) {
         $query = Product::orderBy('created_at','desc');
         $query = $query->where('categoryId', 1)->Where('status', 1);
-//        if($request->keyword){
-//            // This will only executed if you received any keyword
-//            $query = $query->where('title','like','%'.$request->keyword.'%');
-//        }
         if($request->min_price && $request->max_price){
             // This will only executed if you received any price
             // Make you you validated the min and max price properly
@@ -90,14 +84,6 @@ class ProductsallController extends Controller
         return view('detail.detail-food')->with('product_detail', $product_detail);
     }
 
-
-
-//    public function test($id)
-//    {
-//        $product = Product::find($id);
-//        return view('pethouse.cat')->with('product', $product);
-//    }
-
     public function getListHome()
     {
         $product = Product::where('categoryId', 1)->Where('status', 1)->orderBy('created_at', 'desc')->paginate(4);
@@ -115,8 +101,53 @@ class ProductsallController extends Controller
             return view('partials.search')->with('product', $product);
 
     }
-    public function getSearchPrice(){
 
+    public function getSearchPricecat()
+    {
+        $min_price = Input::get('price');
+        $max_price = Input::get('price');
+        $cat = Category::find(2);
+        $product = Product::where('category', $cat)
+            ->where('title','like','%'.search_query.'%')
+            ->whereBetween('price',[ $min_price, $max_price])
+            ->get();
+        return View('pethouse.cat')-> with('product',$product);
+    }
+
+    public function getSearchPricedog()
+    {
+        $min_price = Input::get('price');
+        $max_price = Input::get('price');
+        $dog = Category::find(1);
+        $product = Product::where('category', $dog)
+            ->where('title','like','%'.search_query.'%')
+            ->whereBetween('price',[ $min_price, $max_price])
+            ->get();
+        return View('pethouse.dog')->with('product',$product);
+    }
+
+    public function getSearchPriceAccessories()
+    {
+        $min_price = Input::get('price');
+        $max_price = Input::get('price');
+        $accessories = Category::find(3);
+        $product = Product::where('category', $accessories)
+            ->where('title','like','%'.search_query.'%')
+            ->whereBetween('price',[ $min_price, $max_price])
+            ->get();
+        return View('access.shopaccessories.accessoriesdog')-> with('product', $product);
+    }
+
+    public function getSearchPricefood()
+    {
+        $min_price = Input::get('price');
+        $max_price = Input::get('price');
+        $food = Category::find(4);
+        $product = Product::where('category', $food)
+            ->where('title','like','%'.search_query.'%')
+            ->whereBetween('price',[ $min_price, $max_price])
+            ->get();
+        return View('food-for-pet.food')-> with('product', $product);
     }
 
 }
