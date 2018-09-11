@@ -31,10 +31,10 @@
                                         <tr role="row">
                                             <th class="col-1"><input type="checkbox" id="check-all" name="feature" value="scales">All</th>
                                             <th class="col-1">ID</th>
-                                            <th class="col-1">Order Name</th>
-                                            <th class="col-2">Receiver Name</th>
-                                            <th class="col-2">Order Time</th>
-                                            <th class="col-2">Information</th>
+                                            <th class="col-2">Date Spa</th>
+                                            <th class="col-2">Name</th>
+                                            <th class="col-2">Email</th>
+                                            <th class="col-2">Phone</th>
                                             <th class="col-1">Status</th>
                                             <th class="col-2">Action</th>
                                         </tr>
@@ -44,29 +44,23 @@
                                             <tr role="row" class="odd">
                                                 <td class="col-1"><input type="checkbox" class="item-checkbox" name="feature" value="{{$item->id}}"></td>
                                                 <td class="col-1">{{$item->id}}</td>
-                                                <td class="col-1">{{$item->user->name}}</td>
-                                                <td class="col-2">{!! $item->shipInformation !!}</td>
                                                 <td class="col-2">{{$item->created_at}}</td>
-                                                <td class="col-2">
-                                                    <ul>
-                                                        @foreach($item->details as $order_detail)
-                                                            <li>{{$order_detail->product->title}} - {{$order_detail->quantity}}</li>
-                                                        @endforeach
-                                                    </ul>
-                                                </td>
+                                                <td class="col-2">{{$item->name}}</td>
+                                                <td class="col-2">{{$item->email}}</td>
+                                                <td class="col-2">{{$item->phone}}</td>
                                                 <td class="col-1">{{$item->statusLabel}}</td>
                                                 <td class="col-3">
                                                     @if($item->status==0)
-                                                        <a href="/dashboard/order/change-status?id={{$item->id}}&status=1" onclick="return confirm('Do you want to accept order?')"
+                                                        <a href="/dashboard/spa/change-status?id={{$item->id}}&status=1" onclick="return confirm('Do you want to accept booking spa?')"
                                                            class="btn btn-simple btn-success btn-icon edit"><i
                                                                     class="material-icons">edit</i></a>
                                                     @elseif($item->status==1)
-                                                        <a href="/dashboard/order/change-status?id={{$item->id}}&status=2" onclick="return confirm('Do you want to complete order?')"
+                                                        <a href="/dashboard/spa/change-status?id={{$item->id}}&status=2" onclick="return confirm('Do you want to complete booking spa?')"
                                                            class="btn btn-simple btn-success btn-icon edit"><i
                                                                     class="material-icons">done</i></a>
                                                     @endif
                                                     @if($item->status==0)
-                                                        <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete-cart"><i
+                                                        <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete-spa"><i
                                                                     class="material-icons">close</i></a>
                                                     @endif
                                                 </td>
@@ -76,7 +70,7 @@
                                     </table>
                             </div>
                             @else
-                                <div class="alert alert-info">List Order is Empty.
+                                <div class="alert alert-info">List Spa is Empty.
                                 </div>
                             @endif
                         </div>

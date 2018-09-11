@@ -77,8 +77,8 @@ Route::resource('/dashboard/article','ArticleController');
 
 Route::resource('/dashboard/product', 'ProductController');
 
-Route::get('/dashboard/spa/change-status', 'ProductController@changeStatus');
-Route::delete('/dashboard/spa/delete/{id}', 'ProductController@destroy');
+Route::get('/dashboard/spa/change-status', 'SpaDashboardController@changeStatus');
+Route::delete('/dashboard/spa/delete/{id}', 'SpaDashboardController@destroy');
 
 Route::resource('/dashboard/spa','SpaDashboardController');
 
