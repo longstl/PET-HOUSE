@@ -231,6 +231,33 @@
                         </div>
                     @endif
                 </li>
+
+                <li class="{{ $current_menu == 'spa_manager' ? 'active' : '' }}">
+                    <a data-toggle="collapse" href="#spaExamples">
+                        <i class="material-icons">apps</i>
+                        <p>Spa
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    @if($current_menu == 'spa_manager')
+                        <div class="collapse in" id="spaExamples">
+                            <ul class="nav">
+                                <li class="{{ ($current_menu == 'spa_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/dashboard/spa">List Spa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                        <div class="collapse" id="spaExamples">
+                            <ul class="nav">
+                                <li class="{{ ($current_menu == 'spa_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/dashboard/spa">List Spa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @endif
+                </li>
+
                 <li class="{{ $current_menu == 'user_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#mapsExamples">
                         <i class="material-icons">apps</i>
@@ -243,7 +270,7 @@
                             <ul class="nav">
                                 @if($current_menu == 'user_manager' && $current_sub_menu == 'edit')
                                     <li class="active">
-                                        <a href="{{ url()->current() }}">Edit Category</a>
+                                        <a href="{{ url()->current() }}">Edit User</a>
                                     </li>
                                 @endif
                                 <li class="{{ ($current_menu == 'user_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
@@ -259,7 +286,7 @@
                             <ul class="nav">
                                 @if($current_menu == 'user_manager' && $current_sub_menu == 'edit')
                                     <li class="active">
-                                        <a href="{{ url()->current() }}">Edit Category</a>
+                                        <a href="{{ url()->current() }}">Edit User</a>
                                     </li>
                                 @endif
                                 <li class="{{ ($current_menu == 'user_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
