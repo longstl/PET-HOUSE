@@ -35,6 +35,7 @@
                                             <th class="col-2">Name</th>
                                             <th class="col-2">Email</th>
                                             <th class="col-2">Phone</th>
+                                            <th class="col-2">Message</th>
                                             <th class="col-1">Status</th>
                                             <th class="col-2">Action</th>
                                         </tr>
@@ -48,6 +49,7 @@
                                                 <td class="col-2">{{$item->name}}</td>
                                                 <td class="col-2">{{$item->email}}</td>
                                                 <td class="col-2">{{$item->phone}}</td>
+                                                <td class="col-2">{{$item->message}}</td>
                                                 <td class="col-1">{{$item->statusLabel}}</td>
                                                 <td class="col-3">
                                                     @if($item->status==0)
