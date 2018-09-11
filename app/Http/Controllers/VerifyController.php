@@ -50,25 +50,17 @@ class VerifyController extends Controller
      */
     public function show($id)
     {
-        //http://127.0.0.1:8000/verify/153535972615b83baee9c158?mail=thuonghvd00564@fpt.edu.vn
-        // lay email params trên url . o vd tren la thuonghvd00564@fpt.edu.vn
         $email = Input::get('mail');
-        // đoạn này lấy ra 1 obj theo email trên url mình gửi lên.lấy phần tử đầu tiên của kq trả về.
         $obj = BookSpa::where('email',$email)->first();
         if ($obj == null) {
-            return view('404');
+            return view('error.404');
         }
-        // đoạn này lấy verifycode cua cái obj bên trên.
-        // sau đó so sánh với code trên url mình gửi về email cho họ.
-        // vì trong db có nhiều email trùng nhau nên verifycode trong db no ko khớp với code minh gui cho ho trong url
-        // o vd này code la 153535972615b83baee9c158. ko co trong db luon nen o day no se trả ve view 400.lat tao cai trang 400 la dc
-        //vay h em xoa hết đi chay lại xem nha.okey em nhận ra 1 điều em vùa tạo thêm contact r
         if (($obj->verifyCode) != $id){
-            return view('400');
+            return view('error.400');
         }
         $obj->status = 1;
         $obj->save();
-        return view('mail.confirmed');
+        return view('mail.verifyBookSpa');
 
     }
 
@@ -107,6 +99,6 @@ class VerifyController extends Controller
     }
 
     public function sendemail(){
-        
+
     }
 }

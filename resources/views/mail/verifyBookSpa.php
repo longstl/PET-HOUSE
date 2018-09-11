@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 </head>
 <body>
-<h2>Contact Us</h2>
+<h2>Booking Pet Spa</h2>
 <p>
-    Thanks you for your question. We will reply later.
+    Thanks you for your booking. We will reply later.
 </p>
 <p>
     Best regard
