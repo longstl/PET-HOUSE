@@ -77,6 +77,11 @@ Route::resource('/dashboard/article','ArticleController');
 
 Route::resource('/dashboard/product', 'ProductController');
 
+Route::get('/dashboard/spa/change-status', 'ProductController@changeStatus');
+Route::delete('/dashboard/spa/delete/{id}', 'ProductController@destroy');
+
+Route::resource('/dashboard/spa','SpaDashboardController');
+
 Route::get('/dashboard/chart', function (){
     return view('dashboard.charts.chart');
 });
