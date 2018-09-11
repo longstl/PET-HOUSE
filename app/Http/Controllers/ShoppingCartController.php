@@ -37,7 +37,6 @@ class ShoppingCartController extends Controller
             return redirect()->back();
         }
     }
-
     public function addToCart()
     {
         $id = Input::get('id');
@@ -64,12 +63,10 @@ class ShoppingCartController extends Controller
         Session::put('cart', $shopping_cart);
         return redirect('/cart-view');
     }
-
     public function removeFromCart()
     {
 
     }
-
     public function showCart()
     {
         $shopping_cart = new ShoppingCart();
@@ -78,7 +75,6 @@ class ShoppingCartController extends Controller
         }
         return view('shop.shopping-cart')->with('shopping_cart', $shopping_cart);
     }
-
     public function updateCart()
     {
         $shopping_cart = new ShoppingCart();
@@ -100,13 +96,11 @@ class ShoppingCartController extends Controller
         Session::put('cart', $shopping_cart);
         return redirect('/cart-view');
     }
-
     public function destroyCart()
     {
         Session::remove('cart');
         return redirect('/')->with('message', 'Cart is empty.');
     }
-
     public function checkoutCart()
     {
         if(auth()->check()){
@@ -152,6 +146,7 @@ class ShoppingCartController extends Controller
                     // clear session cart.
                     Session::remove('cart');
                     // send mail or sms.
+
                     return view('shop.animation');
                 } catch (\Exception $exception) {
                     DB::rollBack();

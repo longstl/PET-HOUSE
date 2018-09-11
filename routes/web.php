@@ -129,3 +129,8 @@ Route::get('search',[
 Route::get('/api/categories', 'CategoryController@deleteMultiCategories');
 Route::get('/api/product', 'ProductController@deleteMultiCategories');
 Route::get('/api/article', 'ArticleController@deleteMultiCategories');
+
+Route::get('/search-price/dog','ProductsallController@getSearchPricedog');
+Route::get('/search-price/cat','ProductsallController@getSearchPricecat');
+Route::get('/search-price/accessories','ProductsallController@getSearchPriceAccessories');
+Route::get('/search-price/food','ProductsallController@getSearchPricefood');
