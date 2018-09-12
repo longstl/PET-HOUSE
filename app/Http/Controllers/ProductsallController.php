@@ -134,14 +134,12 @@ class ProductsallController extends Controller
 
     public function getSearchPricefood()
     {
-        $min_price = Input::get('price');
-        $max_price = Input::get('price');
-        $food = Category::find(4);
-        $product = Product::where('category', $food)
-            ->where('title','like','%'.search_query.'%')
-            ->whereBetween('price',[ $min_price, $max_price])
+        $min_price = Input::get('min');
+        $max_price = Input::get('max');
+        return Product::where('category',4)
+            ->whereBetween('price',[ intval($min_price), intval($max_price) ])
             ->get();
-        return View('food-for-pet.food')-> with('product', $product);
+      //  return View('food-for-pet.food')-> with('product', $product);
     }
 
 }
