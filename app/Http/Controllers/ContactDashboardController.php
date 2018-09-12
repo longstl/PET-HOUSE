@@ -16,6 +16,8 @@ class ContactDashboardController extends Controller
     public function index()
     {
         //
+        $list_obj = Contact::orderBy('created_at', 'DESC')->paginate(10);
+        return view('dashboard.contact.list')->with('list_obj', $list_obj);
     }
 
     /**
