@@ -258,6 +258,32 @@
                     @endif
                 </li>
 
+                <li class="{{ $current_menu == 'contact_manager' ? 'active' : '' }}">
+                    <a data-toggle="collapse" href="#contactExamples">
+                        <i class="material-icons">apps</i>
+                        <p>Contact
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    @if($current_menu == 'contact_manager')
+                        <div class="collapse in" id="contactExamples">
+                            <ul class="nav">
+                                <li class="{{ ($current_menu == 'contact_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/dashboard/contact">List Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                        <div class="collapse" id="contactExamples">
+                            <ul class="nav">
+                                <li class="{{ ($current_menu == 'contact_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/dashboard/contact">List Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @endif
+                </li>
+
                 <li class="{{ $current_menu == 'user_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#mapsExamples">
                         <i class="material-icons">apps</i>

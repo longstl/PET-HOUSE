@@ -82,6 +82,11 @@ Route::delete('/dashboard/spa/delete/{id}', 'SpaDashboardController@destroy');
 
 Route::resource('/dashboard/spa','SpaDashboardController');
 
+Route::get('/dashboard/contact/change-status', 'ContactDashboardController@changeStatus');
+Route::delete('/dashboard/contact/delete/{id}', 'ContactDashboardController@destroy');
+
+Route::resource('/dashboard/contact','ContactDashboardController');
+
 Route::get('/dashboard/chart', function (){
     return view('dashboard.charts.chart');
 });
