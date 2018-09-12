@@ -582,6 +582,7 @@
 <script src="{{asset('js/article.js')}}"></script>
 <script src="{{asset('js/order.js')}}"></script>
 <script src="{{asset('js/spa.js')}}"></script>
+<script src="{{asset('js/contact.js')}}"></script>
 @yield('scripts')
 <!-- Mirrored from demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2017 21:32:16 GMT -->
 </html>
