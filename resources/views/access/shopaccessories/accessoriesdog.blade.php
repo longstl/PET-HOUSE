@@ -43,7 +43,7 @@
     <div class="nm-divider separator_align_center col-12 ">
         <form class="form-inline" action="{{route('pethouseaccessories')}}" method="GET"
               style="font-size: 15px; float: right;">
-            <select name="search-price-aseaccessories" id="search-price-aseaccessories" onchange="changeFuncAseaccessories()">
+            <select name="search-price-accessories" id="search-price-accessories" onchange="changeFuncAccessories()">
                 <option >Price Search</option>
                 <option value="5-10">5$ - 10$</option>
                 <option value="10-50">10$ - 50$</option>
@@ -82,5 +82,23 @@
         {{$product->links()}}</div>
     </div>
 
-
+@endsection
+@section('extra-js')
+    <script>
+        function changeFuncAccessories() {
+            var selectBox = document.getElementById("search-price-accessories");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var price = selectedValue.split('-');
+            $.ajax({
+                'url':'/search-price/accessories'+'?min='+price[0]+'&max='+price[1],
+                'method':'GET',
+                success: function (res) {
+                    console.log(res);
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            });
+        }
+    </script>
 @endsection
