@@ -40,24 +40,21 @@
         <br>
         <center><h2 class="nm-divider-title medium">Accessories</h2></center>
         <br>
-        <div class="nm-divider separator_align_center col-12">
-            <form class="form-inline" action="{{route('accessories')}}" method="GET"
-                  style="font-size: 15px;margin-left: 10px;">
-                <h6 style="margin-top: 7px;">Search product by the price :</h6>
-                <div class="col-md-4">
-                    Min ($) - <input class="formsr" type="number" name="min_price"
-                                     style="margin-left: 10px;border-radius: .10rem;">
-                </div>
-                <div class="col-md-4">
-                    Max ($) - <input class="formsr" type="number" name="max_price"
-                                     style="margin-left: 10px; border-radius: .10rem;">
-                </div>
-                <div class="col-md-1">
-                    <input class="btn btn-default" type="submit" value="Search"
-                           style="background-color: white; background-color: white;margin-left: 10px;">
-                </div>
-            </form>
-        </div>
+    <div class="nm-divider separator_align_center col-12 ">
+        <form class="form-inline" action="{{route('pethouseaccessories')}}" method="GET"
+              style="font-size: 15px; float: right;">
+            <select name="search-price-aseaccessories" id="search-price-aseaccessories" onchange="changeFuncAseaccessories()">
+                <option >Price Search</option>
+                <option value="5-10">5$ - 10$</option>
+                <option value="10-50">10$ - 50$</option>
+                <option value="50-100">50$ - 100$</option>
+                <option value="100-300">100$ - 300$</option>
+                <option value="300-500">300$ - 500$</option>
+            </select>
+            <input type="hidden" name="paged" value="1">
+        </form>
+        <br>
+    </div>
     <br>
 
     <div class="container text-center">
