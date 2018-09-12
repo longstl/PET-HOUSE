@@ -84,6 +84,13 @@ class ContactDashboardController extends Controller
     public function destroy($id)
     {
         //
+        $obj = Contactgit::find($id);
+        if ($obj == null) {
+            return response()->json(['message' => 'Order does not exist or Deleted!'], 404);
+        }
+        $obj->status = -1;
+        $obj->save();
+        return response()->json(['message' => 'Deleted'], 200);
     }
 
     public function changeStatus()
