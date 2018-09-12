@@ -104,14 +104,13 @@ class ProductsallController extends Controller
 
     public function getSearchPricecat()
     {
-        $min_price = Input::get('price');
-        $max_price = Input::get('price');
-        $cat = Category::find(2);
-        $product = Product::where('category', $cat)
-            ->where('title','like','%'.search_query.'%')
-            ->whereBetween('price',[ $min_price, $max_price])
+        $min_price = (int)Input::get('min');
+        $max_price = (int)Input::get('max');
+        return Product::where('categoryId', 2)
+            ->whereBetween('price',[ intval($min_price), intval($max_price) ])
             ->get();
-        return View('pethouse.cat')-> with('product',$product);
+//        return View('pethouse.cat')-> with('product',$product);
+
     }
 
     public function getSearchPricedog()
