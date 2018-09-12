@@ -81,3 +81,22 @@
     </div>
 
 @endsection
+@section('extra-js')
+    <script>
+        function changeFuncfood() {
+            var selectBox = document.getElementById("search-price-food");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var price = selectedValue.split('-');
+            $.ajax({
+                'url':'/search-price/food'+'?min='+price[0]+'&max='+price[1],
+                'method':'GET',
+                success: function (res) {
+                    console.log(res);
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            });
+        }
+    </script>
+@endsection
