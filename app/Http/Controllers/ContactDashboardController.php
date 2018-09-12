@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class ContactDashboardController extends Controller
 {
@@ -80,5 +82,18 @@ class ContactDashboardController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function changeStatus()
+    {
+        $id = Input::get('id');
+        $status = Input::get('status');
+        $order = Contact::find($id);
+        if ($order == null) {
+            return view('error.404');
+        }
+        $order->status = $status;
+        $order->save();
+        return redirect('/dashboard/contact');
     }
 }
