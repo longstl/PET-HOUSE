@@ -114,7 +114,20 @@
                 'url':'/search-price/food'+'?min='+price[0]+'&max='+price[1],
                 'method':'GET',
                 success: function (res) {
-                    console.log(res);
+                    // console.log(res);
+                    // phần này lấy ra giá trị từ controller ( tên là res )
+                    var arr = res;
+                    // sau đó dùng innerHTML để hiển thị HTML ra
+                    document.getElementById('resultsearch').innerHTML = "";
+                    // kiểm tra độ dài của mảng res này = 0 hay ko nếu = 0 thì là null sẽ hiển thị khối cái khối generateBlockNullSearch();
+                    if (res.length == 0){
+                        document.getElementById('resultsearch').innerHTML += generateBlockNullSearch();
+                    }else {
+                        // nếu ko null thì sẽ hiển thị khối generateBlockRsSearch() với các thuộc tính ID, title, images và price
+                        for (i in arr) {
+                            document.getElementById('resultsearch').innerHTML += generateBlockRsSearch(arr[i].id, arr[i].title, arr[i].images, arr[i].price);
+                        }
+                    }
                 },
                 error: function (e) {
                     console.log(e);
