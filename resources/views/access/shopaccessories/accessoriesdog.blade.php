@@ -85,7 +85,6 @@
 @endsection
 @section('extra-js')
     <script>
-
         function generateBlockRsSearch(id, title, img, price) {
             var output = "";
             output += '<div class="col-sm-3">';
@@ -102,7 +101,11 @@
             output += '</div>';
             return output;
         }
-
+        function generateBlockNullSearch() {
+            var output = "";
+            output += '<h5>Do not found product.</h5>';
+            return output;
+        }
         function changeFuncAccessories() {
             var selectBox = document.getElementById("search-price-accessories");
             var selectedValue = selectBox.options[selectBox.selectedIndex].value;
