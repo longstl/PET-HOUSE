@@ -85,7 +85,6 @@
 @endsection
 @section('extra-js')
     <script>
-
         function generateBlockRsSearch(id, title, img, price) {
             var output = "";
             output += '<div class="col-sm-3">';
