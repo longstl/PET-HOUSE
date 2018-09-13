@@ -100,6 +100,12 @@
             return output;
         }
 
+        function generateBlockNullSearch() {
+            var output = "";
+            output += '<h5>Do not found product.</h5>';
+            return output;
+        }
+
         function changeFuncfood() {
             var selectBox = document.getElementById("search-price-food");
             var selectedValue = selectBox.options[selectBox.selectedIndex].value;
