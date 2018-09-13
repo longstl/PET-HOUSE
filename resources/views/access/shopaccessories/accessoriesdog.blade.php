@@ -101,7 +101,11 @@
             output += '</div>';
             return output;
         }
-
+        function generateBlockNullSearch() {
+            var output = "";
+            output += '<h5>Do not found product.</h5>';
+            return output;
+        }
         function changeFuncAccessories() {
             var selectBox = document.getElementById("search-price-accessories");
             var selectedValue = selectBox.options[selectBox.selectedIndex].value;
