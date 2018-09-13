@@ -124,9 +124,8 @@ class ProductsallController extends Controller
     {
         $min_price = Input::get('min');
         $max_price = Input::get('max');
-        return Product::where('category',3)
-            ->whereBetween('price',[ intval($min_price), intval($max_price) ])
-            ->get();
+        return Product::where('categoryId',3)
+            ->whereBetween('price',[ intval($min_price), intval($max_price) ])->paginate(12);
       //  return View('access.shopaccessories.accessoriesdog')-> with('product', $product);
     }
 

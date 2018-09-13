@@ -103,7 +103,7 @@
             for (var i = 1; i <= Math.ceil(res.total / res.per_page); i++) {
                 paginateItem += `
             <li class="page-item ${res.current_page === i ? 'active' : ''}">
-                <a href="/pethousefood?page=${i}&min=${price[0]}&max=${price[1]}" class="page-link">${i}</a>
+                <a href="/foodpet?page=${i}&min=${price[0]}&max=${price[1]}" class="page-link">${i}</a>
             </li>
         `;
             }
