@@ -94,6 +94,13 @@
             output += '</div>';
             return output;
         }
+
+        function generateBlockNullSearch() {
+            var output = "";
+            output += '<h5>Do not found product.</h5>';
+            return output;
+        }
+
         function changeFuncDog() {
             var selectBox = document.getElementById("search-price-dog");
             var selectedValue = selectBox.options[selectBox.selectedIndex].value;
