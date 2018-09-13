@@ -107,8 +107,7 @@ class ProductsallController extends Controller
         $min_price = (int)Input::get('min');
         $max_price = (int)Input::get('max');
         return Product::where('categoryId', 2)
-            ->whereBetween('price',[ intval($min_price), intval($max_price) ])
-            ->get();
+            ->whereBetween('price',[ intval($min_price), intval($max_price)])->paginate(12);
 //        return View('pethouse.cat')-> with('product',$product);
     }
 
