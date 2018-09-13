@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
 
 class ShoppingCartController extends Controller
@@ -37,6 +38,7 @@ class ShoppingCartController extends Controller
             return redirect()->back();
         }
     }
+
     public function addToCart()
     {
         $id = Input::get('id');
@@ -63,10 +65,17 @@ class ShoppingCartController extends Controller
         Session::put('cart', $shopping_cart);
         return redirect('/cart-view');
     }
-    public function removeFromCart()
-    {
 
+    public function removeFromCart(Request $request)
+    {
+        $id = Input::get('id');
+        if (Session::has('cart')) {
+            $cart = Session::get('cart');
+            unset($cart->items[$id]);
+        }
+        return redirect()->back();
     }
+
     public function showCart()
     {
         $shopping_cart = new ShoppingCart();
@@ -75,6 +84,7 @@ class ShoppingCartController extends Controller
         }
         return view('shop.shopping-cart')->with('shopping_cart', $shopping_cart);
     }
+
     public function updateCart()
     {
         $shopping_cart = new ShoppingCart();
@@ -96,14 +106,15 @@ class ShoppingCartController extends Controller
         Session::put('cart', $shopping_cart);
         return redirect('/cart-view');
     }
+
     public function destroyCart()
     {
         Session::remove('cart');
-        return redirect('/')->with('message', 'Cart is empty.');
     }
+
     public function checkoutCart()
     {
-        if(auth()->check()){
+        if (auth()->check()) {
             if (Session::has('cart')) {
                 try {
                     DB::beginTransaction();
@@ -126,9 +137,9 @@ class ShoppingCartController extends Controller
                             return view('error.404');
                         }
                         $quantity = $item->quantity;
-                        if($quantity <= 0){
+                        if ($quantity <= 0) {
                             // tra ve loi
-                        }else{
+                        } else {
                             $order_detail = new OrderDetail();
                             $order_detail->orderId = $order_id;
                             $order_detail->productId = $product->id;
@@ -156,7 +167,7 @@ class ShoppingCartController extends Controller
             } else {
                 return redirect('/')->with('message', 'Cart is empty.');
             }
-        }else{
+        } else {
             return redirect('/login');
         }
 

@@ -29,7 +29,7 @@
             @foreach($shopping_cart->items as $item)
                 <article class="product">
                     <header>
-                        <a class="remove" href="/delete-cart">
+                        <a class="remove" href="/remove-from-cart?id={{$item->product->id}}">
                             <img src="{{$item->product->images}}" alt="{{$item->product->name}}">
 
                             <h3>Remove product</h3>
@@ -60,6 +60,14 @@
             <div class="container clearfix">
                 <div class="left">
                     <h1 class="total">Total: <span>{{$shopping_cart->getTotalMoneyWithFormat()}}</span>($)</h1>
+                    <br>
+                    <fieldset>
+                        <center><button class="btn" name="submit" type="submit" id="update-cart" data-submit="...Sending" style="width: 115px">Update Cart</button></center>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <center><button class="btn" name="submit" type="submit" id="continue-buying" style="width: 115px">Continue Buy</button></center>
+                    </fieldset>
                 </div>
                 <div class="right" style="width: 300px">
                     <h1 class="build-details">Bill Details</h1>

@@ -73,9 +73,7 @@ $(document).ready(function(){
 
     window.setTimeout(function(){$(".is-open").removeClass("is-open")}, 1200);
 
-    $(".btn").click(function(){
-        check = true;
-        $(".remove").click();
-        sessionStorage.removeItem('itemName');
+    $("#continue-buying").click(function(){
+        window.location.href = "/";
     });
 });

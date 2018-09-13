@@ -117,6 +117,7 @@ Route::group(['milldeware' => ['web','auth']],function (){
 Route::get('/add-to-cart', 'ShoppingCartController@addToCart');
 Route::get('/cart-view', 'ShoppingCartController@showCart');
 Route::get('/delete-cart', 'ShoppingCartController@destroyCart');
+Route::get('/remove-from-cart', 'ShoppingCartController@removeFromCart');
 Route::put('/edit-cart', 'ShoppingCartController@updateCart');
 Route::post('/send-cart', 'ShoppingCartController@checkoutCart');
 
