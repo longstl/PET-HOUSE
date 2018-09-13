@@ -83,6 +83,23 @@
 @endsection
 @section('extra-js')
     <script>
+        function generateBlockRsSearch(id, title, img, price) {
+            var output = "";
+            output += '<div class="col-sm-3">';
+            output += '<div class="item-image-wrapper">';
+            output += '<div class="single-items">';
+            output += '<div class="iteminfo text-xs-center">';
+            output += '<a href="/detailcat/' + id + '"><img src="' + img + '" style="height: 250px;" alt=""></a>';
+            output += '<p style="height: 70px;">' + title + '</p>';
+            output += '<h2>' + price + '</h2>';
+            output += '<center><a href="/add-to-cart?id=' + id + '&quantity=1" class="btn btn-secondary add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a></center>';
+            output += '</div>';
+            output += '</div>';
+            output += '</div>';
+            output += '</div>';
+            return output;
+        }
+
         function changeFuncfood() {
             var selectBox = document.getElementById("search-price-food");
             var selectedValue = selectBox.options[selectBox.selectedIndex].value;
