@@ -131,6 +131,7 @@ Route::get('/history-order/{id}', 'OrderController@findById');
 
 // chart
 Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
+Route::get('/api-get-pie-chart-data', 'OrderController@getPieChartDataApi');
 
 Route::get('search',[
    'as'=>'search',

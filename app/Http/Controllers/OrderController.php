@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\OrderDetail;
 use Carbon\Carbon;
 use Faker\Provider\DateTime;
 use http\Env\Request;
@@ -37,6 +38,16 @@ class OrderController extends Controller
             ->whereBetween('created_at', array($start_date, $end_date))
             ->groupBy('day')
             ->orderBy('day', 'desc')
+            ->get();
+        return $chart_data;
+    }
+
+    public function getPieChartDataApi()
+    {
+        $chart_data = OrderDetail::select(DB::raw('productId as productId'), DB::raw('products.title as productTitle'),DB::raw('sum(quantity) as number'))
+            ->join('products', 'products.id', '=', 'order_details.productId')
+            ->groupBy('productId')
+            ->groupBy('productTitle')
             ->get();
         return $chart_data;
     }
