@@ -41,10 +41,15 @@
                     </div>
 
                     <footer class="content">
-                        <span class="qt-minus">-</span>
-                        <span class="qt">{{$item->quantity}}</span>
-                        <span class="qt-plus">+</span>
-
+                        @if($item->product->categoryId == 1 || $item->product->categoryId == 2)
+                            <span class="qt-minus" style="pointer-events: none;">-</span>
+                            <span class="qt">{{$item->quantity}}</span>
+                            <span class="qt-plus" style="pointer-events: none;">+</span>
+                            @elseif($item->product->categoryId == 3 || $item->product->categoryId == 4)
+                            <span class="qt-minus">-</span>
+                            <span class="qt">{{$item->quantity}}</span>
+                            <span class="qt-plus">+</span>
+                            @endif
                         <h2 class="full-price">
                             {{$item->getTotalPriceWithFormat()}} ($)
                         </h2>
