@@ -36,7 +36,7 @@
 -->
         <div class="logo">
             <a href="/dashboard" class="simple-text">
-                Creative Tim
+                PET HOUSE
             </a>
         </div>
         <div class="logo logo-mini">
@@ -446,7 +446,7 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-                    <a href="http://www.creative-tim.com/">Creative Tim</a>, made with love for a better web
+                    <a href="http://127.0.0.1:8000/">PET HOUSE</a>, made with love for a better web
                 </p>
             </div>
         </footer>

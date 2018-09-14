@@ -4,10 +4,23 @@
     'current_sub_menu'=>'chart'
 ])
 @section('content')
+    <br>
     <div id="reportrange"
          style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
         <i class="fa fa-calendar"></i>&nbsp;
         <span></span> <i class="fa fa-caret-down"></i>
+    </div>
+    <br>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-icon" data-background-color="blue">
+                <i class="material-icons">timeline</i>
+            </div>
+            <div class="card-content">
+                <h4 class="card-title"> Revenue </h4>
+            </div>
+            <div id="linechart_material" class="col-md-12"></div>
+        </div>
     </div>
     <div class="col-md-12">
         <div class="card">
@@ -15,9 +28,9 @@
                 <i class="material-icons">timeline</i>
             </div>
             <div class="card-content">
-                <h4 class="card-title"> Line Chart </h4>
+                <h4 class="card-title">Hot Product</h4>
             </div>
-            <div id="linechart_material" class="col-md-12"></div>
+            <center><div id="piechart_material" style="width: 500px; height: 500px;"></div></center>
         </div>
     </div>
 @endsection
@@ -26,6 +39,8 @@
     {{--<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>--}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+
+    {{--JS Pie Chart--}}
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         $(function () {
@@ -94,6 +109,35 @@
                 chart.draw(data, google.charts.Line.convertOptions(options));
             }
         });
+    </script>
 
+    {{--JS Pie Chart--}}
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.setOnLoadCallback(drawChart1);
+
+        function drawChart1() {
+            $.ajax({
+                url: '/api-get-pie-chart-data',
+                method: 'GET',
+                success: function (resp) {
+                    var data = new google.visualization.DataTable()
+                    data.addColumn('string', 'Product Name');
+                    data.addColumn('number', 'Quantity');
+                    for (var i = 0; i < resp.length; i++) {
+                        data.addRow([resp[i].productTitle + '', Number(resp[i].number)]);
+                    }
+                    var options = {
+                        title: 'Hot Product'
+                    };
+                    //
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart_material'));
+                    chart.draw(data, options);
+                },
+                error: function () {
+                    swal('Have Error', 'Do not call API', 'error');
+                }
+            });
+        }
     </script>
 @endsection
