@@ -4,13 +4,6 @@
     'current_sub_menu'=>'chart'
 ])
 @section('content')
-    <br>
-    <div id="reportrange"
-         style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-        <i class="fa fa-calendar"></i>&nbsp;
-        <span></span> <i class="fa fa-caret-down"></i>
-    </div>
-    <br>
     <div class="col-md-12">
         <div class="card">
             <div class="card-header card-header-icon" data-background-color="blue">
@@ -18,6 +11,14 @@
             </div>
             <div class="card-content">
                 <h4 class="card-title"> Revenue </h4>
+                <div class="toolbar">
+                    <!--        Here you can write extra buttons/actions for the toolbar              -->
+                </div>
+                <div id="reportrange"
+                     style="background: #fff; cursor: pointer; float: right">
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span></span> <i class="fa fa-caret-down"></i>
+                </div>
             </div>
             <div id="linechart_material" class="col-md-12"></div>
         </div>
