@@ -31,7 +31,7 @@
             <div class="card-content">
                 <h4 class="card-title">Hot Product</h4>
             </div>
-            <center><div id="piechart_3d" style="width: 500px; height: 500px;"></div></center>
+            <center><div id="piechart_3d" style="width: 800px; height: 500px;"></div></center>
         </div>
     </div>
 @endsection
